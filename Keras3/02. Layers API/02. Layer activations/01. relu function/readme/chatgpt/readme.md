@@ -15,6 +15,7 @@ The ReLU (Rectified Linear Unit) function is a widely used activation function i
 
  $\text{ReLU}(x) = \max(0, x)$
 
+
 ### **2. Where is the ReLU Function Used?**
 
 - **Hidden Layers**: Commonly used in hidden layers of neural networks to introduce non-linearity.
