@@ -5,6 +5,24 @@ how, pros, cons, image - (graph or related to topic), table,
 example, proof , example code for proof, application ,key, summary.
 ```
 
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.2/katex.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.2/katex.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.2/contrib/auto-render.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    { left: "$$", right: "$$", display: true },
+                    { left: "$", right: "$", display: false }
+                ]
+            });
+        });
+    </script>   
+</body>
+
 ### **Keras 3 - Sigmoid Function**
 
 ---
@@ -59,7 +77,7 @@ $$
 
 ### **9. Image Representation of the Sigmoid Function**
 
-![Sigmoid Function](https://github.com/engineer-ece/Keras-learn/blob/a1896a6d499e2295bb85e590e95844901406611e/Keras3/02.%20Layers%20API/02.%20Layer%20activations/02.%20sigmoid%20function/sigmoid_function.png)
+![Sigmoid Function](https://github.com/engineer-ece/Keras-learn/Keras3/02. Layers API/02. Layer activations/02. sigmoid function/sigmoid_function.png)
 
 ### **10. Table: Overview of the Sigmoid Function**
 
