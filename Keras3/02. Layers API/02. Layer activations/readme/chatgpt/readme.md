@@ -138,3 +138,39 @@ plot_activations(activations[1], 'conv2')
 
 ### **16. Summary**
 Layer activations in Keras provide crucial insights into the behavior and learning of different layers within a neural network. They facilitate debugging, feature visualization, and model analysis, offering a deeper understanding of how data is processed through the network. While they add valuable information, they can also introduce complexity and performance overhead.
+
+
+---
+
+In Keras (and deep learning frameworks in general), several activation functions may produce similar-looking graphs or outputs over certain ranges of input values. However, their underlying formulas are different, leading to distinct mathematical properties and behaviors. Here are some reasons why different activation functions might have similar graph shapes but different formulas:
+
+### 1. **Linear Segments with Different Slopes or Ranges**:
+   - **ReLU and Leaky ReLU**: Both are piecewise linear functions, but ReLU outputs zero for negative inputs, while Leaky ReLU allows a small, non-zero slope for negative inputs.
+   - **ReLU and ReLU6**: Both are similar, but ReLU6 clips the output at 6.
+
+### 2. **Saturation**:
+   - **Sigmoid and Tanh**: Both functions saturate, meaning they output values close to 0 or 1 (Sigmoid) or -1 and 1 (Tanh) for large positive or negative inputs. This can make their graphs look similar, especially around these saturation regions, even though Tanh is centered around 0, while Sigmoid is centered around 0.5.
+
+### 3. **Clipping Behavior**:
+   - **Hard Sigmoid and Hard Tanh**: These functions are simplified versions of Sigmoid and Tanh, respectively, and include explicit clipping, which can make their plots look similar over certain input ranges.
+
+### 4. **Smooth Approximations**:
+   - **Softplus and ReLU**: Softplus is a smooth approximation of ReLU. While ReLU is piecewise linear with a sharp corner at the origin, Softplus is smooth and differentiable everywhere, but their graphs look similar, especially as inputs become large.
+
+### 5. **Scaling or Offset Adjustments**:
+   - **SELU and ELU**: SELU and ELU functions both handle negative inputs by applying an exponential decay, but SELU includes scaling factors that adjust the output range. Despite these differences in scaling and shifts, their general shapes can appear similar.
+
+### 6. **Logarithmic and Exponential Functions**:
+   - **LogSoftmax and Softmax**: The Softmax function’s output is normalized exponential values, while LogSoftmax is simply the logarithm of the Softmax output. When plotted, their shapes can be similar, but the LogSoftmax output is shifted down (in log space).
+
+### 7. **Exponential Growth and Sigmoid-like Behavior**:
+   - **Mish and Swish**: Both functions are smooth and non-monotonic, with behavior that can resemble a combination of exponential growth and Sigmoid-like behavior. Although their formulas are different, their outputs can look similar in certain ranges.
+
+### Key Differences in Formula and Behavior:
+While the output graphs might appear similar, the underlying formulas define how the activation function behaves:
+- **Gradient Flow**: The derivative of the activation function affects the gradient flow during backpropagation.
+- **Range of Outputs**: Functions like Tanh output between -1 and 1, while Sigmoid outputs between 0 and 1.
+- **Smoothness**: Smooth functions (like Softplus) differ from piecewise functions (like ReLU) in their behavior at certain points, particularly at the origin.
+- **Non-Monotonicity**: Some functions, like Mish and Swish, are non-monotonic, meaning they can change direction, while others, like ReLU, are monotonic.
+
+In summary, the appearance of similar graphs for different activation functions in Keras is due to shared characteristics like linear segments, saturation, or smooth approximations. However, their formulas and resulting mathematical properties lead to different behaviors and use cases in neural networks.
