@@ -5,7 +5,7 @@ how, pros, cons, image - (graph or related to topic), table,
 example, proof , example code for proof, application ,key, summary,
 ```
 
-
+<body>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.2/katex.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.2/katex.min.js"></script>
@@ -20,7 +20,7 @@ example, proof , example code for proof, application ,key, summary,
 
 The ReLU (Rectified Linear Unit) function is a widely used activation function in neural networks. It outputs the input directly if it is positive; otherwise, it outputs zero. The mathematical expression is:
 
- $\text{ReLU}(x) = \max(0, x)$
+ $$\text{ReLU}(x) = \max(0, x)$$
 
 
 ### **2. Where is the ReLU Function Used?**
@@ -141,3 +141,4 @@ print("Model output:", output)
 ### **16. Summary**
 
 The ReLU function is a fundamental activation function in neural networks, known for its efficiency and ability to introduce non-linearity. It outputs the input directly for positive values and zero otherwise. While it improves computational efficiency and helps mitigate the vanishing gradient problem, it also has potential drawbacks such as the dying ReLU problem and unbounded output.
+</body>
