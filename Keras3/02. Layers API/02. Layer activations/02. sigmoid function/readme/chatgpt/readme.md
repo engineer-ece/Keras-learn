@@ -59,8 +59,7 @@ $$
 
 ### **9. Image Representation of the Sigmoid Function**
 
-![Sigmoid Function](https://i.imgur.com/7NkX4eM.png)
-*Image: Graph showing the sigmoid activation function, mapping input values to a range between 0 and 1.*
+![Sigmoid Function](https://github.com/engineer-ece/Keras-learn/blob/a1896a6d499e2295bb85e590e95844901406611e/Keras3/02.%20Layers%20API/02.%20Layer%20activations/02.%20sigmoid%20function/sigmoid_function.png)
 
 ### **10. Table: Overview of the Sigmoid Function**
 
