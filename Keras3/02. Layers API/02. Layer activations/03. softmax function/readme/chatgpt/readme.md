@@ -60,8 +60,7 @@ where 𝒙ᵢ represents each element of the input vector, and the denominator i
 
 ### **9. Image Representation of the Softmax Function**
 
-![Softmax Function](https://i.imgur.com/09W9EBP.png)
-*Image: Graph showing the softmax function, illustrating how it converts a vector of scores into probabilities.*
+![Softmax Function]([https://i.imgur.com/09W9EBP.png](https://github.com/engineer-ece/Keras-learn/blob/6e475edbe059940df06db01fdc787177fdb80862/Keras3/02.%20Layers%20API/02.%20Layer%20activations/03.%20softmax%20function/softmax_function.png))
 
 ### **10. Table: Overview of the Softmax Function**
 
