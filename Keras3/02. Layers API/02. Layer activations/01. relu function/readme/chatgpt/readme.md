@@ -6,10 +6,20 @@ example, proof , example code for proof, application ,key, summary,
 ```
 
 <body>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.2/katex.min.css">
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.2/katex.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.2/katex.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.2/contrib/auto-render.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    { left: "$$", right: "$$", display: true },
+                    { left: "$", right: "$", display: false }
+                ]
+            });
+        });
+    </script>   
    
 </body>
 
@@ -21,7 +31,7 @@ example, proof , example code for proof, application ,key, summary,
 
 The ReLU (Rectified Linear Unit) function is a widely used activation function in neural networks. It outputs the input directly if it is positive; otherwise, it outputs zero. The mathematical expression is:
 
- \[ \text{ReLU}(x) = \max(0, x) \]
+ $$ \text{ReLU}(x) = \max(0, x) $$
 
 
 ### **2. Where is the ReLU Function Used?**
@@ -52,7 +62,7 @@ The ReLU (Rectified Linear Unit) function is a widely used activation function i
 
 ### **6. How Does the ReLU Function Work?**
 
-1. **Positive Inputs**: If the input $ x $ is greater than 0, ReLU returns $x$.
+1. **Positive Inputs**: If the input $ x $ is greater than 0, ReLU returns  $ x $.
 2. **Negative Inputs**: If the input $ x $ is less than or equal to 0, ReLU returns 0.
 
 ### **7. Pros of the ReLU Function**
