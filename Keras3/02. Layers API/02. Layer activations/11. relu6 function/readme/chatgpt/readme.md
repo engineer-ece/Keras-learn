@@ -59,7 +59,7 @@ model.add(Dense(64, activation=relu6, input_shape=(input_dim,)))
 
 Here’s a graph comparing ReLU6 with the standard ReLU activation function:
 
-![ReLU6 vs. ReLU](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/ReLU_Activation_Function.png/400px-ReLU_Activation_Function.png)
+![ReLU6 vs. ReLU](https://github.com/engineer-ece/Keras-learn/blob/edf75093c51220acf4d5e934fd3f5cce0ac6356c/Keras3/02.%20Layers%20API/02.%20Layer%20activations/11.%20relu6%20function/relu6_function.png)
 
 In this graph, the ReLU6 function is similar to ReLU but is capped at 6.
 
