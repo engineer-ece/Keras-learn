@@ -47,8 +47,7 @@ where $x_i$ represents the input for class \(i\), and the sum in the denominator
 
 ### **9. Image Representation of the Log Softmax Function**
 
-![Log Softmax Function](https://upload.wikimedia.org/wikipedia/commons/4/42/Softmax_function.svg)  
-*Image: Graph showing the Softmax function, which is the basis for Log Softmax.*
+![Log Softmax Function](https://github.com/engineer-ece/Keras-learn/blob/7730f3086f93a03440ee788c13fbef9f475122e7/Keras3/02.%20Layers%20API/02.%20Layer%20activations/18.%20log_softmax%20function/log_softmax_function.png)  
 
 ### **10. Table: Overview of the Log Softmax Function**
 
