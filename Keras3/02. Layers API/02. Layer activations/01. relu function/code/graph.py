@@ -23,7 +23,6 @@ plt.legend()
 
 # Get the current working directory
 current_folder = os.getcwd()
-current_folder = current_folder+"/Keras3/02. Layers API/02. Layer activations/01. relu function/"
 
 # Save the plot as an image file in the current folder
 file_path = os.path.join(current_folder, 'relu_function.png')
