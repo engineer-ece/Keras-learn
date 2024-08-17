@@ -57,8 +57,7 @@ where:
 
 ### **9. Image Representation of the SELU Function**
 
-![SELU Function](https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Scaled_Exponential_Linear_Unit.svg/1024px-Scaled_Exponential_Linear_Unit.svg.png)  
-*Image: Graph showing the SELU activation function.*
+![SELU Function](https://github.com/engineer-ece/Keras-learn/blob/b7a4540dc073d0a7084d0c07fab60f9b58304647/Keras3/02.%20Layers%20API/02.%20Layer%20activations/07.%20selu%20function/selu_function.png)  
 
 ### **10. Table: Overview of the SELU Function**
 
