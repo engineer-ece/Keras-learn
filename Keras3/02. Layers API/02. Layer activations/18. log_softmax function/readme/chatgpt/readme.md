@@ -11,9 +11,9 @@ example, proof , example code for proof, application ,key, summary,
 ### **1. What is the Log Softmax Function?**
 The Log Softmax function is an activation function used to compute the logarithm of the softmax function. It is given by:
 
-\[ \text{LogSoftmax}(x_i) = \ln\left(\frac{e^{x_i}}{\sum_{j} e^{x_j}}\right) = x_i - \ln\left(\sum_{j} e^{x_j}\right) \]
+$$ \text{LogSoftmax}(x_i) = \ln\left(\frac{e^{x_i}}{\sum_{j} e^{x_j}}\right) = x_i - \ln\left(\sum_{j} e^{x_j}\right) $$
 
-where \(x_i\) represents the input for class \(i\), and the sum in the denominator is over all possible classes.
+where $x_i$ represents the input for class \(i\), and the sum in the denominator is over all possible classes.
 
 ### **2. Where is the Log Softmax Function Used?**
 - **Classification Tasks**: Typically used in the output layer of neural networks for multi-class classification problems.
