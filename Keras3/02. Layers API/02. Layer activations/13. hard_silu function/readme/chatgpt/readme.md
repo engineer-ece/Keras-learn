@@ -11,7 +11,7 @@ example, proof , example code for proof, application ,key, summary,
 
 The Hard SiLU function, also known as Hard Swish, is a computationally efficient approximation of the SiLU (Swish) activation function. It is defined as:
 
-$$ \text{Hard\_SiLU}(x) = x \cdot \frac{\text{ReLU6}(x + 3)}{6} $$
+$$ \text{Hard SiLU}(x) = x \cdot \frac{\text{ReLU6}(x + 3)}{6} $$
 
 where $\text{ReLU6}(x)$ is the ReLU6 activation function. In other words, it applies a scaled and shifted ReLU6 function to approximate the SiLU.
 
