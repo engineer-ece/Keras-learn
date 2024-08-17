@@ -56,7 +56,7 @@ The exponential function is a mathematical function defined as $f(x) = e^x$, whe
 
 ### **9. Image Representation of the Exponential Function**
 
-![Exponential Function](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Exponential.svg/1200px-Exponential.svg.png)
+![Exponential Function](https://github.com/engineer-ece/Keras-learn/blob/3702b9b07db2462f078007e0b1e9a40c5e6c9ae0/Keras3/02.%20Layers%20API/02.%20Layer%20activations/09.%20exponential%20function/exponential_function.png)
 *Image: Graph showing the exponential function \( f(x) = e^x \).*
 
 ### **10. Table: Overview of the Exponential Function**
