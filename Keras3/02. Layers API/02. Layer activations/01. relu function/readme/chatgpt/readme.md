@@ -14,7 +14,7 @@ example, proof , example code for proof, application ,key, summary,
         document.addEventListener("DOMContentLoaded", function() {
             renderMathInElement(document.body, {
                 delimiters: [
-                    { left: "$$", right: "$$", display: true },
+                    { left: "$$", right: "$$", display: false },
                     { left: "$", right: "$", display: false }
                 ]
             });
