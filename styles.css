@@ -1,0 +1,438 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 1600px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tree-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tree-menu li {
+    margin: 0;
+}
+
+.tree-menu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.tree-menu a:hover {
+    background-color: #444;
+}
+
+.nested {
+    list-style: none;
+    padding-left: 20px;
+    display: none;
+}
+
+.nested li {
+    margin: 0;
+}
+
+.content-area {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.card {
+    background: linear-gradient(to right, #f7f7f7, #e3e3e3);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    width: calc(33.333% - 32px);
+    box-sizing: border-box;
+}
+
+.card:hover {
+    background: linear-gradient(to right, #e3e3e3, #f7f7f7);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    border-bottom: 4px solid #ddd;
+}
+
+.card-title {
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-title h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.equation {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .layout {
+        grid-template-columns: 200px 1fr;
+    }
+
+    .card {
+        width: calc(50% - 32px);
+    }
+}
+
+@media (max-width: 768px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        grid-row: 1;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        width: calc(100% - 32px);
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content-area {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.card {
+    background: linear-gradient(to right, #f7f7f7, #e3e3e3);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    width: calc(33.333% - 32px);
+    box-sizing: border-box;
+}
+
+.card:hover {
+    background: linear-gradient(to right, #e3e3e3, #f7f7f7);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-title {
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-title h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.equation {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .card {
+        width: calc(50% - 32px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(100% - 32px);
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content-area {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.card {
+    background: linear-gradient(to right, #f7f7f7, #e3e3e3);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    width: calc(33.333% - 32px);
+    box-sizing: border-box;
+    transform: scale(1);
+}
+
+.card:hover {
+    background: linear-gradient(to right, #e3e3e3, #f7f7f7);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05); /* Scale up by 5% on hover */
+}
+
+.card-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-title {
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-title h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.equation {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .card {
+        width: calc(50% - 32px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(100% - 32px);
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content-area {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.card {
+    background: linear-gradient(to right, #f7f7f7, #e3e3e3);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    width: calc(33.333% - 32px);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.card:hover {
+    background: linear-gradient(to right, #e3e3e3, #f7f7f7);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05); /* Scale up by 5% on hover */
+}
+
+.card-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-title {
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-title h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.equation {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .card {
+        width: calc(50% - 32px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(100% - 32px);
+    }
+}
