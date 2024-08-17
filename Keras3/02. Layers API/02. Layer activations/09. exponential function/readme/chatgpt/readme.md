@@ -62,18 +62,18 @@ The exponential function is a mathematical function defined as $f(x) = e^x$, whe
 
 ### **10. Table: Overview of the Exponential Function**
 
-| **Aspect**              | **Description**                                                                                                                                                                                 |
-| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **What**                | Mathematical function defined as   $e^x$.                                                                                                                                                              |
-| **Where**               | Used in activation functions, normalization, and probability computations.                                                                                                                            |
-| **Why**                 | To provide non-linearity and smooth transformations in various applications.                                                                                                                          |
-| **When**                | When designing functions requiring exponential transformations or normalizations.                                                                                                                     |
-| **Who**                 | Data scientists, machine learning engineers, researchers, and developers.                                                                                                                             |
-| **How**                 | By computing  $e^x$, which scales input values exponentially.                                                                                                                                  |
-| **Pros**                | Smooth, continuous, introduces non-linearity, useful in probability models.                                                                                                                           |
-| **Cons**                | Computationally intensive, can lead to exploding values, not always intuitive.                                                                                                                        |
-| **Application Example** | Used in ELU activation function and softmax normalization.                                                                                                                                            |
-| **Summary**             | The exponential function$e^x$ provides a smooth and non-linear transformation useful in various machine learning contexts, though it can be computationally intensive and may lead to large values. |
+| **Aspect**              | **Description**                                                                                                                                                                                     |
+| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **What**                | Mathematical function defined as$e^x$.                                                                                                                                                                  |
+| **Where**               | Used in activation functions, normalization, and probability computations.                                                                                                                                |
+| **Why**                 | To provide non-linearity and smooth transformations in various applications.                                                                                                                              |
+| **When**                | When designing functions requiring exponential transformations or normalizations.                                                                                                                         |
+| **Who**                 | Data scientists, machine learning engineers, researchers, and developers.                                                                                                                                 |
+| **How**                 | By computing$e^x$, which scales input values exponentially.                                                                                                                                             |
+| **Pros**                | Smooth, continuous, introduces non-linearity, useful in probability models.                                                                                                                               |
+| **Cons**                | Computationally intensive, can lead to exploding values, not always intuitive.                                                                                                                            |
+| **Application Example** | Used in ELU activation function and softmax normalization.                                                                                                                                                |
+| **Summary**             | The exponential function  $e^x$ provides a smooth and non-linear transformation useful in various machine learning contexts, though it can be computationally intensive and may lead to large values. |
 
 ### **11. Example of Using the Exponential Function**
 
