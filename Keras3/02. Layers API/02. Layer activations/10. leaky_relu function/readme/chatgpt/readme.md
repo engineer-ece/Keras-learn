@@ -54,7 +54,7 @@ where:
 
 ### **9. Image Representation of the Leaky ReLU Function**
 
-![Leaky ReLU Function](https://miro.medium.com/v2/resize:fit:1200/format:webp/1*o9W4YsvHslHzP-WmCehItA.png)  
+![Leaky ReLU Function](https://github.com/engineer-ece/Keras-learn/blob/165faebc2d614fab973693e99daebe22e69646b5/Keras3/02.%20Layers%20API/02.%20Layer%20activations/10.%20leaky_relu%20function/leaky_relu_function.png)  
 *Image: Graph showing the Leaky ReLU activation function with a small slope for negative values.*
 
 ### **10. Table: Overview of the Leaky ReLU Function**
