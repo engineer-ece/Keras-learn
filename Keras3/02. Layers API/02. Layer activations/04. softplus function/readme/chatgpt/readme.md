@@ -35,8 +35,8 @@ where 𝒙 is the input value.
 - **Developers**: For implementing and testing models that need smoother activation functions.
 
 ### **6. How Does the Softplus Function Work?**
-1. **Compute Exponential**: For each input value, compute the exponential $ e^x $.
-2. **Log Transformation**: Apply the logarithm function to $ 1 + e^x $ to get the output.
+1. **Compute Exponential**: For each input value, compute the exponential $e^x$.
+2. **Log Transformation**: Apply the logarithm function to $1 + e^x$ to get the output.
 
 ### **7. Pros of the Softplus Function**
 - **Smooth and Differentiable**: Ensures smooth and continuous gradients, which can be beneficial for optimization.
@@ -48,8 +48,7 @@ where 𝒙 is the input value.
 
 ### **9. Image Representation of the Softplus Function**
 
-![Softplus Function](https://i.imgur.com/5iFnzq1.png)  
-*Image: Graph showing the softplus activation function, providing a smooth approximation to the ReLU function.*
+![Softplus Function](https://github.com/engineer-ece/Keras-learn/blob/9fbe3beae36e13ea2fea3bafe41b6c49106cc2ac/Keras3/02.%20Layers%20API/02.%20Layer%20activations/04.%20softplus%20function/softplus_function.png)  
 
 ### **10. Table: Overview of the Softplus Function**
 
