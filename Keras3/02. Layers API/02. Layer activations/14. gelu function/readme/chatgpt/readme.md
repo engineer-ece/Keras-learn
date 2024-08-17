@@ -1,3 +1,9 @@
+```code
+Keras 3 -  gelu function
+what, where, why, when, who, 
+how, pros, cons, image - (graph or related to topic), table,
+example, proof , example code for proof, application ,key, summary,
+```
 ### **Keras 3 - GELU Function**
 
 ---
