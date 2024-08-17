@@ -53,8 +53,7 @@ The Mish function is a smooth, non-monotonic activation function that combines p
 
 ### **9. Image Representation of the Mish Function**
 
-![Mish Function](https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Mish_function.svg/800px-Mish_function.svg.png)  
-*Image: Graph showing the Mish activation function.*
+![Mish Function](https://github.com/engineer-ece/Keras-learn/blob/67ebffecb1f45a76a683b3757180b4b3d1a83f66/Keras3/02.%20Layers%20API/02.%20Layer%20activations/17.%20mish%20function/mish_function.png)  
 
 ### **10. Table: Overview of the Mish Function**
 
