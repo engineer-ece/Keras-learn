@@ -13,7 +13,7 @@ example, proof , example code for proof, application ,key, summary,
 
 The ReLU (Rectified Linear Unit) function is a widely used activation function in neural networks. It outputs the input directly if it is positive; otherwise, it outputs zero. The mathematical expression is:
 
- \[ \text{ReLU}(x) = \max(0, x) \]
+ $$ \text{ReLU}(x) = \max(0, x) $$
 
 ### **2. Where is the ReLU Function Used?**
 
