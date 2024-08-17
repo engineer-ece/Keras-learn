@@ -17,7 +17,7 @@ $$
 \text{Softmax}(x_i) = \frac{e^{x_i}}{\sum_{j} e^{x_j}}
 $$
 
-where $ x_i $ represents each element of the input vector, and the denominator is the sum of exponentials of all input elements.
+where 𝒙ᵢ represents each element of the input vector, and the denominator is the sum of exponentials of all input elements.
 
 ### **2. Where is the Softmax Function Used?**
 

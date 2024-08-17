@@ -14,7 +14,7 @@ The softplus function is a smooth approximation to the ReLU (Rectified Linear Un
 
 $$ \text{Softplus}(x) = \ln(1 + e^x) $$
 
-where $ x $ is the input value.
+where 𝒙 is the input value.
 
 ### **2. Where is the Softplus Function Used?**
 - **Hidden Layers**: Often used in hidden layers of neural networks as an activation function.
@@ -60,7 +60,7 @@ where $ x $ is the input value.
 | **Why**                 | To provide a smooth and differentiable activation function with continuous gradients. |
 | **When**                | When a smooth alternative to ReLU is needed, or when gradient stability is a concern. |
 | **Who**                 | Data scientists, machine learning engineers, researchers, and developers.       |
-| **How**                 | By applying the softplus formula: $ \text{Softplus} (x) = \ln(1 + e^x) $.    |
+| **How**                 | By applying the softplus formula: $\text{Softplus} (x) = \ln(1 + e^x)$.     |
 | **Pros**                | Smooth gradients, avoids dead neurons, continuous.                              |
 | **Cons**                | Computationally intensive, not zero-centered.                                   |
 | **Application Example** | Used in hidden layers of neural networks for improved gradient flow.            |
