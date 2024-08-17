@@ -60,7 +60,7 @@ where $x$ is the input value.
 | **Why**                 | Provides smooth, bounded activation with stable gradients.                      |
 | **When**                | When a smooth, bounded activation function is required.                          |
 | **Who**                 | Data scientists, machine learning engineers, researchers, and developers.       |
-| **How**                 | By applying the formula: $\text{Softsign}(x) = \frac{x}{1 + |x|}$.         |
+| **How**                 | By applying the formula: Softsign(x)= $\frac{x}{1 + \|x\|} $         |
 | **Pros**                | Smooth gradients, bounded output, avoids dead neurons.                          |
 | **Cons**                | Computationally intensive, less popular, not zero-centered.                     |
 | **Application Example** | Used in hidden layers of neural networks where smooth and bounded outputs are beneficial. |
