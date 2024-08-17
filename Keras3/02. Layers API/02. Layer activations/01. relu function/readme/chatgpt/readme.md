@@ -11,6 +11,7 @@ example, proof , example code for proof, application ,key, summary,
     <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.2/katex.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.2/contrib/auto-render.min.js"></script>
    
+</body>
 
 ### **Keras 3 - ReLU Function**
 
@@ -141,4 +142,3 @@ print("Model output:", output)
 ### **16. Summary**
 
 The ReLU function is a fundamental activation function in neural networks, known for its efficiency and ability to introduce non-linearity. It outputs the input directly for positive values and zero otherwise. While it improves computational efficiency and helps mitigate the vanishing gradient problem, it also has potential drawbacks such as the dying ReLU problem and unbounded output.
-</body>
