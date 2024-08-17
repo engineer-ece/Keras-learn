@@ -11,7 +11,7 @@ example, proof , example code for proof, application ,key, summary,
 ### **1. What is the Linear Function?**
 The Linear function is an activation function that applies a linear transformation to the input. It is mathematically represented as:
 
-\[ \text{Linear}(x) = x \]
+$$ \text{Linear}(x) = x $$
 
 In this function, the output is directly proportional to the input, meaning there is no non-linearity introduced.
 
