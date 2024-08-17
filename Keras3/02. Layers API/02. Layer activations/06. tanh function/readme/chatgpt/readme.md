@@ -49,8 +49,7 @@ where $x$ is the input value.
 
 ### **9. Image Representation of the Tanh Function**
 
-![Tanh Function](https://i.imgur.com/FLu6y5Y.png)  
-*Image: Graph showing the tanh activation function, mapping inputs to a range between -1 and 1.*
+![Tanh Function](https://github.com/engineer-ece/Keras-learn/blob/b4f95d1e1a777d5ed8b48fc6fd6ee4e411dc225b/Keras3/02.%20Layers%20API/02.%20Layer%20activations/06.%20tanh%20function/tanh_function.png)  
 
 ### **10. Table: Overview of the Tanh Function**
 
