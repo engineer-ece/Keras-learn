@@ -116,9 +116,8 @@
                         <p class="equation">                            
                             \( \text{SELU}(x) = \lambda \begin{cases} 
                             x & \text{if } x > 0 \\
-                            \alpha e^x - \alpha & \text{if } x \leq 0 
-                          \end{cases}
-                          \)
+  \alpha(e^x - 1) & \text{if } x \leq 0 
+  \end{cases}\)
                         </p>
                     </div>
                 </a>
@@ -131,18 +130,122 @@
                     </div>
                     <div class="card-content">
                         <p class="equation">                            
-                            \[ \text{ELU}(x) = \begin{cases}
+                            \( \text{ELU}(x) = \begin{cases}
                             x & \text{if } x > 0 \\
                             \alpha (e^x - 1) & \text{if } x \leq 0
-                            \end{cases} \]
+                            \end{cases} \)
+                        </p>
+                    </div>
+                </a>
+                <a href="https://engineer-ece.github.io/Keras-learn/Keras3/02. Layers API/02. Layer activations/09. exponential function/readme/chatgpt" class="card">
+                    <div class="card-image">
+                        <img src="https://engineer-ece.github.io/Keras-learn/Keras3/02. Layers API/02. Layer activations/09. exponential function/exponential_function.png" alt="Example Image">
+                    </div>
+                    <div class="card-title">
+                        <h2>Exponential</h2>
+                    </div>
+                    <div class="card-content">
+                        <p class="equation">                            
+                            \( f(x) = e^x \)
                         </p>
                     </div>
                 </a>
 
+                <a href="https://engineer-ece.github.io/Keras-learn/Keras3/02. Layers API/02. Layer activations/10. leaky_relu function/readme/chatgpt" class="card">
+                    <div class="card-image">
+                        <img src="https://engineer-ece.github.io/Keras-learn/Keras3/02. Layers API/02. Layer activations/10. leaky_relu function/leaky_relu_function.png" alt="Example Image">
+                    </div>
+                    <div class="card-title">
+                        <h2>Leaky ReLU</h2>
+                    </div>
+                    <div class="card-content">
+                        <p class="equation">                            
+                            \( \text{LeakyReLU}(x) = \begin{cases} 
+                            x & \text{if } x > 0 \\
+                            \alpha x & \text{if } x \leq 0 
+                            \end{cases}  \)
+                        </p>
+                    </div>
+                </a>
 
+                <a href="https://engineer-ece.github.io/Keras-learn/Keras3/02. Layers API/02. Layer activations/11. relu6 function/readme/chatgpt" class="card">
+                    <div class="card-image">
+                        <img src="https://engineer-ece.github.io/Keras-learn/Keras3/02. Layers API/02. Layer activations/11. relu6 function/relu6_function.png" alt="Example Image">
+                    </div>
+                    <div class="card-title">
+                        <h2>ReLU 6</h2>
+                    </div>
+                    <div class="card-content">
+                        <p class="equation">                            
+                            \( \text{ReLU6}(x) = \min(\max(0, x), 6) \)
+                        </p>
+                    </div>
+                </a>
 
+                <a href="https://engineer-ece.github.io/Keras-learn/Keras3/02. Layers API/02. Layer activations/12. silu function/readme/chatgpt" class="card">
+                    <div class="card-image">
+                        <img src="https://engineer-ece.github.io/Keras-learn/Keras3/02. Layers API/02. Layer activations/12. silu function/silu_function.png" alt="Example Image">
+                    </div>
+                    <div class="card-title">
+                        <h2>SiLU (Swish)</h2>
+                    </div>
+                    <div class="card-content">
+                        <p class="equation">                            
+                            \( \text{SiLU}(x) = x \cdot \sigma(x) \) 
+                            where \( sigma(x) \) is the sigmoid function:
+                            \( \sigma(x) = \frac{1}{1 + e^{-x}}\)
+                        </p>
+                    </div>
+                </a>
+                <a href="https://engineer-ece.github.io/Keras-learn/Keras3/02. Layers API/02. Layer activations/13. hard_silu function/readme/chatgpt" class="card">
+                    <div class="card-image">
+                        <img src="https://engineer-ece.github.io/Keras-learn/Keras3/02. Layers API/02. Layer activations/13. hard_silu function/hard_silu_function.png" alt="Example Image">
+                    </div>
+                    <div class="card-title">
+                        <h2>Hard SiLU (Swish)</h2>
+                    </div>
+                    <div class="card-content">
+                        <p class="equation">                            
+                            \[ \text{Hard SiLU}(x) = x \cdot \frac{\text{ReLU6}(x + 3)}{6} \]
 
+where \(\text{ReLU6}(x)\) is the ReLU6 activation function. In other words, it applies a scaled and shifted ReLU6 function to approximate the SiLU.
+                        </p>
+                    </div>
+                </a>
+                <a href="https://engineer-ece.github.io/Keras-learn/Keras3/02. Layers API/02. Layer activations/14. gelu function/readme/chatgpt" class="card">
+                    <div class="card-image">
+                        <img src="https://engineer-ece.github.io/Keras-learn/Keras3/02. Layers API/02. Layer activations/14. gelu function/gelu_function.png" alt="Example Image">
+                    </div>
+                    <div class="card-title">
+                        <h2>GeLU</h2>
+                    </div>
+                    <div class="card-content">
+                        <p class="equation">                            
+                            \( \text{GELU}(x) = x \cdot \Phi(x) \)
+                            where $\Phi(x)$ is the cumulative distribution function (CDF) of the standard normal distribution, given by:
+                            \( \Phi(x) = \frac{1}{2} \left[ 1 + \text{erf} \left( \frac{x}{\sqrt{2}} \right) \right] \)                  
+                            Here, $\text{erf}$ is the error function. In practice, the GELU function can be approximated as:
+                            \( \text{GELU}(x) \approx 0.5x \left[ 1 + \tanh \left( \sqrt{\frac{2}{\pi}} \left(x + 0.044715x^3 \right) \right) \right] \)   
+                        </p>
+                    </div>
+                </a>
+                <a href="https://engineer-ece.github.io/Keras-learn/Keras3/02. Layers API/02. Layer activations/15. hard_sigmoid function/readme/chatgpt" class="card">
+                    <div class="card-image">
+                        <img src="https://engineer-ece.github.io/Keras-learn/Keras3/02. Layers API/02. Layer activations/15. hard_sigmoid function/hard_sigmoid_function.png" alt="Example Image">
+                    </div>
+                    <div class="card-title">
+                        <h2>Hard sigmoid</h2>
+                    </div>
+                    <div class="card-content">
+                        <p class="equation">                            
+                            $$ \text{HardSigmoid}(x) = \text{clip} \left( \frac{x + 1}{2}, 0, 1 \right) $$
 
+                            where:
+                            - $\text{clip}(x, \text{min}, \text{max})$ is a function that limits the values of $x$ to the range $[\text{min}, \text{max}]$.
+                            - The formula simplifies to $\text{HardSigmoid}(x) = \text{max}(0, \text{min}(1, \frac{x + 1}{2}))$.   
+                        </p>
+                    </div>
+                </a>
                 <!-- Add more cards as needed -->
             </div>
         </main>
