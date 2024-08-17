@@ -1,7 +1,3 @@
 # Keras-learn
 
-Keras for deep learning - process on learning it
-
-sdf
-
-sdfsdf
+Keras for deep learning - process on learning
