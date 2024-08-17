@@ -14,7 +14,7 @@ The softmax function is an activation function used to convert a vector of raw s
 
 $$ \text{Softmax}(x_i) = \frac{e^{x_i}}{\sum_{j} e^{x_j}} $$
 
-where \( x_i \) represents each element of the input vector, and the denominator is the sum of exponentials of all input elements.
+where $ x_i $ represents each element of the input vector, and the denominator is the sum of exponentials of all input elements.
 
 ### **2. Where is the Softmax Function Used?**
 - **Output Layers**: Primarily used in the output layer of neural networks for multi-class classification problems.
@@ -62,7 +62,7 @@ where \( x_i \) represents each element of the input vector, and the denominator
 | **Why**                 | To provide a probability distribution over multiple classes.                    |
 | **When**                | During multi-class classification tasks and in the output layer of neural networks. |
 | **Who**                 | Data scientists, machine learning engineers, researchers, and developers.       |
-| **How**                 | By applying the softmax formula: \( \text{Softmax}(x_i) = \frac{e^{x_i}}{\sum_{j} e^{x_j}} \). |
+| **How**                 | By applying the softmax formula: $ \text{Softmax}(x_i) = \frac{e^{x_i}}{\sum_{j} e^{x_j}} $. |
 | **Pros**                | Provides probability distribution, interpretable outputs, smooth and differentiable. |
 | **Cons**                | Sensitive to outliers, computationally intensive, may not handle imbalanced data well. |
 | **Application Example** | Used in the output layer of a neural network for classifying images into multiple categories. |
