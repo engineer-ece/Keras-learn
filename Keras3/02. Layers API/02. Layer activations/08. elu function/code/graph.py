@@ -12,7 +12,7 @@ y = elu(x)
 
 # Create the plot
 plt.figure(figsize=(8, 6))
-plt.plot(x, y, label=r'$\text{ELU}(x) = \lambda x \text{ if } x > 0 \text{ else } \alpha (e^x - 1)$', color='blue')
+plt.plot(x, y, label=r'$\text{ELU}(x) = x \text{ if } x > 0 \text{ else } \alpha (e^x - 1)$', color='blue')
 plt.title(r'Exponential Linear Unit (ELU) Function')
 plt.xlabel(r'$x$')
 plt.ylabel(r'$\text{ELU}(x)$')
