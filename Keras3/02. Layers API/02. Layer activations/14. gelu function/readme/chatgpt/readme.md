@@ -63,7 +63,7 @@ $$ \text{GELU}(x) \approx 0.5x \left[ 1 + \tanh \left( \sqrt{\frac{2}{\pi}} \lef
 
 ### **9. Image Representation of the GELU Function**
 
-![GELU Function](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/GaussianErrorLinearUnit.svg/800px-GaussianErrorLinearUnit.svg.png)
+![GELU Function](https://github.com/engineer-ece/Keras-learn/blob/f0b57eb39e9ff4c17a4e0965ca314ec69331abfd/Keras3/02.%20Layers%20API/02.%20Layer%20activations/14.%20gelu%20function/gelu_function.png)
 *Image: Graph showing the GELU activation function.*
 
 ### **10. Table: Overview of the GELU Function**
