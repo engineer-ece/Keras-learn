@@ -1,5 +1,3 @@
-### **Keras 3 - Exponential Function**
-
 ```code
 Keras 3 -  exponential function
 what, where, why, when, who, 
@@ -7,6 +5,7 @@ how, pros, cons, image - (graph or related to topic), table,
 example, proof , example code for proof, application ,key, summary,
 ```
 
+### **Keras 3 - Exponential Function**
 ---
 
 ### **1. What is the Exponential Function?**
