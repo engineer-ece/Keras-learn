@@ -65,7 +65,7 @@ where:
 
 ### **9. Image Representation of the ELU Function**
 
-![ELU Function](https://miro.medium.com/v2/resize:fit:1200/format:webp/1*FfOm5yw9-lT5zNjf5l6xFA.png)
+![ELU Function](https://github.com/engineer-ece/Keras-learn/blob/35ee6e0e6f9a64d78c8d61a021b39abd08ed2bdd/Keras3/02.%20Layers%20API/02.%20Layer%20activations/08.%20elu%20function/elu_function.png)
 *Image: Graph showing the ELU activation function.*
 
 ### **10. Table: Overview of the ELU Function**
