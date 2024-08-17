@@ -53,7 +53,7 @@ $$ \text{ReLU}(x) = \max(0, x) $$
 
 ### **9. Image Representation of the ReLU Function**
 
-![ReLU Function]('../Keras3/02. Layers API/02. Layer activations/01. relu function/relu_function.png')  
+![ReLU Function]('Keras3/02. Layers API/02. Layer activations/01. relu function/relu_function.png')  
 
 ### **10. Table: Overview of the ReLU Function**
 
