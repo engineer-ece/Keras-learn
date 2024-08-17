@@ -12,7 +12,7 @@ example, proof , example code for proof, application ,key, summary,
 ### **1. What is the ReLU Function?**
 The ReLU (Rectified Linear Unit) function is a widely used activation function in neural networks. It outputs the input directly if it is positive; otherwise, it outputs zero. The mathematical expression is:
 
-\[ \text{ReLU}(x) = \max(0, x) \]
+$$ \text{ReLU}(x) = \max(0, x) $$
 
 ### **2. Where is the ReLU Function Used?**
 - **Hidden Layers**: Commonly used in hidden layers of neural networks to introduce non-linearity.
@@ -37,8 +37,8 @@ The ReLU (Rectified Linear Unit) function is a widely used activation function i
 - **Developers**: For implementing and deploying neural network models in various applications.
 
 ### **6. How Does the ReLU Function Work?**
-1. **Positive Inputs**: If the input \( x \) is greater than 0, ReLU returns \( x \).
-2. **Negative Inputs**: If the input \( x \) is less than or equal to 0, ReLU returns 0.
+1. **Positive Inputs**: If the input $x$ is greater than 0, ReLU returns $x$.
+2. **Negative Inputs**: If the input $x$ is less than or equal to 0, ReLU returns 0.
 
 ### **7. Pros of the ReLU Function**
 - **Computationally Efficient**: Simple mathematical operations, making it faster to compute than functions like sigmoid or tanh.
@@ -53,8 +53,7 @@ The ReLU (Rectified Linear Unit) function is a widely used activation function i
 
 ### **9. Image Representation of the ReLU Function**
 
-![ReLU Function](https://i.imgur.com/03c2cP8.png)  
-*Image: Graph showing the ReLU activation function with its linear behavior for positive inputs and zero output for negative inputs.*
+![ReLU Function]('../Keras3/02. Layers API/02. Layer activations/01. relu function/relu_function.png')  
 
 ### **10. Table: Overview of the ReLU Function**
 
@@ -65,7 +64,7 @@ The ReLU (Rectified Linear Unit) function is a widely used activation function i
 | **Why**                 | To introduce non-linearity, improve computational efficiency, and reduce the vanishing gradient problem. |
 | **When**                | During neural network training and in various deep learning architectures.      |
 | **Who**                 | Data scientists, machine learning engineers, researchers, and developers.       |
-| **How**                 | By applying the max function to the input value: \( \text{ReLU}(x) = \max(0, x) \). |
+| **How**                 | By applying the max function to the input value: $\text{ReLU}(x) = \max(0, x)$ . |
 | **Pros**                | Computational efficiency, sparsity, mitigates vanishing gradient, introduces non-linearity. |
 | **Cons**                | Dying ReLU problem, unbounded output, no negative values.                      |
 | **Application Example** | Used in hidden layers of a convolutional neural network to process image data.  |
