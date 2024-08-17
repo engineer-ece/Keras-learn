@@ -12,11 +12,11 @@ example, proof , example code for proof, application ,key, summary,
 ### **1. What is the Hard Sigmoid Function?**
 The Hard Sigmoid function is a computationally efficient approximation of the sigmoid function. It is defined as:
 
-\[ \text{HardSigmoid}(x) = \text{clip} \left( \frac{x + 1}{2}, 0, 1 \right) \]
+$$ \text{HardSigmoid}(x) = \text{clip} \left( \frac{x + 1}{2}, 0, 1 \right) $$
 
 where:
-- \(\text{clip}(x, \text{min}, \text{max})\) is a function that limits the values of \(x\) to the range \([\text{min}, \text{max}]\).
-- The formula simplifies to \(\text{HardSigmoid}(x) = \text{max}(0, \text{min}(1, \frac{x + 1}{2}))\).
+- $\text{clip}(x, \text{min}, \text{max})$ is a function that limits the values of $x$ to the range $[\text{min}, \text{max}]$.
+- The formula simplifies to $\text{HardSigmoid}(x) = \text{max}(0, \text{min}(1, \frac{x + 1}{2}))$.
 
 ### **2. Where is the Hard Sigmoid Function Used?**
 - **Embedded Systems**: Used in environments with limited computational resources where efficiency is critical.
@@ -37,7 +37,7 @@ where:
 
 ### **6. How Does the Hard Sigmoid Function Work?**
 1. **Linear Approximation**: Approximates the sigmoid function using a linear transformation followed by clipping.
-2. **Clipping**: Ensures that the output values are within the range \([0, 1]\), mimicking the behavior of the sigmoid function.
+2. **Clipping**: Ensures that the output values are within the range $[0, 1]$, mimicking the behavior of the sigmoid function.
 
 ### **7. Pros of the Hard Sigmoid Function**
 - **Computationally Efficient**: Less computationally intensive than the standard sigmoid function.
