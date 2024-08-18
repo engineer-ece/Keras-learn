@@ -74,7 +74,7 @@ where:
 
 ### **9. Image Representation of the SELU Function**
 
-![SELU Function](https://github.com/engineer-ece/Keras-learn/blob/b7a4540dc073d0a7084d0c07fab60f9b58304647/Keras3/02.%20Layers%20API/02.%20Layer%20activations/07.%20selu%20function/selu_function.png)  
+![SELU Function](https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/02.%20Layer%20activations/07.%20selu%20function/selu_function.png)  
 
 ### **10. Table: Overview of the SELU Function**
 

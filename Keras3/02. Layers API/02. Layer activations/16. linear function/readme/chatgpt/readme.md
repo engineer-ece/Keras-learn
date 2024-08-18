@@ -66,7 +66,7 @@ In this function, the output is directly proportional to the input, meaning ther
 
 ### **9. Image Representation of the Linear Function**
 
-![Linear Function](https://github.com/engineer-ece/Keras-learn/blob/6b530d3a1f89a01eb860212e81a703d0b38aa9ae/Keras3/02.%20Layers%20API/02.%20Layer%20activations/16.%20linear%20function/linear_function.png)  
+![Linear Function](https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/02.%20Layer%20activations/16.%20linear%20function/linear_function.png)  
 *Image: Graph showing the Linear activation function.*
 
 ### **10. Table: Overview of the Linear Function**

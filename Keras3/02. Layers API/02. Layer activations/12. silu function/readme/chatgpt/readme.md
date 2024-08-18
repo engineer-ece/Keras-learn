@@ -103,7 +103,7 @@ model.summary()
 
 Here’s a graph comparing SiLU with ReLU:
 
-![SiLU vs. ReLU](https://github.com/engineer-ece/Keras-learn/blob/a9b7cf2fb7dbc846da51396590e83c4e4de36ec4/Keras3/02.%20Layers%20API/02.%20Layer%20activations/12.%20silu%20function/silu_function.png)
+![SiLU vs. ReLU](https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/02.%20Layer%20activations/12.%20silu%20function/silu_function.png)
 
 The SiLU function smoothly transitions between negative and positive values, unlike the sharp cutoff of ReLU.
 

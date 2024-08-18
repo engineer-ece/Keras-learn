@@ -68,7 +68,7 @@ where:
 
 ### **9. Image Representation of the Hard Sigmoid Function**
 
-![Hard Sigmoid Function](https://github.com/engineer-ece/Keras-learn/blob/01aa0bf41beee2b59a716ab72ae670864b2d27d5/Keras3/02.%20Layers%20API/02.%20Layer%20activations/15.%20hard_sigmoid%20function/hard_sigmoid_function.png)  
+![Hard Sigmoid Function](https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/02.%20Layer%20activations/15.%20hard_sigmoid%20function/hard_sigmoid_function.png)  
 *Image: Graph showing the Hard Sigmoid activation function.*
 
 ### **10. Table: Overview of the Hard Sigmoid Function**

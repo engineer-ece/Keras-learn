@@ -65,7 +65,7 @@ where 𝒙 is the input value.
 
 ### **9. Image Representation of the Softplus Function**
 
-![Softplus Function](https://github.com/engineer-ece/Keras-learn/blob/9fbe3beae36e13ea2fea3bafe41b6c49106cc2ac/Keras3/02.%20Layers%20API/02.%20Layer%20activations/04.%20softplus%20function/softplus_function.png)  
+![Softplus Function](https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/02.%20Layer%20activations/04.%20softplus%20function/softplus_function.png)  
 
 ### **10. Table: Overview of the Softplus Function**
 

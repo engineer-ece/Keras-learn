@@ -97,7 +97,7 @@ model.summary()
 
 Here’s a graph comparing Hard SiLU with SiLU and ReLU:
 
-![Hard SiLU vs. SiLU](https://github.com/engineer-ece/Keras-learn/blob/fd50242be6e628358480e287926cf02e48c066ab/Keras3/02.%20Layers%20API/02.%20Layer%20activations/13.%20hard_silu%20function/hard_silu_function.png)
+![Hard SiLU vs. SiLU](https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/02.%20Layer%20activations/13.%20hard_silu%20function/hard_silu_function.png)
 
 The Hard SiLU function is designed to approximate SiLU efficiently while being computationally cheaper.
 

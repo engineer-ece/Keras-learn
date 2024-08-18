@@ -67,7 +67,7 @@ where $x$ is the input value.
 
 ### **9. Image Representation of the Softsign Function**
 
-![Softsign Function](https://github.com/engineer-ece/Keras-learn/blob/24d94151c7de294e293cfa89b049d3f50b91e157/Keras3/02.%20Layers%20API/02.%20Layer%20activations/05.%20softsign%20function/softsign_function.png)  
+![Softsign Function](https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/02.%20Layer%20activations/05.%20softsign%20function/softsign_function.png)  
 
 ### **10. Table: Overview of the Softsign Function**
 

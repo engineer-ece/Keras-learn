@@ -77,7 +77,7 @@ $$
 
 ### **9. Image Representation of the Sigmoid Function**
 
-![Sigmoid Function](https://github.com/engineer-ece/Keras-learn/Keras3/02. Layers API/02. Layer activations/02. sigmoid function/sigmoid_function.png)
+![Sigmoid Function](https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/02.%20Layer%20activations/02.%20sigmoid%20function/sigmoid_function.png)
 
 ### **10. Table: Overview of the Sigmoid Function**
 
