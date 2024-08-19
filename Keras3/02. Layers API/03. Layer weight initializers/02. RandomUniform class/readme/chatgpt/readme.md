@@ -49,7 +49,7 @@
 
 ### **9. Image: Graph of Uniform Distribution**
 
-![Uniform Distribution](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Uniform_Distribution_PDF_SVG.svg/1280px-Uniform_Distribution_PDF_SVG.svg.png)
+![Random Uniform](https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/03.%20Layer%20weight%20initializers/02.%20RandomUniform%20class/random_uniform_distribution.png)
 
 ### **10. Table: Overview of `RandomUniform` Initialization**
 
