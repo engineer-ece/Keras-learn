@@ -174,3 +174,92 @@ While the output graphs might appear similar, the underlying formulas define how
 - **Non-Monotonicity**: Some functions, like Mish and Swish, are non-monotonic, meaning they can change direction, while others, like ReLU, are monotonic.
 
 In summary, the appearance of similar graphs for different activation functions in Keras is due to shared characteristics like linear segments, saturation, or smooth approximations. However, their formulas and resulting mathematical properties lead to different behaviors and use cases in neural networks.
+
+------
+
+### **What are Layer Activations in Keras 3?**
+
+**Layer activations** in Keras 3 refer to the functions applied to the output of each layer in a neural network to introduce non-linearity. These activations are critical because they allow the network to learn complex patterns from data.
+
+### **Where are Layer Activations Used in Keras 3?**
+
+In Keras 3, layer activations are applied within layers of a neural network, such as Dense, Conv2D, and LSTM layers. They are used in almost every neural network model to transform the outputs of neurons in each layer before passing them to the next layer.
+
+### **Why are Layer Activations Important in Keras 3?**
+
+Layer activations are crucial because:
+- **Non-linearity**: They enable neural networks to learn from data that isn’t linearly separable.
+- **Feature learning**: Different activations allow the network to learn various types of features, depending on the task.
+- **Decision making**: Activations like Softmax allow the network to make probabilistic decisions, essential in classification tasks.
+
+### **When are Layer Activations Applied in Keras 3?**
+
+Activations are applied after the linear transformation of inputs (i.e., after weights and biases are applied) in each layer. This happens during the forward pass of the network, where inputs are propagated through the layers to produce an output.
+
+### **Who Developed and Popularized Layer Activations in Keras 3?**
+
+The development of various activation functions has been an ongoing process in the field of deep learning:
+- **Sigmoid and Tanh Functions**: These were among the earliest activation functions used.
+- **ReLU**: Introduced by Xavier Glorot and Yoshua Bengio, it became a standard due to its simplicity and effectiveness.
+- **Advanced Activations**: Researchers have developed more sophisticated activations like Leaky ReLU, PReLU, and GELU to address specific issues with earlier functions.
+
+### **How Do Layer Activations Work in Keras 3?**
+
+In Keras 3, layer activations can be applied in different ways:
+- **Directly in Layers**: Many layers allow you to specify an activation function directly.
+- **As Separate Layers**: You can also apply activations as separate layers, which is useful for adding custom logic or combining different activation functions.
+
+### **Common Activation Functions in Keras 3:**
+
+| **Activation Function** | **Description** | **Pros** | **Cons** | **Best Used With** |
+|-------------------------|-----------------|----------|----------|-------------------|
+| **Sigmoid**             | Output ranges between 0 and 1. | Smooth gradient | Vanishing gradients | Binary classification |
+| **Tanh**                | Output ranges between -1 and 1. | Zero-centered | Vanishing gradients | RNNs |
+| **ReLU**                | Sets all negative values to 0. | Fast convergence | "Dead neurons" | Most deep networks |
+| **Leaky ReLU**          | Allows small gradients for negative inputs. | Solves "dead neurons" | Slightly more complex | Advanced architectures |
+| **Softmax**             | Converts outputs into probabilities. | Useful for classification | Sensitive to outliers | Multi-class classification |
+
+### **Image: Visual Representation of Activation Functions in Keras 3**
+It seems that I cannot generate images at the moment. Please try again later.
+
+### **Example: Using ReLU Activation in Keras 3**
+
+Here’s an example of how to use the ReLU activation function in a Keras 3 model:
+
+```python
+import keras
+from keras.models import Sequential
+from keras.layers import Dense
+
+# Define a simple neural network with ReLU activation
+model = Sequential([
+    Dense(256, input_shape=(784,), activation='relu'),
+    Dense(128, activation='relu'),
+    Dense(10, activation='softmax')
+])
+
+# Compile the model
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+
+# Print the model summary
+model.summary()
+```
+
+### **Proof of Effectiveness:**
+
+The ReLU activation function is widely used in deep learning due to its ability to mitigate the vanishing gradient problem, allowing networks to converge faster and learn more complex patterns.
+
+### **Application:**
+
+Layer activations in Keras 3 are used across a broad range of applications, such as:
+- **Image Classification**: Convolutional layers with ReLU activations.
+- **Text Processing**: RNNs and LSTMs with Tanh or ReLU activations.
+- **Reinforcement Learning**: Deep Q-networks (DQNs) using ReLU or Leaky ReLU.
+
+### **Key Points to Remember:**
+- Activation functions are essential for introducing non-linearity into neural networks.
+- The choice of activation function impacts model performance, convergence speed, and the types of patterns the network can learn.
+- ReLU is popular due to its simplicity and effectiveness but comes with its own limitations, like "dead neurons."
+
+### **Summary:**
+Layer activations in Keras 3 are critical components that determine how data flows through the network and how complex patterns are learned. Choosing the right activation function for each layer is essential for building effective models, as it can significantly impact the network’s ability to learn and make predictions.
