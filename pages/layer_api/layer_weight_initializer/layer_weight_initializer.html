@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layer Weight Initializers</title>
     <link rel="stylesheet" href="../../../styles.css">
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.2/katex.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.2/katex.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.2/contrib/auto-render.min.js"></script>
-   
+  
 </head>
 <body>
     <script>
@@ -20,6 +19,25 @@
                     { left: "$$", right: "$$", display: true },
                     { left: "$", right: "$", display: false }
                 ]
+            });
+
+            document.querySelectorAll('.show-more-btn').forEach(button => {
+                button.addEventListener('click', function(event) {
+                    event.stopPropagation(); // Prevents the click event from propagating to the parent <a> element
+                    event.preventDefault();  // Prevents the default action of the button, if it has a default action
+                    
+                    const card = this.closest('.card');
+                    const content = card.querySelector('.card-content');
+                    const isHidden = content.classList.contains('hidden-content');
+
+                    if (isHidden) {
+                        content.classList.remove('hidden-content');
+                        this.textContent = "hide";
+                    } else {
+                        content.classList.add('hidden-content');
+                        this.textContent = "show";
+                    }
+                });
             });
         });
     </script>
@@ -33,136 +51,75 @@
                     </div>
                     <div class="card-title">
                         <h2>RandomNormal</h2>
+                        <button class="show-more-btn">show</button>
                     </div>
-                    <div class="card-content">
+                    <div class="card-content hidden-content">
                         <p class="equation">
-<div style="text-align: left;">
-    The RandomNormal initializer in Keras is used to initialize the weights of layers in a neural network with values drawn from a normal (Gaussian) distribution. The formula for generating a random weight using the RandomNormal initializer is:
-</div>
-
-\[ W \sim \mathcal{N}(\text{mean}, \text{stddev}^2) \]
-
-<div style="text-align: left;">
- Where:
-<li> \( W \) represents the initialized weight.
-<li> \( \mathcal{N} \) denotes a normal distribution.
-<li> <b>mean</b> is the mean of the distribution.
-<li> <b>stddev</b> is the standard deviation of the distribution.
-</div>
-<br>
-<div style="text-align: left;">
- Parameters in Keras:
-<li> <b>mean</b>: The mean of the normal distribution (default is 0.0).
-<li> <b>stddev</b>: The standard deviation of the normal distribution (default is 0.05).
-<li> <b>seed</b>: An optional integer used to seed the random number generator for reproducibility.
-</div>
-
-                        </p>
-                    </div>
-                </a>
-
-                <a href="https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/03. Layer weight initializers/01. RandomUniform class/readme/chatgpt" class="card">
-                    <div class="card-image">
-                        <img src="https://engineer-ece.github.io/Keras-learn/Keras3/02. Layers API/03. Layer weight initializers/02. RandomUniform class/random_uniform_distribution.png" alt="Example Image">
-                    </div>
-                    <div class="card-title">
-                        <h2>RandomUniform</h2>
-                    </div>
-                    <div class="card-content">
-                        <p class="equation">
-<div style="text-align: left;">                            
-    The <b>RandomUniform</b> initializer in Keras generates weights by drawing samples from a uniform distribution within a specified range. The formula for generating a weight \( W \) using this initializer is:
-
-\[ W \sim \text{Uniform}(\text{minval}, \text{maxval}) \]
-
-
-Where: 
-<div>
-<li> \( W \) represents the initialized weight.
-<li> <b>Uniform</b> denotes the uniform distribution.
-<li> <b>minval</b> is the lower bound of the uniform distribution.
-<li> <b>maxval</b> is the upper bound of the uniform distribution.
-</div>
-<br><br> This means that each weight is randomly selected from a uniform distribution that lies between `minval` and `maxval`. By default, `minval` is \(-0.05\) and `maxval` is \(0.05\).
+                            <div class="container" style="text-align: left;">
+                                <h1>RandomNormal Initializer in Keras</h1>
                         
-</div>
+                                <div class="section">
+                                    <h2>Formula</h2>
+                                    <p>The <code>RandomNormal</code> initializer generates weights according to the normal distribution defined by the following parameters:</p>
+                                    <ul>
+                                        <li><b>Mean (μ)</b>: The mean of the normal distribution.</li>
+                                        <li><b>Standard Deviation (σ)</b>: The standard deviation of the normal distribution.</li>
+                                    </ul>
+                                    <p>The formula for the weights <code>W</code> initialized using <code>RandomNormal</code> is:</p>
+                                    <div class="equation">
+                                        \[
+                                        W \sim \mathcal{N} (\text{mean}, \text{stddev}^2)
+                                        \]
+                                    </div>
+                                    <p>where \( \mathcal{N} \)  denotes a normal distribution with:</p>
+                                    <ul>
+                                        <li><b>Mean (μ)</b>: The average value of the distribution.</li>
+                                        <li><b>Variance (σ²)</b>: The square of the standard deviation, representing the spread of the distribution.</li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="section">
+                                    <h2>Practical Considerations</h2>
+                                    <p>Here are some practical considerations for using the <code>RandomNormal</code> initializer:</p>
+                                    <ul>
+                                        <li><b>Initialization in Neural Networks</b>:
+                                            <ul>
+                                                <li><b>Why Use Normal Distribution?</b> Initializing weights with a normal distribution helps in breaking the symmetry and can improve convergence speed during training.</li>
+                                                <li><b>Impact on Training:</b> The choice of mean and standard deviation can affect the performance and convergence of the model. For example, weights that are too large or too small can lead to problems such as vanishing or exploding gradients.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Default Values</b>:
+                                            <ul>
+                                                <li><b>Mean:</b> Default is 0.0.</li>
+                                                <li><b>Standard Deviation:</b> Default is 0.05. This value is a reasonable starting point for most networks but can be adjusted based on the network architecture and specific requirements.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Choosing Parameters</b>:
+                                            <ul>
+                                                <li><b>Mean:</b> Typically set to 0.0. In some cases, it might be adjusted if you want to center the distribution around a different value.</li>
+                                                <li><b>Standard Deviation:</b> Should be chosen based on the scale of the weights needed. For deeper networks, you might need to adjust the standard deviation to ensure that weights are neither too small nor too large.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Examples of Use</b>:
+                                            <ul>
+                                                <li><b>Small Networks:</b> In shallow networks, the default values of mean and standard deviation often work well.</li>
+                                                <li><b>Deep Networks:</b> In deeper networks, you might need to experiment with different values for <code>stddev</code> or use other initializers like Xavier (Glorot) or He initialization, which are designed to address specific issues in deep networks.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Potential Issues</b>:
+                                            <ul>
+                                                <li><b>Vanishing and Exploding Gradients:</b> If the weights are initialized with very high or very low values, gradients might vanish or explode during backpropagation, making training difficult.</li>
+                                                <li><b>Symmetry Breaking:</b> Proper initialization helps in breaking symmetry, ensuring that neurons learn different features.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
 
-</p>
-                    </div>
-                </a>
-                <a href="https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/03. Layer weight initializers/03. TruncatedNormal class/readme/chatgpt" class="card">
-                    <div class="card-image">
-                        <img src="https://engineer-ece.github.io/Keras-learn/Keras3/02. Layers API/03. Layer weight initializers/03. TruncatedNormal class/truncated_normal_distribution.png" alt="Example Image">
-                    </div>
-                    <div class="card-title">
-                        <h2>TruncatedNormal</h2>
-                    </div>
-                    <div class="card-content" >
-                        <p class="equation">
-                            <div style="text-align: left;">
-                    
-
-    
-
-    <h3>Probability Density Function (PDF)</h3>
-    <p>
-        The PDF of the truncated normal distribution is given by:
-    </p>
-    <p>
-        \[
-        f(x) = \frac{\phi\left(\frac{x - \mu}{\sigma}\right)}{\Phi\left(\frac{b - \mu}{\sigma}\right) - \Phi\left(\frac{a - \mu}{\sigma}\right)}
-        \]
-    </p>
-    <p>
-        where:
-        <ul>
-            <li>
-                \(\phi\) is the PDF of the standard normal distribution:
-                \[
-                \phi(z) = \frac{1}{\sqrt{2 \pi}} e^{-\frac{z^2}{2}}
-                \]
-            </li>
-            <li>
-                \(\Phi\) is the CDF of the standard normal distribution:
-                \[
-                \Phi(z) = \int_{-\infty}^z \phi(t) \, dt
-                \]
-            </li>
-            <li>\(\mu\) is the mean of the original normal distribution.</li>
-            <li>\(\sigma\) is the standard deviation of the original normal distribution.</li>
-            <li>\(a\) and \(b\) are the lower and upper bounds for truncation.</li>
-        </ul>
-    </p>
-
-    <h3>Cumulative Distribution Function (CDF)</h3>
-    <p>
-        The CDF of the truncated normal distribution is:
-    </p>
-    <p>
-        \[
-        F(x) = \frac{\Phi\left(\frac{x - \mu}{\sigma}\right) - \Phi\left(\frac{a - \mu}{\sigma}\right)}{\Phi\left(\frac{b - \mu}{\sigma}\right) - \Phi\left(\frac{a - \mu}{\sigma}\right)}
-        \]
-    </p>
-    <p>
-        where:
-        <ul>
-            <li>\(\Phi\) is the CDF of the standard normal distribution.</li>
-        </ul>
-    </p>
-
-    
-    
-   
-</div>
+                            </div>
                         </p>
-
                     </div>
                 </a>
-
-
-
-                
-             
                 <!-- Add more cards as needed -->
             </div>
         </main>

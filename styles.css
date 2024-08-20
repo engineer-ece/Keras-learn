@@ -460,3 +460,79 @@ h1 {
 .tips {
     margin-top: 20px;
 }
+
+.hidden-content {
+    display: none;
+}
+.show-more-btn {
+    cursor: pointer;
+    color: #007bff;
+    text-decoration: none;
+    background-color: #f1f1f1;
+    border: 1px solid #007bff;
+    border-radius: 30px;
+    padding: 8px 12px;
+   
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    outline: none;
+}
+.show-more-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+.show-more-btn:focus {
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+.card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+.card-content {
+    padding: 10px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+.section {
+    margin-bottom: 20px;
+}
+h1, h2, h3 {
+    color: #333;
+}
+code {
+    background: #f4f4f4;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+.equation {
+    margin: 20px 0;
+}
