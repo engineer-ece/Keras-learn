@@ -305,7 +305,7 @@ where \(\text{ReLU6}(x)\) is the ReLU6 activation function. In other words, it a
                 <!-- Add more cards as needed -->
             </div>
             <div>
-                <h2>Summary Table</h2>
+                <h2>Supported and Not Supported Task </h2>
                 <table border="1" cellpadding="5" cellspacing="0">
                     <thead>
                         <tr>
@@ -410,310 +410,438 @@ where \(\text{ReLU6}(x)\) is the ReLU6 activation function. In other words, it a
 
 
             </div>
+           
+
             <div>
-                <h2>General Tips for Choosing Activation Functions:</h2>
-                <ul>
-                    <li><strong>Start Simple:</strong> For most tasks, start with ReLU for hidden layers and Softmax/Sigmoid for output layers. Experiment if performance is not satisfactory.</li>
-                    <li><strong>Consider the Task:</strong> Classification (Softmax, Sigmoid), Regression (Linear), Attention/NLP (GeLU, SiLU).</li>
-                    <li><strong>Avoid Common Pitfalls:</strong> Vanishing gradients with Sigmoid/Tanh in deep networks; dying neurons with ReLU.</li>
-                    <li><strong>Experiment and Monitor:</strong> Especially in complex models, try different activations and monitor performance metrics like loss and accuracy.</li>
-                </ul>
-            
-                <p>By carefully selecting the activation function based on the task and the architecture, you can significantly improve the performance and training stability of your neural network.</p>
-            
-            </div>
-            <div>
-                <h1>Choosing the Appropriate Activation Function</h1>
-    <p>Choosing the appropriate activation function depends on the nature of the task, the architecture of the model, and the specific requirements of the network. Here's a guide on how to select from the provided activation functions based on their support for different tasks and their general use cases:</p>
+            <h1>Activation Functions Overview and Tips</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Activation Function</th>
+                        <th>Supported Layers</th>
+                        <th>Use Case</th>
+                        <th>Tips</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ReLU</td>
+                        <td>Dense, Convolutional, RNNs (with care)</td>
+                        <td>Hidden layers for faster training and mitigating vanishing gradient issues</td>
+                        <td>Avoid in output layers; use variants for better performance in some cases.</td>
+                    </tr>
+                    <tr>
+                        <td>Sigmoid</td>
+                        <td>Dense, Output layers</td>
+                        <td>Binary classification output to get probabilities between 0 and 1</td>
+                        <td>Not suitable for hidden layers due to vanishing gradient problem.</td>
+                    </tr>
+                    <tr>
+                        <td>Softmax</td>
+                        <td>Output layers</td>
+                        <td>Multi-class classification to get class probabilities</td>
+                        <td>Best used in the output layer for classification tasks.</td>
+                    </tr>
+                    <tr>
+                        <td>Softplus</td>
+                        <td>Dense layers</td>
+                        <td>Smoother ReLU alternative; less common due to higher computational cost</td>
+                        <td>Use where a smoother activation is needed; can be slower than ReLU.</td>
+                    </tr>
+                    <tr>
+                        <td>Softsign</td>
+                        <td>Dense layers</td>
+                        <td>Alternative to Tanh; smooth non-linearity</td>
+                        <td>Less popular than Tanh; can be used in hidden layers where smoothness is desired.</td>
+                    </tr>
+                    <tr>
+                        <td>Tanh</td>
+                        <td>Dense, Convolutional layers</td>
+                        <td>Hidden layers for outputs between -1 and 1</td>
+                        <td>Better than sigmoid in hidden layers as it mitigates vanishing gradients.</td>
+                    </tr>
+                    <tr>
+                        <td>Selu</td>
+                        <td>Dense layers</td>
+                        <td>Self-normalizing networks; hidden layers</td>
+                        <td>Requires careful initialization; good for deep networks.</td>
+                    </tr>
+                    <tr>
+                        <td>Elu</td>
+                        <td>Dense layers</td>
+                        <td>Hidden layers to address dying ReLU problem</td>
+                        <td>Can help with learning; slow convergence compared to ReLU.</td>
+                    </tr>
+                    <tr>
+                        <td>Exponential</td>
+                        <td>Dense layers</td>
+                        <td>Applies exponential function to inputs</td>
+                        <td>Rarely used; can be too extreme for some cases.</td>
+                    </tr>
+                    <tr>
+                        <td>Leaky ReLU</td>
+                        <td>Dense, Convolutional layers</td>
+                        <td>Hidden layers; addresses dying ReLU issue</td>
+                        <td>Use where ReLU is too sparse; adds a small gradient for negative inputs.</td>
+                    </tr>
+                    <tr>
+                        <td>ReLU6</td>
+                        <td>Dense, Convolutional layers</td>
+                        <td>Hidden layers with upper bound limit of 6</td>
+                        <td>Helps prevent extreme values; use in constrained environments.</td>
+                    </tr>
+                    <tr>
+                        <td>SiLU (Swish)</td>
+                        <td>Dense, Convolutional layers</td>
+                        <td>Hidden layers; smooth non-linearity</td>
+                        <td>Often outperforms ReLU; use in deep networks for better results.</td>
+                    </tr>
+                    <tr>
+                        <td>Hard SiLU (Swish)</td>
+                        <td>Dense, Convolutional layers</td>
+                        <td>Approximates SiLU with a piecewise linear function</td>
+                        <td>Faster to compute than SiLU; can be used where computational efficiency is crucial.</td>
+                    </tr>
+                    <tr>
+                        <td>GeLU</td>
+                        <td>Dense, Convolutional layers</td>
+                        <td>Hidden layers; smooth and probabilistic non-linearity</td>
+                        <td>Often used in transformer models; computationally expensive.</td>
+                    </tr>
+                    <tr>
+                        <td>Hard Sigmoid</td>
+                        <td>Dense layers</td>
+                        <td>Output layers or specific hidden layers</td>
+                        <td>Approximation of sigmoid with faster computation; useful in resource-constrained settings.</td>
+                    </tr>
+                    <tr>
+                        <td>Linear</td>
+                        <td>Dense layers</td>
+                        <td>Output layers for regression tasks</td>
+                        <td>Use when no non-linearity is needed; often for predicting continuous values.</td>
+                    </tr>
+                    <tr>
+                        <td>Mish</td>
+                        <td>Dense, Convolutional layers</td>
+                        <td>Hidden layers for smooth and non-monotonic non-linearity</td>
+                        <td>Relatively new; use for potentially better performance in some cases.</td>
+                    </tr>
+                    <tr>
+                        <td>Log Softmax</td>
+                        <td>Output layers</td>
+                        <td>Multi-class classification with logarithmic probabilities</td>
+                        <td>Use when combined with negative log likelihood loss; more stable than Softmax.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h2>General Tips for Choosing Activation Functions:</h2>
+            <ul>
+                <li><strong>Start Simple:</strong> For most tasks, start with ReLU for hidden layers and Softmax/Sigmoid for output layers. Experiment if performance is not satisfactory.</li>
+                <li><strong>Consider the Task:</strong> Classification (Softmax, Sigmoid), Regression (Linear), Attention/NLP (GeLU, SiLU).</li>
+                <li><strong>Avoid Common Pitfalls:</strong> Vanishing gradients with Sigmoid/Tanh in deep networks; dying neurons with ReLU.</li>
+                <li><strong>Experiment and Monitor:</strong> Especially in complex models, try different activations and monitor performance metrics like loss and accuracy.</li>
+            </ul>
+        
+            <p>By carefully selecting the activation function based on the task and the architecture, you can significantly improve the performance and training stability of your neural network.</p>
+        
+        </div>
+        <div>
+            <h1>Choosing the Appropriate Activation Function</h1>
+            <p>Choosing the appropriate activation function depends on the nature of the task, the architecture of the model, and the specific requirements of the network. Here's a guide on how to select from the provided activation functions based on their support for different tasks and their general use cases:</p>
+        
+            <h2>1. ReLU (Rectified Linear Unit)</h2>
+            <ul>
+                <li><strong>Supported Tasks:</strong>
+                    <ul>
+                        <li>General-purpose activation, especially in hidden layers of deep neural networks.</li>
+                        <li>Computer vision tasks (CNNs).</li>
+                    </ul>
+                </li>
+                <li><strong>Not Supported:</strong>
+                    <ul>
+                        <li>Output layers for classification or regression tasks where non-linearity is needed.</li>
+                    </ul>
+                </li>
+                <li><strong>Notes:</strong> ReLU is prone to the "dying ReLU" problem, where neurons can become inactive.</li>
+            </ul>
+        
+            <h2>2. Sigmoid</h2>
+            <ul>
+                <li><strong>Supported Tasks:</strong>
+                    <ul>
+                        <li>Binary classification (output layer).</li>
+                        <li>Logistic regression.</li>
+                        <li>Probability outputs (0 to 1).</li>
+                    </ul>
+                </li>
+                <li><strong>Not Supported:</strong>
+                    <ul>
+                        <li>Hidden layers in deep networks (can cause vanishing gradient problem).</li>
+                        <li>Multi-class classification (use Softmax instead).</li>
+                    </ul>
+                </li>
+                <li><strong>Notes:</strong> Sigmoid squashes the input into the range (0, 1), which can lead to slow learning in deeper layers.</li>
+            </ul>
+        
+            <h2>3. Softmax</h2>
+            <ul>
+                <li><strong>Supported Tasks:</strong>
+                    <ul>
+                        <li>Multi-class classification (output layer).</li>
+                        <li>Probability distribution over classes.</li>
+                    </ul>
+                </li>
+                <li><strong>Not Supported:</strong>
+                    <ul>
+                        <li>Hidden layers or regression tasks.</li>
+                    </ul>
+                </li>
+                <li><strong>Notes:</strong> Softmax is specifically designed for multi-class classification problems.</li>
+            </ul>
+        
+            <h2>4. Softplus</h2>
+            <ul>
+                <li><strong>Supported Tasks:</strong>
+                    <ul>
+                        <li>Smooth approximation of ReLU.</li>
+                        <li>Tasks requiring positive outputs.</li>
+                    </ul>
+                </li>
+                <li><strong>Not Supported:</strong>
+                    <ul>
+                        <li>Situations where the zero-centered output is necessary.</li>
+                    </ul>
+                </li>
+                <li><strong>Notes:</strong> Softplus is a smoother alternative to ReLU but is less commonly used in practice.</li>
+            </ul>
+        
+            <h2>5. Softsign</h2>
+            <ul>
+                <li><strong>Supported Tasks:</strong>
+                    <ul>
+                        <li>Alternatives to Tanh.</li>
+                        <li>Tasks requiring bounded, smooth output.</li>
+                    </ul>
+                </li>
+                <li><strong>Not Supported:</strong>
+                    <ul>
+                        <li>Hidden layers in deep networks (can cause vanishing gradient problem).</li>
+                    </ul>
+                </li>
+                <li><strong>Notes:</strong> Similar to Tanh but with slower saturation, less common in practice.</li>
+            </ul>
+        
+            <h2>6. Tanh</h2>
+            <ul>
+                <li><strong>Supported Tasks:</strong>
+                    <ul>
+                        <li>Hidden layers where output should be centered around zero.</li>
+                        <li>RNNs.</li>
+                    </ul>
+                </li>
+                <li><strong>Not Supported:</strong>
+                    <ul>
+                        <li>Output layers where non-negative outputs are required.</li>
+                    </ul>
+                </li>
+                <li><strong>Notes:</strong> Tanh outputs between -1 and 1, which can help with convergence in some cases.</li>
+            </ul>
+        
+            <h2>7. SELU (Scaled Exponential Linear Unit)</h2>
+            <ul>
+                <li><strong>Supported Tasks:</strong>
+                    <ul>
+                        <li>Deep networks where self-normalization is beneficial.</li>
+                        <li>Fully connected layers.</li>
+                    </ul>
+                </li>
+                <li><strong>Not Supported:</strong>
+                    <ul>
+                        <li>Layers without normalization (SELU requires specific data scaling).</li>
+                    </ul>
+                </li>
+                <li><strong>Notes:</strong> SELU can lead to faster convergence but requires careful data preprocessing.</li>
+            </ul>
+        
+            <h2>8. ELU (Exponential Linear Unit)</h2>
+            <ul>
+                <li><strong>Supported Tasks:</strong>
+                    <ul>
+                        <li>Deep networks with faster convergence needs.</li>
+                        <li>Avoiding dying ReLU problem.</li>
+                    </ul>
+                </li>
+                <li><strong>Not Supported:</strong>
+                    <ul>
+                        <li>Cases where the computation cost is a concern (ELU is more expensive than ReLU).</li>
+                    </ul>
+                </li>
+                <li><strong>Notes:</strong> ELU outputs negative values, which helps in making the mean activations closer to zero.</li>
+            </ul>
+        
+            <h2>9. Exponential</h2>
+            <ul>
+                <li><strong>Supported Tasks:</strong>
+                    <ul>
+                        <li>Specific mathematical models where exponential scaling is required.</li>
+                    </ul>
+                </li>
+                <li><strong>Not Supported:</strong>
+                    <ul>
+                        <li>General deep learning tasks (rarely used in practice).</li>
+                    </ul>
+                </li>
+                <li><strong>Notes:</strong> The exponential function increases rapidly, which may not be suitable for most neural network tasks.</li>
+            </ul>
+        
+            <h2>10. Leaky ReLU</h2>
+            <ul>
+                <li><strong>Supported Tasks:</strong>
+                    <ul>
+                        <li>General-purpose activation with a small gradient for negative inputs.</li>
+                        <li>Avoiding dying ReLU problem.</li>
+                    </ul>
+                </li>
+                <li><strong>Not Supported:</strong>
+                    <ul>
+                        <li>Output layers where non-linearity is needed.</li>
+                    </ul>
+                </li>
+                <li><strong>Notes:</strong> Leaky ReLU is often used when ReLU might lead to dead neurons.</li>
+            </ul>
+        
+            <h2>11. ReLU6</h2>
+            <ul>
+                <li><strong>Supported Tasks:</strong>
+                    <ul>
+                        <li>Mobile and embedded device models (e.g., MobileNet).</li>
+                        <li>Constrained range for activation outputs.</li>
+                    </ul>
+                </li>
+                <li><strong>Not Supported:</strong>
+                    <ul>
+                        <li>Tasks requiring large output ranges.</li>
+                    </ul>
+                </li>
+                <li><strong>Notes:</strong> ReLU6 is a variant of ReLU that caps the output at 6, making it more suitable for quantized networks.</li>
+            </ul>
+        
+            <h2>12. SiLU (Swish)</h2>
+            <ul>
+                <li><strong>Supported Tasks:</strong>
+                    <ul>
+                        <li>Deep learning tasks where smooth, non-linear activation is needed.</li>
+                        <li>Attention mechanisms.</li>
+                    </ul>
+                </li>
+                <li><strong>Not Supported:</strong>
+                    <ul>
+                        <li>Tasks requiring non-negative outputs.</li>
+                    </ul>
+                </li>
+                <li><strong>Notes:</strong> SiLU has shown to perform better than ReLU in some cases, especially in deep networks.</li>
+            </ul>
+        
+            <h2>13. Hard SiLU (Hard Swish)</h2>
+            <ul>
+                <li><strong>Supported Tasks:</strong>
+                    <ul>
+                        <li>Mobile models (e.g., MobileNetV3).</li>
+                        <li>When computational efficiency is critical.</li>
+                    </ul>
+                </li>
+                <li><strong>Not Supported:</strong>
+                    <ul>
+                        <li>Scenarios where smooth activation is essential.</li>
+                    </ul>
+                </li>
+                <li><strong>Notes:</strong> A computationally cheaper approximation of SiLU, used in mobile networks.</li>
+            </ul>
+        
+            <h2>14. GeLU (Gaussian Error Linear Unit)</h2>
+            <ul>
+                <li><strong>Supported Tasks:</strong>
+                    <ul>
+                        <li>Transformers and other attention mechanisms.</li>
+                        <li>Deep networks requiring smooth activation functions.</li>
+                    </ul>
+                </li>
+                <li><strong>Not Supported:</strong>
+                    <ul>
+                        <li>Cases where computational simplicity is required.</li>
+                    </ul>
+                </li>
+                <li><strong>Notes:</strong> GeLU is popular in NLP models (e.g., BERT) due to its smooth activation properties.</li>
+            </ul>
+        
+            <h2>15. Hard Sigmoid</h2>
+            <ul>
+                <li><strong>Supported Tasks:</strong>
+                    <ul>
+                        <li>Mobile models with low computational resources.</li>
+                    </ul>
+                </li>
+                <li><strong>Not Supported:</strong>
+                    <ul>
+                        <li>Complex models where precise, smooth activation is needed.</li>
+                    </ul>
+                </li>
+                <li><strong>Notes:</strong> A piecewise linear approximation of Sigmoid, often used in resource-constrained environments.</li>
+            </ul>
+        
+            <h2>16. Linear</h2>
+            <ul>
+                <li><strong>Supported Tasks:</strong>
+                    <ul>
+                        <li>Regression (output layer).</li>
+                        <li>Linear models.</li>
+                    </ul>
+                </li>
+                <li><strong>Not Supported:</strong>
+                    <ul>
+                        <li>Hidden layers where non-linearity is required.</li>
+                    </ul>
+                </li>
+                <li><strong>Notes:</strong> Linear activation is the default (no activation), used mainly in output layers for regression tasks.</li>
+            </ul>
+        
+            <h2>17. Mish</h2>
+            <ul>
+                <li><strong>Supported Tasks:</strong>
+                    <ul>
+                        <li>Deep networks requiring smooth, non-linear activations.</li>
+                        <li>Computer vision, NLP.</li>
+                    </ul>
+                </li>
+                <li><strong>Not Supported:</strong>
+                    <ul>
+                        <li>Cases where simpler activations are sufficient.</li>
+                    </ul>
+                </li>
+                <li><strong>Notes:</strong> Mish is a newer activation function that has shown promise in outperforming ReLU in some tasks.</li>
+            </ul>
+        
+            <h2>18. Log Softmax</h2>
+            <ul>
+                <li><strong>Supported Tasks:</strong>
+                    <ul>
+                        <li>Multi-class classification with numerical stability requirements.</li>
+                        <li>Language modeling.</li>
+                    </ul>
+                </li>
+                <li><strong>Not Supported:</strong>
+                    <ul>
+                        <li>General hidden layers.</li>
+                    </ul>
+                </li>
+                <li><strong>Notes:</strong> Log Softmax is often used in combination with the negative log-likelihood loss for better numerical stability in classification tasks.</li>
+            </ul>
+        
+        </div>
 
-    <h2>1. ReLU (Rectified Linear Unit)</h2>
-    <ul>
-        <li><strong>Supported Tasks:</strong>
-            <ul>
-                <li>General-purpose activation, especially in hidden layers of deep neural networks.</li>
-                <li>Computer vision tasks (CNNs).</li>
-            </ul>
-        </li>
-        <li><strong>Not Supported:</strong>
-            <ul>
-                <li>Output layers for classification or regression tasks where non-linearity is needed.</li>
-            </ul>
-        </li>
-        <li><strong>Notes:</strong> ReLU is prone to the "dying ReLU" problem, where neurons can become inactive.</li>
-    </ul>
-
-    <h2>2. Sigmoid</h2>
-    <ul>
-        <li><strong>Supported Tasks:</strong>
-            <ul>
-                <li>Binary classification (output layer).</li>
-                <li>Logistic regression.</li>
-                <li>Probability outputs (0 to 1).</li>
-            </ul>
-        </li>
-        <li><strong>Not Supported:</strong>
-            <ul>
-                <li>Hidden layers in deep networks (can cause vanishing gradient problem).</li>
-                <li>Multi-class classification (use Softmax instead).</li>
-            </ul>
-        </li>
-        <li><strong>Notes:</strong> Sigmoid squashes the input into the range (0, 1), which can lead to slow learning in deeper layers.</li>
-    </ul>
-
-    <h2>3. Softmax</h2>
-    <ul>
-        <li><strong>Supported Tasks:</strong>
-            <ul>
-                <li>Multi-class classification (output layer).</li>
-                <li>Probability distribution over classes.</li>
-            </ul>
-        </li>
-        <li><strong>Not Supported:</strong>
-            <ul>
-                <li>Hidden layers or regression tasks.</li>
-            </ul>
-        </li>
-        <li><strong>Notes:</strong> Softmax is specifically designed for multi-class classification problems.</li>
-    </ul>
-
-    <h2>4. Softplus</h2>
-    <ul>
-        <li><strong>Supported Tasks:</strong>
-            <ul>
-                <li>Smooth approximation of ReLU.</li>
-                <li>Tasks requiring positive outputs.</li>
-            </ul>
-        </li>
-        <li><strong>Not Supported:</strong>
-            <ul>
-                <li>Situations where the zero-centered output is necessary.</li>
-            </ul>
-        </li>
-        <li><strong>Notes:</strong> Softplus is a smoother alternative to ReLU but is less commonly used in practice.</li>
-    </ul>
-
-    <h2>5. Softsign</h2>
-    <ul>
-        <li><strong>Supported Tasks:</strong>
-            <ul>
-                <li>Alternatives to Tanh.</li>
-                <li>Tasks requiring bounded, smooth output.</li>
-            </ul>
-        </li>
-        <li><strong>Not Supported:</strong>
-            <ul>
-                <li>Hidden layers in deep networks (can cause vanishing gradient problem).</li>
-            </ul>
-        </li>
-        <li><strong>Notes:</strong> Similar to Tanh but with slower saturation, less common in practice.</li>
-    </ul>
-
-    <h2>6. Tanh</h2>
-    <ul>
-        <li><strong>Supported Tasks:</strong>
-            <ul>
-                <li>Hidden layers where output should be centered around zero.</li>
-                <li>RNNs.</li>
-            </ul>
-        </li>
-        <li><strong>Not Supported:</strong>
-            <ul>
-                <li>Output layers where non-negative outputs are required.</li>
-            </ul>
-        </li>
-        <li><strong>Notes:</strong> Tanh outputs between -1 and 1, which can help with convergence in some cases.</li>
-    </ul>
-
-    <h2>7. SELU (Scaled Exponential Linear Unit)</h2>
-    <ul>
-        <li><strong>Supported Tasks:</strong>
-            <ul>
-                <li>Deep networks where self-normalization is beneficial.</li>
-                <li>Fully connected layers.</li>
-            </ul>
-        </li>
-        <li><strong>Not Supported:</strong>
-            <ul>
-                <li>Layers without normalization (SELU requires specific data scaling).</li>
-            </ul>
-        </li>
-        <li><strong>Notes:</strong> SELU can lead to faster convergence but requires careful data preprocessing.</li>
-    </ul>
-
-    <h2>8. ELU (Exponential Linear Unit)</h2>
-    <ul>
-        <li><strong>Supported Tasks:</strong>
-            <ul>
-                <li>Deep networks with faster convergence needs.</li>
-                <li>Avoiding dying ReLU problem.</li>
-            </ul>
-        </li>
-        <li><strong>Not Supported:</strong>
-            <ul>
-                <li>Cases where the computation cost is a concern (ELU is more expensive than ReLU).</li>
-            </ul>
-        </li>
-        <li><strong>Notes:</strong> ELU outputs negative values, which helps in making the mean activations closer to zero.</li>
-    </ul>
-
-    <h2>9. Exponential</h2>
-    <ul>
-        <li><strong>Supported Tasks:</strong>
-            <ul>
-                <li>Specific mathematical models where exponential scaling is required.</li>
-            </ul>
-        </li>
-        <li><strong>Not Supported:</strong>
-            <ul>
-                <li>General deep learning tasks (rarely used in practice).</li>
-            </ul>
-        </li>
-        <li><strong>Notes:</strong> The exponential function increases rapidly, which may not be suitable for most neural network tasks.</li>
-    </ul>
-
-    <h2>10. Leaky ReLU</h2>
-    <ul>
-        <li><strong>Supported Tasks:</strong>
-            <ul>
-                <li>General-purpose activation with a small gradient for negative inputs.</li>
-                <li>Avoiding dying ReLU problem.</li>
-            </ul>
-        </li>
-        <li><strong>Not Supported:</strong>
-            <ul>
-                <li>Output layers where non-linearity is needed.</li>
-            </ul>
-        </li>
-        <li><strong>Notes:</strong> Leaky ReLU is often used when ReLU might lead to dead neurons.</li>
-    </ul>
-
-    <h2>11. ReLU6</h2>
-    <ul>
-        <li><strong>Supported Tasks:</strong>
-            <ul>
-                <li>Mobile and embedded device models (e.g., MobileNet).</li>
-                <li>Constrained range for activation outputs.</li>
-            </ul>
-        </li>
-        <li><strong>Not Supported:</strong>
-            <ul>
-                <li>Tasks requiring large output ranges.</li>
-            </ul>
-        </li>
-        <li><strong>Notes:</strong> ReLU6 is a variant of ReLU that caps the output at 6, making it more suitable for quantized networks.</li>
-    </ul>
-
-    <h2>12. SiLU (Swish)</h2>
-    <ul>
-        <li><strong>Supported Tasks:</strong>
-            <ul>
-                <li>Deep learning tasks where smooth, non-linear activation is needed.</li>
-                <li>Attention mechanisms.</li>
-            </ul>
-        </li>
-        <li><strong>Not Supported:</strong>
-            <ul>
-                <li>Tasks requiring non-negative outputs.</li>
-            </ul>
-        </li>
-        <li><strong>Notes:</strong> SiLU has shown to perform better than ReLU in some cases, especially in deep networks.</li>
-    </ul>
-
-    <h2>13. Hard SiLU (Hard Swish)</h2>
-    <ul>
-        <li><strong>Supported Tasks:</strong>
-            <ul>
-                <li>Mobile models (e.g., MobileNetV3).</li>
-                <li>When computational efficiency is critical.</li>
-            </ul>
-        </li>
-        <li><strong>Not Supported:</strong>
-            <ul>
-                <li>Scenarios where smooth activation is essential.</li>
-            </ul>
-        </li>
-        <li><strong>Notes:</strong> A computationally cheaper approximation of SiLU, used in mobile networks.</li>
-    </ul>
-
-    <h2>14. GeLU (Gaussian Error Linear Unit)</h2>
-    <ul>
-        <li><strong>Supported Tasks:</strong>
-            <ul>
-                <li>Transformers and other attention mechanisms.</li>
-                <li>Deep networks requiring smooth activation functions.</li>
-            </ul>
-        </li>
-        <li><strong>Not Supported:</strong>
-            <ul>
-                <li>Cases where computational simplicity is required.</li>
-            </ul>
-        </li>
-        <li><strong>Notes:</strong> GeLU is popular in NLP models (e.g., BERT) due to its smooth activation properties.</li>
-    </ul>
-
-    <h2>15. Hard Sigmoid</h2>
-    <ul>
-        <li><strong>Supported Tasks:</strong>
-            <ul>
-                <li>Mobile models with low computational resources.</li>
-            </ul>
-        </li>
-        <li><strong>Not Supported:</strong>
-            <ul>
-                <li>Complex models where precise, smooth activation is needed.</li>
-            </ul>
-        </li>
-        <li><strong>Notes:</strong> A piecewise linear approximation of Sigmoid, often used in resource-constrained environments.</li>
-    </ul>
-
-    <h2>16. Linear</h2>
-    <ul>
-        <li><strong>Supported Tasks:</strong>
-            <ul>
-                <li>Regression (output layer).</li>
-                <li>Linear models.</li>
-            </ul>
-        </li>
-        <li><strong>Not Supported:</strong>
-            <ul>
-                <li>Hidden layers where non-linearity is required.</li>
-            </ul>
-        </li>
-        <li><strong>Notes:</strong> Linear activation is the default (no activation), used mainly in output layers for regression tasks.</li>
-    </ul>
-
-    <h2>17. Mish</h2>
-    <ul>
-        <li><strong>Supported Tasks:</strong>
-            <ul>
-                <li>Deep networks requiring smooth, non-linear activations.</li>
-                <li>Computer vision, NLP.</li>
-            </ul>
-        </li>
-        <li><strong>Not Supported:</strong>
-            <ul>
-                <li>Cases where simpler activations are sufficient.</li>
-            </ul>
-        </li>
-        <li><strong>Notes:</strong> Mish is a newer activation function that has shown promise in outperforming ReLU in some tasks.</li>
-    </ul>
-
-    <h2>18. Log Softmax</h2>
-    <ul>
-        <li><strong>Supported Tasks:</strong>
-            <ul>
-                <li>Multi-class classification with numerical stability requirements.</li>
-                <li>Language modeling.</li>
-            </ul>
-        </li>
-        <li><strong>Not Supported:</strong>
-            <ul>
-                <li>General hidden layers.</li>
-            </ul>
-        </li>
-        <li><strong>Notes:</strong> Log Softmax is often used in combination with the negative log-likelihood loss for better numerical stability in classification tasks.</li>
-    </ul>
-            </div>
+           
         </main>
     </div>
 </body>

@@ -435,3 +435,28 @@ body {
         width: calc(100% - 32px);
     }
 }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.tips {
+    margin-top: 20px;
+}
