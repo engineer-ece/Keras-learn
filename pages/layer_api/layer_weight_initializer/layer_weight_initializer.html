@@ -120,6 +120,73 @@
                         </p>
                     </div>
                 </a>
+                <a href="https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/03. Layer weight initializers/02. RandomUniform class/readme/chatgpt" class="card">
+                    <div class="card-image">
+                        <img src="https://engineer-ece.github.io/Keras-learn/Keras3/02. Layers API/03. Layer weight initializers/02. RandomUniform class/random_uniform_distribution.png" alt="Example Image">
+                    </div>
+                    <div class="card-title">
+                        <h2>RandomUniform</h2>
+                        <button class="show-more-btn">show</button>
+                    </div>
+                    <div class="card-content hidden-content">
+                        <p class="equation">
+                            <div class="container" style="text-align: left;">
+                                <h1>RandomUniform Initializer in Keras</h1>
+                        
+                                <div class="section">
+                                    <h2>Formula</h2>
+                                    <p>The <code>RandomUniform</code> initializer generates weights by drawing samples from a uniform distribution within a specified range. The formula for the weights <code>W</code> initialized using <code>RandomUniform</code> is:</p>
+                                    <div class="equation">
+                                        \[
+                                        W \sim \text{Uniform}(\text{minval}, \text{maxval})
+                                        \]
+                                    </div>
+                                    <p>where \text{Uniform} denotes a uniform distribution with:</p>
+                                    <ul>
+                                        <li><b>minval</b>: The lower bound of the uniform distribution.</li>
+                                        <li><b>maxval</b>: The upper bound of the uniform distribution.</li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="section">
+                                    <h2>Practical Considerations</h2>
+                                    <p>Here are some practical considerations for using the <code>RandomUniform</code> initializer:</p>
+                                    <ul>
+                                        <li><b>Initialization in Neural Networks</b>:
+                                            <ul>
+                                                <li><b>Why Use Uniform Distribution?</b> Initializing weights with a uniform distribution helps in breaking symmetry and ensures that weights are distributed within a specific range.</li>
+                                                <li><b>Impact on Training:</b> The choice of minval and maxval can affect the performance and convergence of the model. Weights that are too large or too small can lead to slow convergence or instability.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Default Values</b>:
+                                            <ul>
+                                                <li><b>minval:</b> Default is -0.05.</li>
+                                                <li><b>maxval:</b> Default is 0.05. These default values are a good starting point but can be adjusted based on the network architecture and specific requirements.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Choosing Parameters</b>:
+                                            <ul>
+                                                <li><b>minval and maxval:</b> Should be chosen based on the scale of the weights needed. For different network architectures or activation functions, you might need to adjust these values to ensure that weights are neither too small nor too large.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Examples of Use</b>:
+                                            <ul>
+                                                <li><b>Small Networks:</b> In shallow networks, the default values of minval and maxval often work well.</li>
+                                                <li><b>Deep Networks:</b> In deeper networks, you might need to experiment with different values for minval and maxval or consider other initializers like Xavier (Glorot) or He initialization to address specific issues in deep networks.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Potential Issues</b>:
+                                            <ul>
+                                                <li><b>Vanishing and Exploding Gradients:</b> If the weights are initialized with very high or very low values, gradients might vanish or explode during backpropagation, making training difficult.</li>
+                                                <li><b>Symmetry Breaking:</b> Proper initialization helps in breaking symmetry, ensuring that neurons learn different features.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                </div>
+                        </p>
+                    </div>
+                </a>
                 <!-- Add more cards as needed -->
             </div>
         </main>
