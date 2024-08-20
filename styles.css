@@ -536,3 +536,49 @@ code {
 .equation {
     margin: 20px 0;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    text-align: left;
+}
+h1, h2 {
+    color: #333;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin-bottom: 10px;
+}
+strong {
+    color: #000;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #f4f4f4;
+}
+.supported {
+    background-color: #d4edda;
+}
+.not-supported {
+    background-color: #f8d7da;
+}
