@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layer Activations</title>
+    <title>Layer Weight Initializers</title>
     <link rel="stylesheet" href="../../../styles.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
@@ -36,6 +36,27 @@
                     </div>
                     <div class="card-content">
                         <p class="equation">
+<div style="text-align: left;">
+    The RandomNormal initializer in Keras is used to initialize the weights of layers in a neural network with values drawn from a normal (Gaussian) distribution. The formula for generating a random weight using the RandomNormal initializer is:
+</div>
+
+\[ W \sim \mathcal{N}(\text{mean}, \text{stddev}^2) \]
+
+<div style="text-align: left;">
+ Where:
+<li> \( W \) represents the initialized weight.
+<li> \( \mathcal{N} \) denotes a normal distribution.
+<li> <b>mean</b> is the mean of the distribution.
+<li> <b>stddev</b> is the standard deviation of the distribution.
+</div>
+<br>
+<div style="text-align: left;">
+ Parameters in Keras:
+<li> <b>mean</b>: The mean of the normal distribution (default is 0.0).
+<li> <b>stddev</b>: The standard deviation of the normal distribution (default is 0.05).
+<li> <b>seed</b>: An optional integer used to seed the random number generator for reproducibility.
+</div>
+
                         </p>
                     </div>
                 </a>
