@@ -90,6 +90,78 @@ Where:
 </p>
                     </div>
                 </a>
+                <a href="https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/03. Layer weight initializers/03. TruncatedNormal class/readme/chatgpt" class="card">
+                    <div class="card-image">
+                        <img src="https://engineer-ece.github.io/Keras-learn/Keras3/02. Layers API/03. Layer weight initializers/03. TruncatedNormal class/truncated_normal_distribution.png" alt="Example Image">
+                    </div>
+                    <div class="card-title">
+                        <h2>TruncatedNormal</h2>
+                    </div>
+                    <div class="card-content" >
+                        <p class="equation">
+                            <div style="text-align: left;">
+                    
+
+    
+
+    <h3>Probability Density Function (PDF)</h3>
+    <p>
+        The PDF of the truncated normal distribution is given by:
+    </p>
+    <p>
+        \[
+        f(x) = \frac{\phi\left(\frac{x - \mu}{\sigma}\right)}{\Phi\left(\frac{b - \mu}{\sigma}\right) - \Phi\left(\frac{a - \mu}{\sigma}\right)}
+        \]
+    </p>
+    <p>
+        where:
+        <ul>
+            <li>
+                \(\phi\) is the PDF of the standard normal distribution:
+                \[
+                \phi(z) = \frac{1}{\sqrt{2 \pi}} e^{-\frac{z^2}{2}}
+                \]
+            </li>
+            <li>
+                \(\Phi\) is the CDF of the standard normal distribution:
+                \[
+                \Phi(z) = \int_{-\infty}^z \phi(t) \, dt
+                \]
+            </li>
+            <li>\(\mu\) is the mean of the original normal distribution.</li>
+            <li>\(\sigma\) is the standard deviation of the original normal distribution.</li>
+            <li>\(a\) and \(b\) are the lower and upper bounds for truncation.</li>
+        </ul>
+    </p>
+
+    <h3>Cumulative Distribution Function (CDF)</h3>
+    <p>
+        The CDF of the truncated normal distribution is:
+    </p>
+    <p>
+        \[
+        F(x) = \frac{\Phi\left(\frac{x - \mu}{\sigma}\right) - \Phi\left(\frac{a - \mu}{\sigma}\right)}{\Phi\left(\frac{b - \mu}{\sigma}\right) - \Phi\left(\frac{a - \mu}{\sigma}\right)}
+        \]
+    </p>
+    <p>
+        where:
+        <ul>
+            <li>\(\Phi\) is the CDF of the standard normal distribution.</li>
+        </ul>
+    </p>
+
+    
+    
+   
+</div>
+                        </p>
+
+                    </div>
+                </a>
+
+
+
+                
              
                 <!-- Add more cards as needed -->
             </div>

@@ -304,6 +304,168 @@ where \(\text{ReLU6}(x)\) is the ReLU6 activation function. In other words, it a
                 </a>
                 <!-- Add more cards as needed -->
             </div>
+
+            <div>
+                <h1>Activation Functions Overview and Tips</h1>
+
+<table>
+    <caption>Activation Functions Overview and Tips</caption>
+    <thead>
+        <tr>
+            <th>Activation Function</th>
+            <th>Formula</th>
+            <th>Range</th>
+            <th>Use Case</th>
+            <th>Tips</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>ReLU</td>
+            <td><code>ReLU(x) = max(0, x)</code></td>
+            <td>[0, ∞)</td>
+            <td>Hidden layers</td>
+            <td>Efficient for deep networks; can suffer from dying ReLU problem.</td>
+        </tr>
+        <tr>
+            <td>Sigmoid</td>
+            <td><code>σ(x) = 1 / (1 + e^(-x))</code></td>
+            <td>(0, 1)</td>
+            <td>Output layer for binary classification</td>
+            <td>Can cause vanishing gradients; less used in hidden layers.</td>
+        </tr>
+        <tr>
+            <td>Softmax</td>
+            <td><code>Softmax(x_i) = e^(x_i) / Σ e^(x_j)</code></td>
+            <td>(0, 1)</td>
+            <td>Output layer for multi-class classification</td>
+            <td>Converts logits to probabilities; ensure use with categorical cross-entropy.</td>
+        </tr>
+        <tr>
+            <td>Softplus</td>
+            <td><code>Softplus(x) = ln(1 + e^x)</code></td>
+            <td>(0, ∞)</td>
+            <td>Hidden layers</td>
+            <td>Smooth approximation of ReLU; avoids dying ReLU problem.</td>
+        </tr>
+        <tr>
+            <td>Softsign</td>
+            <td><code>Softsign(x) = x / (1 + |x|)</code></td>
+            <td>(-1, 1)</td>
+            <td>Hidden layers</td>
+            <td>Smooth non-linearity; not as common as ReLU or tanh.</td>
+        </tr>
+        <tr>
+            <td>Tanh</td>
+            <td><code>Tanh(x) = (e^x - e^(-x)) / (e^x + e^(-x))</code></td>
+            <td>(-1, 1)</td>
+            <td>Hidden layers</td>
+            <td>Zero-centered; often used when inputs and outputs are centered around zero.</td>
+        </tr>
+        <tr>
+            <td>SELU</td>
+            <td><code>SELU(x) = λ * (x if x > 0 else α * (e^x - 1))</code></td>
+            <td>(-∞, ∞)</td>
+            <td>Hidden layers</td>
+            <td>Self-normalizing; suitable for deep networks with proper initialization.</td>
+        </tr>
+        <tr>
+            <td>ELU</td>
+            <td><code>ELU(x) = x if x > 0 else α * (e^x - 1)</code></td>
+            <td>(-α, ∞)</td>
+            <td>Hidden layers</td>
+            <td>Smooth non-linearity; less prone to dying units compared to ReLU.</td>
+        </tr>
+        <tr>
+            <td>Exponential</td>
+            <td><code>f(x) = e^x</code></td>
+            <td>(0, ∞)</td>
+            <td>Output layer (e.g., for some generative models)</td>
+            <td>Can lead to exploding gradients; use with caution.</td>
+        </tr>
+        <tr>
+            <td>Leaky ReLU</td>
+            <td><code>LeakyReLU(x) = x if x > 0 else α * x</code></td>
+            <td>(-∞, ∞)</td>
+            <td>Hidden layers</td>
+            <td>Helps prevent dying ReLU problem by allowing small gradient when x ≤ 0.</td>
+        </tr>
+        <tr>
+            <td>ReLU6</td>
+            <td><code>ReLU6(x) = min(max(0, x), 6)</code></td>
+            <td>[0, 6]</td>
+            <td>Hidden layers</td>
+            <td>Clip the output to a maximum value; used in some mobile networks.</td>
+        </tr>
+        <tr>
+            <td>SiLU (Swish)</td>
+            <td><code>SiLU(x) = x * σ(x)</code> where <code>σ(x) = 1 / (1 + e^(-x))</code></td>
+            <td>(-∞, ∞)</td>
+            <td>Hidden layers</td>
+            <td>Smooth and non-monotonic; can outperform ReLU in some tasks.</td>
+        </tr>
+        <tr>
+            <td>Hard SiLU (Swish)</td>
+            <td><code>Hard SiLU(x) = x * ReLU6(x + 3) / 6</code></td>
+            <td>(-∞, ∞)</td>
+            <td>Hidden layers</td>
+            <td>Approximation of SiLU; computationally efficient.</td>
+        </tr>
+        <tr>
+            <td>GeLU</td>
+            <td><code>GELU(x) = x * Φ(x)</code> where <code>Φ(x) = 0.5 * [1 + erf(x / sqrt(2))]</code></td>
+            <td>(-∞, ∞)</td>
+            <td>Hidden layers</td>
+            <td>Combines properties of ReLU and dropout; good for transformers.</td>
+        </tr>
+        <tr>
+            <td>Hard Sigmoid</td>
+            <td><code>HardSigmoid(x) = clip((x + 1) / 2, 0, 1)</code></td>
+            <td>(0, 1)</td>
+            <td>Output layer for binary classification</td>
+            <td>Efficient approximation of sigmoid; avoids vanishing gradients.</td>
+        </tr>
+        <tr>
+            <td>Linear</td>
+            <td><code>Linear(x) = x</code></td>
+            <td>(-∞, ∞)</td>
+            <td>Output layer for regression</td>
+            <td>No activation; used when direct output is needed.</td>
+        </tr>
+        <tr>
+            <td>Mish</td>
+            <td><code>Mish(x) = x * tanh(ln(1 + e^x))</code></td>
+            <td>(-∞, ∞)</td>
+            <td>Hidden layers</td>
+            <td>Smooth and non-monotonic; often performs well in practice.</td>
+        </tr>
+        <tr>
+            <td>Log Softmax</td>
+            <td><code>LogSoftmax(x_i) = ln(e^(x_i) / Σ e^(x_j))</code></td>
+            <td>(-∞, 0]</td>
+            <td>Output layer for multi-class classification with log likelihood</td>
+            <td>Numerical stability for computing log probabilities; use with negative log likelihood loss.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Tips for Choosing Activation Functions</h2>
+<ul>
+    <li><strong>Hidden Layers:</strong> Use non-linear functions like ReLU, Leaky ReLU, ELU, or SiLU to introduce non-linearity and learn complex patterns. Avoid sigmoid or softmax here due to vanishing gradients.</li>
+    <li><strong>Output Layers:</strong>
+        <ul>
+            <li><strong>Binary Classification:</strong> Use sigmoid or hard sigmoid.</li>
+            <li><strong>Multi-class Classification:</strong> Use softmax or log softmax, depending on the loss function (cross-entropy or negative log likelihood).</li>
+        </ul>
+    </li>
+    <li><strong>Vanishing Gradients:</strong> Functions like ReLU, Leaky ReLU, and ELU are preferred over sigmoid and tanh as they
+
+
+
+
+
+
+            </div>
             <div>
                 <h2>Supported and Not Supported Task </h2>
                 <table border="1" cellpadding="5" cellspacing="0">
