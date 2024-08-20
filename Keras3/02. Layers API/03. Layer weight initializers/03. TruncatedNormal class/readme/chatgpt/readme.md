@@ -48,7 +48,8 @@
 
 ### **9. Image: Graph of Truncated Normal Distribution**
 
-![Truncated Normal Distribution](https://upload.wikimedia.org/wikipedia/commons/8/8c/Truncated_Normal_Distribution.png)
+![Truncated Normal Distribution](https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/03.%20Layer%20weight%20initializers/03.%20TruncatedNormal%20class/truncated_normal_distribution.png)
+
 
 ### **10. Table: Overview of `TruncatedNormal` Initialization**
 

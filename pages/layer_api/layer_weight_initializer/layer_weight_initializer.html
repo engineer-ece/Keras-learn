@@ -120,6 +120,7 @@
                         </p>
                     </div>
                 </a>
+                
                 <a href="https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/03. Layer weight initializers/02. RandomUniform class/readme/chatgpt" class="card">
                     <div class="card-image">
                         <img src="https://engineer-ece.github.io/Keras-learn/Keras3/02. Layers API/03. Layer weight initializers/02. RandomUniform class/random_uniform_distribution.png" alt="Example Image">
@@ -187,6 +188,97 @@
                         </p>
                     </div>
                 </a>
+
+
+                <a href="https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/03. Layer weight initializers/03. TruncatedNormal class/readme/chatgpt" class="card">
+                    <div class="card-image">
+                        <img src="https://engineer-ece.github.io/Keras-learn/Keras3/02. Layers API/03. Layer weight initializers/03. TruncatedNormal class/truncated_normal_distribution.png" alt="Example Image">
+                    </div>
+                    <div class="card-title">
+                        <h2>TruncatedNormal</h2>
+                        <button class="show-more-btn">show</button>
+                    </div>
+                    <div class="card-content hidden-content">
+                        <p class="equation">
+                            <div class="container" style="text-align: left;">
+                                <h1>TruncatedNormal Initializer in Keras</h1>
+                        
+                                <div class="section">
+                                    <h2>Formula</h2>
+                                    <p>The <code>TruncatedNormal</code> initializer generates weights by drawing samples from a truncated normal distribution. The truncated normal distribution is a normal distribution that has been truncated to lie within a specified range. The formula for the weights <code>W</code> initialized using <code>TruncatedNormal</code> is:</p>
+                                    <div class="equation">
+                                        <h3>Probability Density Function (PDF)</h3>
+                                        \[
+                                        f(x) = \frac{\phi\left(\frac{x - \mu}{\sigma}\right)}{\Phi\left(\frac{b - \mu}{\sigma}\right) - \Phi\left(\frac{a - \mu}{\sigma}\right)}
+                                        \]
+                                        <h3>Cumulative Distribution Function (CDF)</h3>
+                                        \[
+                                        F(x) = \frac{\Phi\left(\frac{x - \mu}{\sigma}\right) - \Phi\left(\frac{a - \mu}{\sigma}\right)}{\Phi\left(\frac{b - \mu}{\sigma}\right) - \Phi\left(\frac{a - \mu}{\sigma}\right)}
+                                        \]
+                                    </div>
+                                    <p>where:</p>
+                                    <ul>
+                                        <li> \( \phi \) is the PDF of the standard normal distribution:
+                                            \[
+                                            \phi(z) = \frac{1}{\sqrt{2 \pi}} e^{-\frac{z^2}{2}}
+                                            \]
+                                        </li>
+                                        <li>\( \Phi \) is the CDF of the standard normal distribution:
+                                            \[
+                                            \Phi(z) = \int_{-\infty}^z \phi(t) \, dt
+                                            \]
+                                        </li>
+                                        <li>\(  \mu\) is the mean of the original normal distribution.</li>
+                                        <li>\(   \sigma\) is the standard deviation of the original normal distribution.</li>
+                                        <li>\(  a \)and \( b\) are the lower and upper bounds for truncation.</li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="section">
+                                    <h2>Practical Considerations</h2>
+                                    <p>Here are some practical considerations for using the <code>TruncatedNormal</code> initializer:</p>
+                                    <ul>
+                                        <li><b>Initialization in Neural Networks</b>:
+                                            <ul>
+                                                <li><b>Why Use Truncated Normal Distribution?</b> The truncated normal distribution helps in avoiding extreme values by truncating the tails of the normal distribution, which can lead to better training stability.</li>
+                                                <li><b>Impact on Training:</b> The truncation ensures that the initialized weights are within a reasonable range, which can help in preventing issues such as exploding or vanishing gradients.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Default Values</b>:
+                                            <ul>
+                                                <li><b>mean:</b> Default is 0.0.</li>
+                                                <li><b>stddev:</b> Default is 0.05.</li>
+                                                <li><b>minval:</b> Default is -2.0 * <code>stddev</code>.</li>
+                                                <li><b>maxval:</b> Default is 2.0 * <code>stddev</code>.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Choosing Parameters</b>:
+                                            <ul>
+                                                <li><b>mean:</b> Typically set to 0.0. In some cases, it might be adjusted based on the specific requirements of the network.</li>
+                                                <li><b>stddev:</b> Should be chosen based on the scale of the weights needed. For different network architectures, you might need to adjust the standard deviation to ensure that weights are within a suitable range.</li>
+                                                <li><b>minval and maxval:</b> The default values are often reasonable, but you might need to adjust them depending on the network's depth and architecture.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Examples of Use</b>:
+                                            <ul>
+                                                <li><b>Small Networks:</b> In shallow networks, the default values for mean and stddev often work well.</li>
+                                                <li><b>Deep Networks:</b> In deeper networks, you might need to experiment with different values for mean, stddev, minval, and maxval to ensure proper weight initialization.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Potential Issues</b>:
+                                            <ul>
+                                                <li><b>Vanishing and Exploding Gradients:</b> Proper initialization helps in avoiding issues related to vanishing and exploding gradients by keeping weights within a reasonable range.</li>
+                                                <li><b>Symmetry Breaking:</b> The truncated normal initialization helps in breaking symmetry and ensuring that neurons learn different features.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                        </p>
+                    </div>
+                </a>
+
                 <!-- Add more cards as needed -->
             </div>
         </main>
