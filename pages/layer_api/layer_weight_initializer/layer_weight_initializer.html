@@ -290,6 +290,56 @@
                     </div>
                     <div class="card-content hidden-content">
                         <p class="equation">
+                            <div class="container" style="text-align: left;">
+                                <h1>Zeros Initializer in Keras</h1>
+                        
+                                <div class="section">
+                                    <h2>Formula</h2>
+                                    <p>The <code>Zeros</code> initializer sets all weights to zero. It does not use any distribution or randomness. This initializer is defined by the following formula:</p>
+                                    <div class="equation">
+                                        \[
+                                        W = 0
+                                        \]
+                                        where \( W \) represents the initialized weight, and it is set to zero.
+                                    </div>
+                                </div>
+                        
+                                <div class="section">
+                                    <h2>Practical Considerations</h2>
+                                    <p>Here are some practical considerations for using the <code>Zeros</code> initializer:</p>
+                                    <ul>
+                                        <li><b>Initialization in Neural Networks</b>:
+                                            <ul>
+                                                <li><b>Why Use Zeros Initialization?</b> The zeros initializer is used to set all weights to zero. While this might seem simple, it is rarely used in practice for hidden layers because it can lead to issues during training.</li>
+                                                <li><b>Impact on Training:</b> Using zeros for weight initialization can cause problems such as symmetry. When all weights are initialized to zero, each neuron in a layer will learn the same features during training, leading to poor model performance.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Default Values</b>:
+                                            <ul>
+                                                <li><b>Value:</b> All weights are initialized to 0.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Choosing Parameters</b>:
+                                            <ul>
+                                                <li><b>Mean and Variance:</b> There are no parameters to choose as all weights are set to zero.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Examples of Use</b>:
+                                            <ul>
+                                                <li><b>Output Layers:</b> The zeros initializer is sometimes used for biases in output layers where zero initialization might be acceptable or required.</li>
+                                                <li><b>Hidden Layers:</b> It is generally not recommended to use the zeros initializer for weights in hidden layers due to the issues with symmetry breaking.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Potential Issues</b>:
+                                            <ul>
+                                                <li><b>Symmetry Problem:</b> Initializing all weights to zero can lead to symmetry problems where neurons in the same layer learn the same features, causing poor model learning.</li>
+                                                <li><b>Gradient Flow:</b> Zero initialization can affect the gradient flow during backpropagation, leading to ineffective training.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        </div>
                             
                         </p>
                     </div>
@@ -306,6 +356,55 @@
                     </div>
                     <div class="card-content hidden-content">
                         <p class="equation">
+                            <div class="container" style="text-align: left;">
+                                <h1>Ones Initializer in Keras</h1>
+                        
+                                <div class="section">
+                                    <h2>Formula</h2>
+                                    <p>The <code>Ones</code> initializer sets all weights to one. It does not use any distribution or randomness. This initializer is defined by the following formula:</p>
+                                    <div class="equation">
+                                        \[
+                                        W = 1
+                                        \]
+                                        where \( W \) represents the initialized weight, and it is set to one.
+                                    </div>
+                                </div>
+                        
+                                <div class="section">
+                                    <h2>Practical Considerations</h2>
+                                    <p>Here are some practical considerations for using the <code>Ones</code> initializer:</p>
+                                    <ul>
+                                        <li><b>Initialization in Neural Networks</b>:
+                                            <ul>
+                                                <li><b>Why Use Ones Initialization?</b> The ones initializer is used to set all weights to one. While this might seem straightforward, it is rarely used for weight initialization in practice due to potential issues during training.</li>
+                                                <li><b>Impact on Training:</b> Using ones for weight initialization can cause problems similar to those with zeros initialization, such as symmetry and gradient issues.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Default Values</b>:
+                                            <ul>
+                                                <li><b>Value:</b> All weights are initialized to 1.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Choosing Parameters</b>:
+                                            <ul>
+                                                <li><b>Value:</b> There are no parameters to choose, as all weights are set to one.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Examples of Use</b>:
+                                            <ul>
+                                                <li><b>Output Layers:</b> The ones initializer is sometimes used for biases in specific scenarios where initializing with ones might be acceptable or desired.</li>
+                                                <li><b>Hidden Layers:</b> It is generally not recommended to use the ones initializer for weights in hidden layers due to potential symmetry and gradient issues.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Potential Issues</b>:
+                                            <ul>
+                                                <li><b>Symmetry Problem:</b> Initializing all weights to one can lead to symmetry issues where neurons in the same layer learn the same features, leading to ineffective learning.</li>
+                                                <li><b>Gradient Flow:</b> Initializing weights with ones can affect the gradient flow during backpropagation, which may hinder effective training.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                             
                         </p>
                     </div>
@@ -321,7 +420,65 @@
                     </div>
                     <div class="card-content hidden-content">
                         <p class="equation">
-                            
+                            <div class="container" style="text-align: left;">
+                                <h1>GlorotNormal Initializer in Keras</h1>
+                        
+                                <div class="section">
+                                    <h2>Formula</h2>
+                                    <p>The <code>GlorotNormal</code> initializer, also known as Xavier Normal initializer, is designed to keep the variance of activations and gradients approximately the same across all layers. This helps in avoiding vanishing and exploding gradients problems. The weights are drawn from a normal distribution with a mean of 0 and a variance calculated based on the number of input and output units of the layer.</p>
+                                    <div class="equation">
+                                        The variance of the normal distribution is given by:
+                                        \[
+                                        \text{Var}(W) = \frac{2}{\text{input_units} + \text{output_units}}
+                                        \]
+                                        where \( W \) represents the weights initialized, and \( \text{input_units} \) and \( \text{output_units} \) are the number of input and output units for the layer, respectively.
+                                    </div>
+                                    <div class="equation">
+                                        Thus, the weights are drawn from:
+                                        \[
+                                        W \sim \mathcal{N}(0, \text{Var}(W))
+                                        \]
+                                        where \( \mathcal{N} \) denotes a normal distribution with mean 0 and the calculated variance.
+                                    </div>
+                                </div>
+                        
+                                <div class="section">
+                                    <h2>Practical Considerations</h2>
+                                    <p>Here are some practical considerations for using the <code>GlorotNormal</code> initializer:</p>
+                                    <ul>
+                                        <li><b>Initialization in Neural Networks</b>:
+                                            <ul>
+                                                <li><b>Why Use Glorot Normal Initialization?</b> This initializer is effective for deep neural networks as it helps in maintaining a stable variance of activations and gradients throughout the network. It is particularly useful for avoiding problems such as vanishing and exploding gradients.</li>
+                                                <li><b>Impact on Training:</b> By initializing the weights in a way that balances the variance, Glorot Normal can help in improving the convergence speed and stability of training.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Default Values</b>:
+                                            <ul>
+                                                <li><b>Mean:</b> The weights are initialized with a mean of 0.</li>
+                                                <li><b>Variance:</b> Calculated as \( \frac{2}{\text{input_units} + \text{output_units}} \).</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Choosing Parameters</b>:
+                                            <ul>
+                                                <li><b>Mean:</b> Always set to 0 in this initializer.</li>
+                                                <li><b>Variance:</b> Automatically determined based on the input and output units of the layer.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Examples of Use</b>:
+                                            <ul>
+                                                <li><b>Deep Networks:</b> Suitable for deep networks where maintaining stable gradients and activations is crucial.</li>
+                                                <li><b>Activation Functions:</b> Works well with activation functions like ReLU, where initialization can significantly impact performance.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Potential Issues</b>:
+                                            <ul>
+                                                <li><b>Layer Variance:</b> Ensure that the variance calculation is appropriate for your network's architecture to avoid issues with gradient flow.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        </div>
                         </p>
                     </div>
                 </a>
