@@ -1220,317 +1220,241 @@
                     </table>
                 </div>
                 
-                <div>
-                    <h1>Weight Initializers Supported Tasks</h1>
+                <div class="container">
+                    <h3>Keras Initializers: Supported and Not Supported Tasks</h3>
                     <table>
-                        <thead>
-                            <tr>
-                                <th>Initializer</th>
-                                <th>Supported Tasks</th>
-                                <th>Not Supported Tasks</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>RandomNormal</td>
-                                <td class="supported">General-purpose initialization, Deep Networks, Convolutional Layers (e.g., initializing weights in CNN layers)</td>
-                                <td class="not-supported">None, but might be less suitable for ReLU activations compared to He initialization</td>
-                            </tr>
-                            <tr>
-                                <td>RandomUniform</td>
-                                <td class="supported">General-purpose initialization, Deep Networks, Convolutional Layers (e.g., initializing weights in CNN layers)</td>
-                                <td class="not-supported">None, but could be less effective in preventing vanishing/exploding gradients compared to specialized initializers</td>
-                            </tr>
-                            <tr>
-                                <td>TruncatedNormal</td>
-                                <td class="supported">General-purpose initialization, Networks prone to extreme values (e.g., large MLPs with dense layers)</td>
-                                <td class="not-supported">None, but may be less effective for certain activation functions like ReLU compared to He initializers</td>
-                            </tr>
-                            <tr>
-                                <td>Zeros</td>
-                                <td class="supported">Bias initialization (e.g., initializing biases in any layer)</td>
-                                <td class="not-supported">Weights in hidden layers (can lead to symmetry issues and poor training)</td>
-                            </tr>
-                            <tr>
-                                <td>Ones</td>
-                                <td class="supported">Bias initialization (e.g., initializing biases in any layer)</td>
-                                <td class="not-supported">Weights in hidden layers (similar to zeros, can cause symmetry issues and slow training)</td>
-                            </tr>
-                            <tr>
-                                <td>GlorotNormal</td>
-                                <td class="supported">Layers with tanh or sigmoid activations (e.g., initializing weights in MLPs with these activations)</td>
-                                <td class="not-supported">None, but less effective for ReLU activations compared to He initializers</td>
-                            </tr>
-                            <tr>
-                                <td>GlorotUniform</td>
-                                <td class="supported">Layers with tanh or sigmoid activations (e.g., initializing weights in MLPs with these activations)</td>
-                                <td class="not-supported">None, but less effective for ReLU activations compared to He initializers</td>
-                            </tr>
-                            <tr>
-                                <td>HeNormal</td>
-                                <td class="supported">ReLU and its variants (e.g., initializing weights in layers with ReLU or Leaky ReLU activations)</td>
-                                <td class="not-supported">None, but might be less effective for tanh or sigmoid activations compared to Glorot initializers</td>
-                            </tr>
-                            <tr>
-                                <td>HeUniform</td>
-                                <td class="supported">ReLU and its variants (e.g., initializing weights in layers with ReLU or Leaky ReLU activations)</td>
-                                <td class="not-supported">None, but might be less effective for tanh or sigmoid activations compared to Glorot initializers</td>
-                            </tr>
-                            <tr>
-                                <td>Orthogonal</td>
-                                <td class="supported">RNNs, Deep Networks requiring orthogonality (e.g., initializing weights in RNN layers to maintain stability)</td>
-                                <td class="not-supported">Non-square weight matrices (e.g., layers where the number of input and output units are not equal)</td>
-                            </tr>
-                            <tr>
-                                <td>Constant</td>
-                                <td class="supported">Bias initialization (e.g., initializing biases in any layer with a specific constant value)</td>
-                                <td class="not-supported">Weights in hidden layers (e.g., initializing weights in hidden layers can lead to symmetry issues and poor training)</td>
-                            </tr>
-                            <tr>
-                                <td>VarianceScaling</td>
-                                <td class="supported">General-purpose initialization, Flexible scaling for different layers (e.g., initializing weights in a variety of architectures)</td>
-                                <td class="not-supported">None, but may be less specific for certain activations compared to dedicated initializers</td>
-                            </tr>
-                            <tr>
-                                <td>LeCunNormal</td>
-                                <td class="supported">Leaky ReLU, SELU activations (e.g., initializing weights in layers with Leaky ReLU or SELU activations)</td>
-                                <td class="not-supported">None, but might be less effective for ReLU or sigmoid activations compared to He or Glorot initializers</td>
-                            </tr>
-                            <tr>
-                                <td>LeCunUniform</td>
-                                <td class="supported">Leaky ReLU, SELU activations (e.g., initializing weights in layers with Leaky ReLU or SELU activations)</td>
-                                <td class="not-supported">None, but might be less effective for ReLU or sigmoid activations compared to He or Glorot initializers</td>
-                            </tr>
-                            <tr>
-                                <td>Identity</td>
-                                <td class="supported">Square weight matrices, Residual Networks (e.g., initializing weights in residual connections where the matrix is square)</td>
-                                <td class="not-supported">Non-square weight matrices (e.g., layers where the number of input and output units are not equal)</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            
-                
-
-                <div>
-                    <h1>Weight Initializers Supported Layers</h1>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Initializer</th>
-                                <th>Supported Layers</th>
-                                <th>Not Supported Layers</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>RandomNormal</td>
-                                <td class="supported">Dense layers, Convolutional layers, LSTM layers (when used with general-purpose initialization)</td>
-                                <td class="not-supported">None, but may be less optimal for layers with ReLU activations compared to He initializers</td>
-                            </tr>
-                            <tr>
-                                <td>RandomUniform</td>
-                                <td class="supported">Dense layers, Convolutional layers, LSTM layers (when used with general-purpose initialization)</td>
-                                <td class="not-supported">None, but could be less effective in preventing vanishing/exploding gradients compared to specialized initializers</td>
-                            </tr>
-                            <tr>
-                                <td>TruncatedNormal</td>
-                                <td class="supported">Dense layers, Convolutional layers, RNN layers (helps with networks prone to extreme values)</td>
-                                <td class="not-supported">None, but may not be as effective for ReLU activations compared to He initializers</td>
-                            </tr>
-                            <tr>
-                                <td>Zeros</td>
-                                <td class="supported">Bias layers (initialization of biases in any layer)</td>
-                                <td class="not-supported">Weights in hidden layers (can lead to symmetry issues and poor learning)</td>
-                            </tr>
-                            <tr>
-                                <td>Ones</td>
-                                <td class="supported">Bias layers (initialization of biases in any layer)</td>
-                                <td class="not-supported">Weights in hidden layers (can lead to symmetry issues and poor learning)</td>
-                            </tr>
-                            <tr>
-                                <td>GlorotNormal</td>
-                                <td class="supported">Dense layers, Convolutional layers with tanh or sigmoid activations</td>
-                                <td class="not-supported">None, but might be less effective for ReLU activations compared to He initializers</td>
-                            </tr>
-                            <tr>
-                                <td>GlorotUniform</td>
-                                <td class="supported">Dense layers, Convolutional layers with tanh or sigmoid activations</td>
-                                <td class="not-supported">None, but might be less effective for ReLU activations compared to He initializers</td>
-                            </tr>
-                            <tr>
-                                <td>HeNormal</td>
-                                <td class="supported">Dense layers, Convolutional layers, especially with ReLU or Leaky ReLU activations</td>
-                                <td class="not-supported">None, but less effective for tanh or sigmoid activations compared to Glorot initializers</td>
-                            </tr>
-                            <tr>
-                                <td>HeUniform</td>
-                                <td class="supported">Dense layers, Convolutional layers, especially with ReLU or Leaky ReLU activations</td>
-                                <td class="not-supported">None, but less effective for tanh or sigmoid activations compared to Glorot initializers</td>
-                            </tr>
-                            <tr>
-                                <td>Orthogonal</td>
-                                <td class="supported">RNN layers, Layers requiring orthogonality (e.g., certain types of recurrent networks)</td>
-                                <td class="not-supported">Non-square weight matrices (e.g., layers where input and output units differ)</td>
-                            </tr>
-                            <tr>
-                                <td>Constant</td>
-                                <td class="supported">Bias layers (initialization of biases in any layer with a constant value)</td>
-                                <td class="not-supported">Weights in hidden layers (can lead to symmetry issues and poor learning)</td>
-                            </tr>
-                            <tr>
-                                <td>VarianceScaling</td>
-                                <td class="supported">General-purpose initialization, Suitable for various types of layers with flexible scaling</td>
-                                <td class="not-supported">None, but less specific for certain activation functions compared to dedicated initializers</td>
-                            </tr>
-                            <tr>
-                                <td>LeCunNormal</td>
-                                <td class="supported">Dense layers, Convolutional layers with Leaky ReLU or SELU activations</td>
-                                <td class="not-supported">None, but might be less effective for ReLU or sigmoid activations compared to He or Glorot initializers</td>
-                            </tr>
-                            <tr>
-                                <td>LeCunUniform</td>
-                                <td class="supported">Dense layers, Convolutional layers with Leaky ReLU or SELU activations</td>
-                                <td class="not-supported">None, but might be less effective for ReLU or sigmoid activations compared to He or Glorot initializers</td>
-                            </tr>
-                            <tr>
-                                <td>IdentityInitializer</td>
-                                <td class="supported">Layers with square weight matrices, Residual networks (where identity mapping is beneficial)</td>
-                                <td class="not-supported">Non-square weight matrices (e.g., layers where input and output units differ)</td>
-                            </tr>
-                        </tbody>
+                        <tr>
+                            <th>Initializer</th>
+                            <th>Supported Tasks</th>
+                            <th>Not Supported Tasks</th>
+                            <th>Explanation</th>
+                            <th>Example Tasks</th>
+                        </tr>
+                        <tr>
+                            <td><strong>RandomNormal</strong></td>
+                            <td>General-purpose tasks, dense layers, LSTMs</td>
+                            <td>ReLU-based networks</td>
+                            <td>Generates weights from a normal distribution. Suitable for tasks that don't require special initialization strategies.</td>
+                            <td>Used in basic feedforward networks for classification tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>RandomUniform</strong></td>
+                            <td>General-purpose tasks, shallow networks</td>
+                            <td>Deep networks with ReLU activations</td>
+                            <td>Draws weights from a uniform distribution. Simple and effective for shallow networks but less effective in preventing vanishing or exploding gradients.</td>
+                            <td>Used in simple regression tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>TruncatedNormal</strong></td>
+                            <td>Deep learning tasks, CNNs, RNNs</td>
+                            <td>Shallow networks where extreme values are not a concern</td>
+                            <td>Generates weights from a normal distribution but cuts off extreme values, preventing outliers that can slow down learning.</td>
+                            <td>Used in deep CNNs for image classification.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Zeros</strong></td>
+                            <td>Bias initialization</td>
+                            <td>Weights in hidden layers</td>
+                            <td>Initializes all weights to zero, leading to symmetry problems in hidden layers but is fine for biases.</td>
+                            <td>Used for bias initialization in most networks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ones</strong></td>
+                            <td>Bias initialization</td>
+                            <td>Weights in hidden layers</td>
+                            <td>Similar to zeros but initializes with ones. Also leads to symmetry issues when used for weights.</td>
+                            <td>Used for bias initialization where a non-zero start is needed.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>GlorotNormal</strong></td>
+                            <td>Dense layers, tasks with tanh or sigmoid activations</td>
+                            <td>ReLU-based networks</td>
+                            <td>Balances the variance of weights across layers, effective in preventing vanishing and exploding gradients in certain activations.</td>
+                            <td>Used in deep networks for classification tasks with tanh activation.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>GlorotUniform</strong></td>
+                            <td>Dense layers, tasks with tanh or sigmoid activations</td>
+                            <td>ReLU-based networks</td>
+                            <td>Similar to GlorotNormal but uses a uniform distribution. It’s effective in shallow to moderately deep networks.</td>
+                            <td>Used in shallow neural networks for binary classification tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>HeNormal</strong></td>
+                            <td>Deep networks, ReLU activations</td>
+                            <td>Non-ReLU activations like tanh or sigmoid</td>
+                            <td>Designed specifically for ReLU and its variants, helping in maintaining activation variance throughout the network.</td>
+                            <td>Used in ResNet architectures for image recognition tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>HeUniform</strong></td>
+                            <td>Deep networks, ReLU activations</td>
+                            <td>Non-ReLU activations like tanh or sigmoid</td>
+                            <td>Similar to HeNormal but with a uniform distribution. Suitable for deep networks requiring ReLU.</td>
+                            <td>Used in deep convolutional networks for object detection.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Orthogonal</strong></td>
+                            <td>RNNs, tasks requiring stable weight matrices</td>
+                            <td>Layers with non-square weight matrices</td>
+                            <td>Ensures that weights are orthogonal, preserving the norm of the input across layers, which is crucial for RNNs.</td>
+                            <td>Used in LSTM networks for sequence prediction tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Constant</strong></td>
+                            <td>Bias initialization</td>
+                            <td>Weights in hidden layers</td>
+                            <td>Initializes all weights or biases to a constant value, which can lead to poor learning dynamics if used for weights.</td>
+                            <td>Used for setting a specific bias value in networks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>VarianceScaling</strong></td>
+                            <td>Versatile, various deep learning tasks</td>
+                            <td>Very deep networks with specific activation functions</td>
+                            <td>Scales weights based on the number of input units, making it versatile for different types of tasks.</td>
+                            <td>Used in networks where the task doesn't strictly require specialized initializers.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>LeCunNormal</strong></td>
+                            <td>Deep networks with Leaky ReLU or SELU</td>
+                            <td>ReLU, sigmoid-based networks</td>
+                            <td>Specifically designed for self-normalizing networks using SELU, maintaining stable mean and variance.</td>
+                            <td>Used in self-normalizing networks for anomaly detection.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>LeCunUniform</strong></td>
+                            <td>Deep networks with Leaky ReLU or SELU</td>
+                            <td>ReLU, sigmoid-based networks</td>
+                            <td>Similar to LeCunNormal but with a uniform distribution. Ideal for self-normalizing networks.</td>
+                            <td>Used in tasks requiring self-normalizing neural networks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>IdentityInitializer</strong></td>
+                            <td>Residual networks, networks with identity mappings</td>
+                            <td>Layers with non-square weight matrices</td>
+                            <td>Initializes weights to form an identity matrix, ensuring that the input is preserved, which is useful in residual networks.</td>
+                            <td>Used in ResNet blocks for tasks like image classification.</td>
+                        </tr>
                     </table>
                 </div>
 
+
                 <div class="container">
-                    <h1>Weight Initializers: Supported and Not Supported Tasks</h1>
-                    <ul>
-                        <li>
-                            <strong>RandomNormal:</strong> 
-                            <ul>
-                                <li><strong>Supported:</strong> General-purpose initialization for dense, convolutional, and LSTM layers.</li>
-                                <li><strong>Not Supported:</strong> Tasks requiring specific initialization tailored to certain activation functions, such as ReLU where He initializers might be better.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>RandomUniform:</strong> 
-                            <ul>
-                                <li><strong>Supported:</strong> General-purpose use in dense and convolutional layers.</li>
-                                <li><strong>Not Supported:</strong> Scenarios where preventing vanishing or exploding gradients is critical, and specialized initializers might be needed.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>TruncatedNormal:</strong> 
-                            <ul>
-                                <li><strong>Supported:</strong> Networks prone to extreme values, dense, convolutional, and RNN layers.</li>
-                                <li><strong>Not Supported:</strong> ReLU activations where other initializers may perform better.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>Zeros:</strong> 
-                            <ul>
-                                <li><strong>Supported:</strong> Bias initialization.</li>
-                                <li><strong>Not Supported:</strong> Weight initialization in hidden layers due to symmetry breaking issues.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>Ones:</strong> 
-                            <ul>
-                                <li><strong>Supported:</strong> Bias initialization.</li>
-                                <li><strong>Not Supported:</strong> Weight initialization in hidden layers due to symmetry issues.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>GlorotNormal & GlorotUniform:</strong> 
-                            <ul>
-                                <li><strong>Supported:</strong> Layers with tanh or sigmoid activations.</li>
-                                <li><strong>Not Supported:</strong> Layers with ReLU activations where He initializers are preferred.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>HeNormal & HeUniform:</strong> 
-                            <ul>
-                                <li><strong>Supported:</strong> Layers with ReLU or its variants.</li>
-                                <li><strong>Not Supported:</strong> Layers with tanh or sigmoid activations.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>Orthogonal:</strong> 
-                            <ul>
-                                <li><strong>Supported:</strong> RNNs and layers requiring orthogonality.</li>
-                                <li><strong>Not Supported:</strong> Non-square weight matrices.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>Constant:</strong> 
-                            <ul>
-                                <li><strong>Supported:</strong> Bias initialization.</li>
-                                <li><strong>Not Supported:</strong> Weight initialization due to symmetry issues.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>VarianceScaling:</strong> 
-                            <ul>
-                                <li><strong>Supported:</strong> Versatile across various layer types.</li>
-                                <li><strong>Not Supported:</strong> Specific activations requiring more tailored initialization methods.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>LeCunNormal & LeCunUniform:</strong> 
-                            <ul>
-                                <li><strong>Supported:</strong> Layers with Leaky ReLU or SELU activations.</li>
-                                <li><strong>Not Supported:</strong> Layers with ReLU or sigmoid activations.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>IdentityInitializer:</strong> 
-                            <ul>
-                                <li><strong>Supported:</strong> Square weight matrices and residual networks.</li>
-                                <li><strong>Not Supported:</strong> Non-square matrices.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="container">
-                    <h1>Weight Initializers: Supported and Not Supported Layers</h1>
-                    <ul>
-                        <li>
-                            <strong>RandomNormal:</strong> Suitable for general-purpose initialization, applicable to dense, convolutional, and LSTM layers. It might be less optimal for ReLU activations compared to He initializers.
-                        </li>
-                        <li>
-                            <strong>RandomUniform:</strong> Similar to RandomNormal, it’s good for general-purpose use but might be less effective in preventing vanishing or exploding gradients compared to specialized initializers.
-                        </li>
-                        <li>
-                            <strong>TruncatedNormal:</strong> Helps with networks prone to extreme values, effective in dense, convolutional, and RNN layers. Less effective for ReLU activations.
-                        </li>
-                        <li>
-                            <strong>Zeros:</strong> Best for initializing biases, but not recommended for weights in hidden layers due to potential symmetry issues.
-                        </li>
-                        <li>
-                            <strong>Ones:</strong> Like Zeros, useful for bias initialization but problematic for weights in hidden layers.
-                        </li>
-                        <li>
-                            <strong>GlorotNormal & GlorotUniform:</strong> Effective for layers with tanh or sigmoid activations. Less suited for ReLU activations compared to He initializers.
-                        </li>
-                        <li>
-                            <strong>HeNormal & HeUniform:</strong> Optimal for layers with ReLU or its variants. Less effective for tanh or sigmoid activations.
-                        </li>
-                        <li>
-                            <strong>Orthogonal:</strong> Useful for RNNs and layers requiring orthogonality but not suitable for non-square weight matrices.
-                        </li>
-                        <li>
-                            <strong>Constant:</strong> Good for bias initialization but can cause issues when used for weights due to symmetry.
-                        </li>
-                        <li>
-                            <strong>VarianceScaling:</strong> Versatile for various types of layers, though less specific for certain activations compared to dedicated initializers.
-                        </li>
-                        <li>
-                            <strong>LeCunNormal & LeCunUniform:</strong> Ideal for layers with Leaky ReLU or SELU activations. Less effective for ReLU or sigmoid activations.
-                        </li>
-                        <li>
-                            <strong>IdentityInitializer:</strong> Useful for square weight matrices and residual networks but not for non-square matrices.
-                        </li>
-                    </ul>
+                    <h3>Keras Initializers: Supported and Not Supported Layers</h3>
+                    <table>
+                        <tr>
+                            <th>Initializer</th>
+                            <th>Supported Layers</th>
+                            <th>Not Supported Layers</th>
+                            <th>Explanation</th>
+                            <th>Example Layers</th>
+                        </tr>
+                        <tr>
+                            <td><strong>RandomNormal</strong></td>
+                            <td>Dense, Convolutional, LSTM</td>
+                            <td>BatchNormalization</td>
+                            <td>Generates weights from a normal distribution. General-purpose initializer suitable for most types of layers.</td>
+                            <td>Dense layers in a simple feedforward network.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>RandomUniform</strong></td>
+                            <td>Dense, Convolutional</td>
+                            <td>Recurrent, Attention</td>
+                            <td>Draws weights from a uniform distribution, useful in layers where the scale of the initialized weights is not crucial.</td>
+                            <td>Convolutional layers in a CNN for image recognition.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>TruncatedNormal</strong></td>
+                            <td>Dense, Convolutional, RNN</td>
+                            <td>BatchNormalization, Dropout</td>
+                            <td>Generates weights from a normal distribution but truncates values beyond a certain threshold to prevent outliers.</td>
+                            <td>LSTM layers in a sequence prediction model.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Zeros</strong></td>
+                            <td>Bias Initialization</td>
+                            <td>Dense, Convolutional, Recurrent (for weights)</td>
+                            <td>Initializes all weights to zero, leading to symmetry problems in hidden layers but suitable for biases.</td>
+                            <td>Bias terms in a dense layer of a neural network.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ones</strong></td>
+                            <td>Bias Initialization</td>
+                            <td>Dense, Convolutional, RNN (for weights)</td>
+                            <td>Similar to Zeros but initializes with ones. Causes symmetry issues when used for weights but is acceptable for biases.</td>
+                            <td>Bias terms in a convolutional layer.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>GlorotNormal</strong></td>
+                            <td>Dense, Convolutional, RNN</td>
+                            <td>Residual, BatchNormalization</td>
+                            <td>Balances the variance of weights across layers, effective for preventing vanishing and exploding gradients.</td>
+                            <td>Dense layers in a deep neural network with tanh activation.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>GlorotUniform</strong></td>
+                            <td>Dense, Convolutional</td>
+                            <td>ReLU-based layers</td>
+                            <td>Similar to GlorotNormal but uses a uniform distribution, suitable for tanh and sigmoid activations.</td>
+                            <td>Embedding layers in a text classification model.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>HeNormal</strong></td>
+                            <td>Dense, Convolutional</td>
+                            <td>Sigmoid-based layers</td>
+                            <td>Optimized for ReLU and its variants, helping maintain variance in deep networks.</td>
+                            <td>Convolutional layers in a ResNet architecture.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>HeUniform</strong></td>
+                            <td>Convolutional, Dense</td>
+                            <td>LSTM, GRU</td>
+                            <td>Similar to HeNormal but uses a uniform distribution. Effective in ReLU-based layers.</td>
+                            <td>Dense layers in a deep network for image classification.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Orthogonal</strong></td>
+                            <td>RNN, LSTM, GRU</td>
+                            <td>Non-square weight matrices</td>
+                            <td>Ensures weights are orthogonal, preserving input norm across layers, crucial for RNNs and LSTMs.</td>
+                            <td>LSTM layers in a sequence modeling task.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Constant</strong></td>
+                            <td>Bias Initialization</td>
+                            <td>Dense, Convolutional, RNN (for weights)</td>
+                            <td>Initializes weights or biases to a constant value, leading to poor learning dynamics if used for weights.</td>
+                            <td>Setting a specific bias value in a neural network layer.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>VarianceScaling</strong></td>
+                            <td>Dense, Convolutional, RNN</td>
+                            <td>Very deep networks requiring specialized initializers</td>
+                            <td>Scales weights based on the number of input units, making it versatile for different types of layers.</td>
+                            <td>Convolutional layers in a deep neural network.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>LeCunNormal</strong></td>
+                            <td>Dense, Convolutional</td>
+                            <td>ReLU, sigmoid-based layers</td>
+                            <td>Specifically designed for SELU activations, ensuring self-normalizing properties in deep networks.</td>
+                            <td>Dense layers in a self-normalizing network for anomaly detection.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>LeCunUniform</strong></td>
+                            <td>Dense, Convolutional</td>
+                            <td>ReLU, sigmoid-based layers</td>
+                            <td>Similar to LeCunNormal but uses a uniform distribution. Effective in SELU-based layers.</td>
+                            <td>Dense layers in a network for self-normalizing tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>IdentityInitializer</strong></td>
+                            <td>Residual layers, Layers with identity mappings</td>
+                            <td>Non-square weight matrices</td>
+                            <td>Initializes weights to form an identity matrix, preserving input features in residual networks.</td>
+                            <td>Residual layers in a ResNet for image recognition.</td>
+                        </tr>
+                    </table>
                 </div>
             
         </main>
