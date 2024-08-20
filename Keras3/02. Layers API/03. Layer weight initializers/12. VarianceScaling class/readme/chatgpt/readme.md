@@ -48,7 +48,7 @@
 
 ### **9. Image: Graph of VarianceScaling Initialization**
 
-![Variance Scaling Initialization](https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Normal_Distribution_and_its_scaling.png/640px-Normal_Distribution_and_its_scaling.png)
+![Variance Scaling Initialization](https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/03.%20Layer%20weight%20initializers/12.%20VarianceScaling%20class/variance_scaling_distribution.png)
 
 ### **10. Table: Overview of `VarianceScaling` Initialization**
 

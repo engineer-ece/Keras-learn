@@ -493,7 +493,54 @@
                     </div>
                     <div class="card-content hidden-content">
                         <p class="equation">
-                            
+                            <div class="container" style="text-align: left;">
+                                <h1>GlorotUniform Initializer in Keras</h1>
+                        
+                                <div class="section">
+                                    <h2>Formula</h2>
+                                    <p>The <code>GlorotUniform</code> initializer, also known as Xavier Uniform initializer, is designed to maintain the variance of activations across layers by drawing weights from a uniform distribution. This helps in avoiding issues such as vanishing or exploding gradients.</p>
+                                    <div class="equation">
+                                        The weights are drawn from a uniform distribution within the range:
+                                        \[
+                                        \text{Uniform} \left(- \sqrt{\frac{6}{\text{input_units} + \text{output_units}}}, \sqrt{\frac{6}{\text{input_units} + \text{output_units}}}\right)
+                                        \]
+                                        where \( \text{input_units} \) and \( \text{output_units} \) are the number of input and output units for the layer, respectively.
+                                    </div>
+                                </div>
+                        
+                                <div class="section">
+                                    <h2>Practical Considerations</h2>
+                                    <p>Here are some practical considerations for using the <code>GlorotUniform</code> initializer:</p>
+                                    <ul>
+                                        <li><b>Initialization in Neural Networks</b>:
+                                            <ul>
+                                                <li><b>Why Use Glorot Uniform Initialization?</b> This initializer helps maintain a stable variance of activations and gradients throughout the network, which is crucial for deep networks to avoid vanishing or exploding gradient problems.</li>
+                                                <li><b>Impact on Training:</b> By initializing the weights in a balanced manner, Glorot Uniform can improve the convergence speed and overall stability of the training process.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Default Values</b>:
+                                            <ul>
+                                                <li><b>Range:</b> The weights are drawn from a uniform distribution within the range specified by the formula above.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Choosing Parameters</b>:
+                                            <ul>
+                                                <li><b>Range:</b> Automatically determined based on the input and output units of the layer.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Examples of Use</b>:
+                                            <ul>
+                                                <li><b>Deep Networks:</b> Suitable for deep networks where maintaining balanced gradients and activations is important.</li>
+                                                <li><b>Activation Functions:</b> Works well with activation functions like ReLU and sigmoid, which can benefit from balanced initialization.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Potential Issues</b>:
+                                            <ul>
+                                                <li><b>Layer Variance:</b> Ensure that the initialization range is appropriate for your network's architecture to avoid issues with gradient flow.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div></div>
                         </p>
                     </div>
                 </a>
@@ -509,6 +556,60 @@
                     </div>
                     <div class="card-content hidden-content">
                         <p class="equation">
+                            <div class="container" style="text-align: left;">
+                                <h1>HeNormal Initializer in Keras</h1>
+                        
+                                <div class="section">
+                                    <h2>Formula</h2>
+                                    <p>The <code>HeNormal</code> initializer, also known as He Initialization, is designed to address the issue of vanishing and exploding gradients in deep neural networks by initializing weights with values drawn from a normal distribution. It is particularly effective with ReLU activation functions.</p>
+                                    <div class="equation">
+                                        The weights are drawn from a normal distribution with:
+                                        \[
+                                        W \sim \mathcal{N}(0, \frac{2}{\text{input_units}})
+                                        \]
+                                        where \( \mathcal{N} \) denotes a normal distribution with:
+                                        - **Mean**: \( 0 \)
+                                        - **Variance**: \( \frac{2}{\text{input_units}} \)
+                        
+                                        Here, \( \text{input_units} \) is the number of input units in the layer.
+                                    </div>
+                                </div>
+                        
+                                <div class="section">
+                                    <h2>Practical Considerations</h2>
+                                    <p>Here are some practical considerations for using the <code>HeNormal</code> initializer:</p>
+                                    <ul>
+                                        <li><b>Initialization in Neural Networks</b>:
+                                            <ul>
+                                                <li><b>Why Use He Normal Initialization?</b> This initializer helps mitigate the vanishing and exploding gradient problems that can occur in deep networks, especially when using ReLU activation functions.</li>
+                                                <li><b>Impact on Training:</b> By initializing weights with a higher variance, He Normal helps maintain a healthy gradient flow through the network, which can improve convergence and stability during training.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Default Values</b>:
+                                            <ul>
+                                                <li><b>Mean:</b> 0</li>
+                                                <li><b>Variance:</b> \( \frac{2}{\text{input_units}} \)</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Choosing Parameters</b>:
+                                            <ul>
+                                                <li><b>Variance:</b> The variance is automatically determined based on the number of input units. This ensures that the weights are initialized in a way that supports effective training.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Examples of Use</b>:
+                                            <ul>
+                                                <li><b>ReLU Activation:</b> Works well with ReLU and its variants (e.g., Leaky ReLU, Parametric ReLU) because it compensates for the non-linearities introduced by these activations.</li>
+                                                <li><b>Deep Networks:</b> Particularly beneficial in very deep networks where gradients might otherwise vanish or explode.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Potential Issues</b>:
+                                            <ul>
+                                                <li><b>Layer Variance:</b> Ensure that the initializer is used appropriately with activation functions that benefit from it. For other types of activations, different initializers might be more suitable.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                        </div>
                             
                         </p>
                     </div>
@@ -524,7 +625,59 @@
                     </div>
                     <div class="card-content hidden-content">
                         <p class="equation">
-                            
+                            <div class="container" style="text-align: left;">
+                                <h1>HeUniform Initializer in Keras</h1>
+                        
+                                <div class="section">
+                                    <h2>Formula</h2>
+                                    <p>The <code>HeUniform</code> initializer, also known as He Initialization with Uniform Distribution, is designed to address the issue of vanishing and exploding gradients in deep neural networks by initializing weights with values drawn from a uniform distribution. It is particularly effective with ReLU activation functions.</p>
+                                    <div class="equation">
+                                        The weights are drawn from a uniform distribution within the range:
+                                        \[
+                                        W \sim \text{Uniform}\left(-\sqrt{\frac{6}{\text{input_units}}}, \sqrt{\frac{6}{\text{input_units}}}\right)
+                                        \]
+                                        where \( \text{Uniform}(a, b) \) denotes a uniform distribution between \( a \) and \( b \), with:
+                                        - **Lower Bound (a)**: \(-\sqrt{\frac{6}{\text{input_units}}}\)
+                                        - **Upper Bound (b)**: \(\sqrt{\frac{6}{\text{input_units}}}\)
+                        
+                                        Here, \( \text{input_units} \) is the number of input units in the layer.
+                                    </div>
+                                </div>
+                        
+                                <div class="section">
+                                    <h2>Practical Considerations</h2>
+                                    <p>Here are some practical considerations for using the <code>HeUniform</code> initializer:</p>
+                                    <ul>
+                                        <li><b>Initialization in Neural Networks</b>:
+                                            <ul>
+                                                <li><b>Why Use He Uniform Initialization?</b> This initializer helps mitigate the vanishing and exploding gradient problems that can occur in deep networks, especially when using ReLU activation functions, by maintaining a variance that scales with the number of input units.</li>
+                                                <li><b>Impact on Training:</b> By initializing weights with values drawn from a uniform distribution within a specific range, He Uniform ensures that the weights are neither too large nor too small, which helps in effective training and convergence.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Default Values</b>:
+                                            <ul>
+                                                <li><b>Lower Bound:</b> \(-\sqrt{\frac{6}{\text{input_units}}}\)</li>
+                                                <li><b>Upper Bound:</b> \(\sqrt{\frac{6}{\text{input_units}}}\)</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Choosing Parameters</b>:
+                                            <ul>
+                                                <li><b>Range:</b> The range is automatically determined based on the number of input units. This ensures that the weights are initialized within a suitable range to support effective training.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Examples of Use</b>:
+                                            <ul>
+                                                <li><b>ReLU Activation:</b> Works well with ReLU and its variants (e.g., Leaky ReLU, Parametric ReLU) because it compensates for the non-linearities introduced by these activations.</li>
+                                                <li><b>Deep Networks:</b> Particularly beneficial in very deep networks where gradients might otherwise vanish or explode.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Potential Issues</b>:
+                                            <ul>
+                                                <li><b>Layer Variance:</b> Ensure that the initializer is used appropriately with activation functions that benefit from it. For other types of activations, different initializers might be more suitable.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div></div>
                         </p>
                     </div>
                 </a>
@@ -539,6 +692,54 @@
                     </div>
                     <div class="card-content hidden-content">
                         <p class="equation">
+                            <div class="container" style="text-align: left;">
+                                <h1>Orthogonal Initializer in Keras</h1>
+                        
+                                <div class="section">
+                                    <h2>Formula</h2>
+                                    <p>The <code>Orthogonal</code> initializer is designed to initialize weights such that the weight matrix is orthogonal. This means that the columns (or rows) of the weight matrix are orthogonal unit vectors. An orthogonal matrix \( W \) satisfies the property:</p>
+                                    <div class="equation">
+                                        \[
+                                        W^T W = W W^T = I
+                                        \]
+                                        where \( W^T \) is the transpose of \( W \), and \( I \) is the identity matrix. This ensures that the weight matrix is orthogonal, which can help in preserving the norms of gradients throughout the training process.
+                                    </div>
+                                </div>
+                        
+                                <div class="section">
+                                    <h2>Practical Considerations</h2>
+                                    <p>Here are some practical considerations for using the <code>Orthogonal</code> initializer:</p>
+                                    <ul>
+                                        <li><b>Initialization in Neural Networks</b>:
+                                            <ul>
+                                                <li><b>Why Use Orthogonal Initialization?</b> Orthogonal initialization helps to maintain the stability of gradients throughout the network. It is especially beneficial in deep networks where gradients might otherwise vanish or explode.</li>
+                                                <li><b>Impact on Training:</b> Orthogonal matrices help preserve the variance of activations and gradients, which can lead to more stable and faster convergence during training.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Default Values</b>:
+                                            <ul>
+                                                <li><b>Gain:</b> The default gain value is 1.0. This can be adjusted to scale the weights if necessary.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Choosing Parameters</b>:
+                                            <ul>
+                                                <li><b>Gain:</b> The gain parameter scales the orthogonal matrix. It can be adjusted based on the activation function used. For example, for ReLU activations, a gain of \(\sqrt{2}\) might be used.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Examples of Use</b>:
+                                            <ul>
+                                                <li><b>Deep Networks:</b> Particularly useful in deep networks where maintaining gradient stability is critical.</li>
+                                                <li><b>Activation Functions:</b> Works well with a variety of activation functions, including ReLU and its variants.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Potential Issues</b>:
+                                            <ul>
+                                                <li><b>Matrix Size:</b> The initializer is generally applied to layers where the weight matrix is square. For non-square matrices, the orthogonality is preserved as much as possible but may not be perfect.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                        </div>
                             
                         </p>
                     </div>
@@ -554,6 +755,55 @@
                     </div>
                     <div class="card-content hidden-content">
                         <p class="equation">
+                            <div class="container" style="text-align: left;">
+                                <h1>Constant Initializer in Keras</h1>
+                        
+                                <div class="section">
+                                    <h2>Formula</h2>
+                                    <p>The <code>Constant</code> initializer sets all the weights in a layer to a constant value. The formula for the weights \( W \) initialized using <code>Constant</code> is:</p>
+                                    <div class="equation">
+                                        \[
+                                        W = c
+                                        \]
+                                        where \( c \) is the constant value specified during initialization.
+                                    </div>
+                                </div>
+                        
+                                <div class="section">
+                                    <h2>Practical Considerations</h2>
+                                    <p>Here are some practical considerations for using the <code>Constant</code> initializer:</p>
+                                    <ul>
+                                        <li><b>Initialization in Neural Networks</b>:
+                                            <ul>
+                                                <li><b>Why Use Constant Initialization?</b> Setting weights to a constant value might be useful in specific scenarios where you need uniform initial values. For example, initializing biases to a small constant value to prevent dead neurons in the early stages of training.</li>
+                                                <li><b>Impact on Training:</b> Initializing weights with a constant value may not be ideal for most layers, as it doesn’t help in breaking symmetry or introducing variability. It can lead to problems like neurons learning the same features if all weights start with the same value.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Default Values</b>:
+                                            <ul>
+                                                <li><b>Value:</b> The default value is 0.0. This value can be adjusted according to the needs of the model.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Choosing Parameters</b>:
+                                            <ul>
+                                                <li><b>Value:</b> The constant value should be chosen carefully. For instance, setting biases to a small positive value can help in cases where neurons might be inactive initially.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Examples of Use</b>:
+                                            <ul>
+                                                <li><b>Bias Initialization:</b> Commonly used for initializing biases, especially if you want to start with a non-zero constant value.</li>
+                                                <li><b>Special Cases:</b> Can be used in custom layers or situations where specific constant initialization is required.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Potential Issues</b>:
+                                            <ul>
+                                                <li><b>Symmetry Breaking:</b> Using the same constant value for all weights might not help in breaking symmetry in layers, potentially leading to suboptimal learning.</li>
+                                                <li><b>Gradient Flow:</b> If used for weights, constant initialization might hinder gradient flow and affect the convergence of the network.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>    
+                        </div>
                             
                         </p>
                     </div>
@@ -569,7 +819,67 @@
                     </div>
                     <div class="card-content hidden-content">
                         <p class="equation">
-                            
+                            <div class="container" style="text-align: left;">
+                                <h1>VarianceScaling Initializer in Keras</h1>
+                        
+                                <div class="section">
+                                    <h2>Formula</h2>
+                                    <p>The <code>VarianceScaling</code> initializer scales the variance of the weights according to the number of input units in the layer. The formula for the weights \( W \) initialized using <code>VarianceScaling</code> is:</p>
+                                    <div class="equation">
+                                        \[
+                                        W \sim \text{Uniform} \left(-\sqrt{\frac{3}{\text{scale}}}, \sqrt{\frac{3}{\text{scale}}}\right)
+                                        \]
+                                        or
+                                        \[
+                                        W \sim \text{Normal} \left(0, \frac{\text{scale}}{\text{fan_in}}\right)
+                                        \]
+                                        where:
+                                        <ul>
+                                            <li><b>scale:</b> A scaling factor, typically 1.0, 2.0, or 3.0 depending on the mode.</li>
+                                            <li><b>fan_in:</b> The number of input units in the weight tensor.</li>
+                                            <li><b>fan_out:</b> The number of output units in the weight tensor.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                        
+                                <div class="section">
+                                    <h2>Practical Considerations</h2>
+                                    <p>Here are some practical considerations for using the <code>VarianceScaling</code> initializer:</p>
+                                    <ul>
+                                        <li><b>Initialization in Neural Networks</b>:
+                                            <ul>
+                                                <li><b>Why Use Variance Scaling?</b> This initializer helps to maintain the variance of activations across layers, addressing issues like vanishing or exploding gradients by scaling the weights based on the number of input units.</li>
+                                                <li><b>Impact on Training:</b> By keeping the variance of activations in check, it can lead to better training stability and faster convergence.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Default Values</b>:
+                                            <ul>
+                                                <li><b>Scale:</b> Default is 1.0. This value can be adjusted depending on the specific needs of the network.</li>
+                                                <li><b>Mode:</b> Can be set to 'fan_in', 'fan_out', or 'fan_avg'.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Choosing Parameters</b>:
+                                            <ul>
+                                                <li><b>Scale:</b> Choose based on the mode and type of activation function used. For ReLU activations, a scale of 2.0 is often recommended (He initialization).</li>
+                                                <li><b>Mode:</b> 'fan_in' is often used to scale based on input units, 'fan_out' for output units, and 'fan_avg' for a balance of both.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Examples of Use</b>:
+                                            <ul>
+                                                <li><b>ReLU Activations:</b> For layers with ReLU activations, using 'fan_in' with a scale of 2.0 (He initialization) is effective.</li>
+                                                <li><b>Custom Initializations:</b> Useful for custom initializers where maintaining variance is crucial.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Potential Issues</b>:
+                                            <ul>
+                                                <li><b>Choosing the Wrong Mode:</b> Incorrectly choosing between 'fan_in', 'fan_out', and 'fan_avg' can lead to suboptimal performance.</li>
+                                                <li><b>Over-Scaling:</b> Excessive scaling might cause instability in training, especially for deep networks.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        </div>
                         </p>
                     </div>
                 </a>
@@ -584,7 +894,62 @@
                     </div>
                     <div class="card-content hidden-content">
                         <p class="equation">
-                            
+                            <div class="container" style="text-align: left;">
+                                <h1>LeCunNormal Initializer in Keras</h1>
+                        
+                                <div class="section">
+                                    <h2>Formula</h2>
+                                    <p>The <code>LeCunNormal</code> initializer scales weights according to the number of input units using a normal distribution. The formula for the weights \( W \) initialized using <code>LeCunNormal</code> is:</p>
+                                    <div class="equation">
+                                        \[
+                                        W \sim \mathcal{N}\left(0, \frac{1}{\text{fan_in}}\right)
+                                        \]
+                                        where:
+                                        <ul>
+                                            <li><b>\(\mathcal{N}\)</b> denotes a normal distribution.</li>
+                                            <li><b>fan_in</b> is the number of input units in the weight tensor.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                        
+                                <div class="section">
+                                    <h2>Practical Considerations</h2>
+                                    <p>Here are some practical considerations for using the <code>LeCunNormal</code> initializer:</p>
+                                    <ul>
+                                        <li><b>Initialization in Neural Networks</b>:
+                                            <ul>
+                                                <li><b>Why Use Normal Distribution?</b> The LeCunNormal initializer helps in initializing weights with a variance that maintains stable gradients and improves training efficiency. It is particularly well-suited for activation functions like ReLU and its variants.</li>
+                                                <li><b>Impact on Training:</b> This initializer can lead to better convergence and reduced training times compared to other initializers, especially in deep networks.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Default Values</b>:
+                                            <ul>
+                                                <li><b>Mean:</b> Default is 0.0.</li>
+                                                <li><b>Standard Deviation:</b> Scaled as \( \frac{1}{\sqrt{\text{fan_in}}} \), where fan_in is the number of input units.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Choosing Parameters</b>:
+                                            <ul>
+                                                <li><b>Mean:</b> Typically set to 0.0.</li>
+                                                <li><b>Standard Deviation:</b> Automatically adjusted based on the number of input units, ensuring appropriate variance.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Examples of Use</b>:
+                                            <ul>
+                                                <li><b>ReLU Activations:</b> Effective for layers with ReLU or its variants, helping to avoid issues like vanishing gradients.</li>
+                                                <li><b>Deep Networks:</b> Useful in deep networks to maintain stable variance of activations across layers.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Potential Issues</b>:
+                                            <ul>
+                                                <li><b>Compatibility:</b> Not ideal for all activation functions; other initializers may be more suitable for non-ReLU activations.</li>
+                                                <li><b>Over-Sensitivity:</b> The performance can be sensitive to the choice of activation functions and network architecture.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                        </div>
                         </p>
                     </div>
                 </a>
@@ -599,7 +964,60 @@
                     </div>
                     <div class="card-content hidden-content">
                         <p class="equation">
-                            
+                            <div class="container" style="text-align: left;">
+                                <h1>LeCunUniform Initializer in Keras</h1>
+                        
+                                <div class="section">
+                                    <h2>Formula</h2>
+                                    <p>The <code>LeCunUniform</code> initializer generates weights according to a uniform distribution scaled by the number of input units. The formula for the weights \( W \) initialized using <code>LeCunUniform</code> is:</p>
+                                    <div class="equation">
+                                        \[
+                                        W \sim \text{Uniform}\left(-\sqrt{\frac{3}{\text{fan_in}}}, \sqrt{\frac{3}{\text{fan_in}}}\right)
+                                        \]
+                                        where:
+                                        <ul>
+                                            <li><b>\(\text{Uniform}\)</b> denotes a uniform distribution.</li>
+                                            <li><b>fan_in</b> is the number of input units in the weight tensor.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                        
+                                <div class="section">
+                                    <h2>Practical Considerations</h2>
+                                    <p>Here are some practical considerations for using the <code>LeCunUniform</code> initializer:</p>
+                                    <ul>
+                                        <li><b>Initialization in Neural Networks</b>:
+                                            <ul>
+                                                <li><b>Why Use Uniform Distribution?</b> The LeCunUniform initializer scales weights uniformly across a range that depends on the number of input units, which can help in maintaining stable activations and gradients. It is particularly suited for layers with ReLU and similar activation functions.</li>
+                                                <li><b>Impact on Training:</b> This initializer helps prevent issues like vanishing or exploding gradients, leading to more stable and faster training.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Default Values</b>:
+                                            <ul>
+                                                <li><b>Lower Bound:</b> \(-\sqrt{\frac{3}{\text{fan_in}}}\)</li>
+                                                <li><b>Upper Bound:</b> \(\sqrt{\frac{3}{\text{fan_in}}}\)</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Choosing Parameters</b>:
+                                            <ul>
+                                                <li><b>Range:</b> The range of the uniform distribution is automatically scaled based on the number of input units, ensuring weights are initialized within an appropriate range for the given layer.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Examples of Use</b>:
+                                            <ul>
+                                                <li><b>ReLU Activations:</b> Effective for layers with ReLU or similar activations, helping to keep activations and gradients in a stable range.</li>
+                                                <li><b>Deep Networks:</b> Useful in deep networks to maintain uniformity and stability of weights across layers.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Potential Issues</b>:
+                                            <ul>
+                                                <li><b>Activation Function Compatibility:</b> While effective for ReLU activations, this initializer might not be suitable for activation functions with different properties.</li>
+                                                <li><b>Scale Sensitivity:</b> The performance can be sensitive to the scale of the initializer; other initializers might be preferable based on the specific network architecture.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                        </div>
                         </p>
                     </div>
                 </a>
@@ -614,6 +1032,62 @@
                     </div>
                     <div class="card-content hidden-content">
                         <p class="equation">
+                            <div class="container" style="text-align: left;">
+                                <h1>Identity Initializer in Keras</h1>
+                            
+                                <div class="section">
+                                    <h2>Formula</h2>
+                                    <p>The <code>Identity</code> initializer generates weights according to the identity matrix. The formula for the weights \( W \) initialized using <code>Identity</code> is:</p>
+                                    <div class="equation">
+                                        <p>For a weight matrix \( W \) of size \( n \times n \):</p>
+                                        \[
+                            W_{ij} = \begin{cases}
+                            1 & \text{if } i = j \\
+                            0 & \text{if } i \ne j
+                            \end{cases}
+                                        \]
+                                        <ul>
+                                            <li><b>\(W_{ij}\)</b> represents the element at the \(i\)-th row and \(j\)-th column of the weight matrix.</li>
+                                            <li><b>\(n \times n\)</b> denotes a square matrix where the number of rows and columns is equal.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            
+                                <div class="section">
+                                    <h2>Practical Considerations</h2>
+                                    <p>Here are some practical considerations for using the <code>Identity</code> initializer:</p>
+                                    <ul>
+                                        <li><b>Initialization in Neural Networks</b>:
+                                            <ul>
+                                                <li><b>When to Use:</b> The Identity initializer is useful when you want to initialize weights such that the identity mapping is preserved. This can be particularly important in certain deep learning architectures like residual networks.</li>
+                                                <li><b>Impact on Training:</b> Using the identity initializer can help with convergence by preserving the identity of the input data, particularly in very deep networks.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Layer Compatibility</b>:
+                                            <ul>
+                                                <li><b>Square Weight Matrices:</b> This initializer is only applicable to layers where the weight matrix is square (i.e., the number of input units equals the number of output units).</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Choosing Parameters</b>:
+                                            <ul>
+                                                <li><b>Matrix Size:</b> Ensure that the weight matrix is square for the identity initializer to be applied correctly. For non-square matrices, other initializers might be required.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Examples of Use</b>:
+                                            <ul>
+                                                <li><b>Residual Networks:</b> Effective in residual networks where preserving the identity mapping between layers is crucial.</li>
+                                                <li><b>Stability:</b> Helps maintain stability in networks where maintaining input-output relationships is important.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Potential Issues</b>:
+                                            <ul>
+                                                <li><b>Non-Square Layers:</b> Cannot be used with non-square weight matrices, which limits its application to specific types of layers.</li>
+                                                <li><b>Layer Type:</b> Ensure that the layer is compatible with the identity initialization to avoid incorrect configurations.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                             
                         </p>
                     </div>

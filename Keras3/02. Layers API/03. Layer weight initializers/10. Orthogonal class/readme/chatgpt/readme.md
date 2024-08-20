@@ -48,7 +48,7 @@ The `Orthogonal` initializer is a method for initializing the weights of neural 
 
 ### **9. Image: Graph of Orthogonal Matrix**
 
-![Orthogonal Matrix](https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Orthogonal_Matrix.png/800px-Orthogonal_Matrix.png)
+![Orthogonal Matrix](https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/03.%20Layer%20weight%20initializers/10.%20Orthogonal%20class/orthogonal_distribution.png)
 
 ### **10. Table: Overview of `Orthogonal` Initialization**
 

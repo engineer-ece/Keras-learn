@@ -49,7 +49,7 @@ The `Constant` initializer in Keras sets all the weights of a neural network lay
 
 ### **9. Image: Graph of Constant Initialization**
 
-![Constant Initialization](https://upload.wikimedia.org/wikipedia/commons/8/89/Constant_Initialization.png)
+![Constant Initialization](https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/03.%20Layer%20weight%20initializers/11.%20Constant%20class/constant_distribution.png)
 
 ### **10. Table: Overview of `Constant` Initialization**
 

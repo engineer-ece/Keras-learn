@@ -55,7 +55,7 @@ where $n_{\text{in}}$ and $n_{\text{out}}$ are the number of input and output un
 
 ### **9. Image: Graph of Glorot Normal Distribution**
 
-![Glorot Normal Distribution](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Xavier_Normal_Weight_Initialization.svg/1200px-Xavier_Normal_Weight_Initialization.svg.png)
+![Glorot Normal Distribution](https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/03.%20Layer%20weight%20initializers/06.%20GlorotNormal%20class/glorot_normal_distribution.png)
 
 ### **10. Table: Overview of `GlorotNormal` Initialization**
 

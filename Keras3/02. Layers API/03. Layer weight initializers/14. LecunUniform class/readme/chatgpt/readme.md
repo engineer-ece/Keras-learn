@@ -48,7 +48,7 @@
 
 ### **9. Image: Graph of LecunUniform Distribution**
 
-![Uniform Distribution](https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Uniform_distribution_PDF_SVG.svg/640px-Uniform_distribution_PDF_SVG.svg.png)
+![Uniform Distribution](https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/03.%20Layer%20weight%20initializers/14.%20LecunUniform%20class/lecun_uniform_distribution.png)
 
 ### **10. Table: Overview of `LecunUniform` Initialization**
 

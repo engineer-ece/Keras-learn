@@ -45,7 +45,7 @@ The `Ones` initializer in Keras is a method to initialize the weights of neural 
 
 ### **9. Image: Impact of Uniform Initialization**
 
-![Uniform Initialization Issues](https://upload.wikimedia.org/wikipedia/commons/3/34/Neural_Networks_Weight_Initialization.png)
+![Uniform Initialization Issues](https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/03.%20Layer%20weight%20initializers/05.%20Ones%20class/ones_distribution.png)
 
 ### **10. Table: Overview of `Ones` Initialization**
 

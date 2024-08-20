@@ -55,7 +55,7 @@ where $n_{\text{in}}$ and $n_{\text{out}}$ are the number of input and output un
 
 ### **9. Image: Graph of Glorot Uniform Distribution**
 
-![Glorot Uniform Distribution](https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Xavier_Weight_Initialization.png/1200px-Xavier_Weight_Initialization.png)
+![Glorot Uniform Distribution](https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/03.%20Layer%20weight%20initializers/07.%20GlorotUniform%20class/glorot_uniform_distribution.png)
 
 ### **10. Table: Overview of `GlorotUniform` Initialization**
 

@@ -55,7 +55,7 @@ where $ n_{\text{in}} $ is the number of input units to the layer. This method h
 
 ### **9. Image: Graph of He Uniform Distribution**
 
-![He Uniform Distribution](https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/He_Uniform_Weight_Initialization.png/1200px-He_Uniform_Weight_Initialization.png)
+![He Uniform Distribution](https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/03.%20Layer%20weight%20initializers/09.%20HeUniform%20class/he_uniform_distribution.png)
 
 ### **10. Table: Overview of `HeUniform` Initialization**
 

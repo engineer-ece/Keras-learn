@@ -55,7 +55,7 @@ where $n_{\text{in}}$ is the number of input units to the layer. This initializa
 
 ### **9. Image: Graph of He Normal Distribution**
 
-![He Normal Distribution](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/He_Normal_Weight_Initialization.png/1200px-He_Normal_Weight_Initialization.png)
+![He Normal Distribution](https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/03.%20Layer%20weight%20initializers/08.%20HeNormal%20class/he_normal_distribution.png)
 
 ### **10. Table: Overview of `HeNormal` Initialization**
 

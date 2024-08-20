@@ -45,7 +45,7 @@ The `Zeros` initializer in Keras is a method to initialize the weights of neural
 
 ### **9. Image: Impact of Zero Initialization on Symmetry**
 
-![Zero Initialization Symmetry](https://upload.wikimedia.org/wikipedia/commons/8/87/Neural_Networks_Weight_Symmetry.svg)
+![Zero Initialization Symmetry](https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/03.%20Layer%20weight%20initializers/04.%20Zeros%20class/zeros_distribution.png)
 
 ### **10. Table: Overview of `Zeros` Initialization**
 

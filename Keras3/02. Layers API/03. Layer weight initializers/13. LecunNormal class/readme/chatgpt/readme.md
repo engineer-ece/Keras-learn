@@ -48,7 +48,7 @@
 
 ### **9. Image: Graph of LecunNormal Distribution**
 
-![LecunNormal Distribution](https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Normal_Distribution_PDF.svg/640px-Normal_Distribution_PDF.svg.png)
+![LecunNormal Distribution](https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/03.%20Layer%20weight%20initializers/13.%20LecunNormal%20class/lecun_normal_distribution.png)
 
 ### **10. Table: Overview of `LecunNormal` Initialization**
 

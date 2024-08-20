@@ -48,7 +48,7 @@ The `IdentityInitializer` in Keras initializes the weights of a square 2D matrix
 
 ### **9. Image: Identity Matrix Example**
 
-![Identity Matrix](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Identity_matrix.svg/320px-Identity_matrix.svg.png)
+![Identity Matrix](https://engineer-ece.github.io/Keras-learn/Keras3/02.%20Layers%20API/03.%20Layer%20weight%20initializers/15.%20IdentityInitializer%20class/identity_distribution.png)
 
 ### **10. Table: Overview of `IdentityInitializer`**
 
