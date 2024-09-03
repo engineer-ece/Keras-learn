@@ -1,0 +1,35 @@
+Keras 3 -  Layer weight regularizers
+
+what, where, why, when, who, 
+how, pros, cons, image - (graph or related to topic), table,
+example, proof , example code for proof, application ,key, summary.
+
+
+
+The base layer class
+Layer activations
+Layer Weight initializers
+Layer Weight Regularizers
+Layer Weight Constraints
+Core layers
+Convolution layers
+Pooling layers
+Recurrent layers
+Preprocessing layers
+Normalization layers
+Regularization layers
+Attention layers
+Reshaping layers
+Merging layers
+Activation layers
+Backend-specific layers
+
+
+
+Regularizer class
+L1 class
+L2 class
+L1L2 class
+OrthogonalRegularizer class
+
+Practical consideration in Table overview use cases, tips and tricks, example application in process flow.

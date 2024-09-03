@@ -31,7 +31,7 @@
 
 ### **6. How Does `LecunNormal` Work?**
 
-1. **Calculate Standard Deviation**: The standard deviation is computed as \( \sqrt{\frac{1}{n}} \), where $ n $ is the number of input units.
+1. **Calculate Standard Deviation**: The standard deviation is computed as $ \sqrt{\frac{1}{n}} $, where $ n $ is the number of input units.
 2. **Draw Samples**: Weights are initialized by drawing from a normal distribution centered at zero with the computed standard deviation.
 3. **Assign Weights**: The sampled weights are then assigned to the model parameters.
 
@@ -59,7 +59,7 @@
 | **Why**                 | To ensure stable gradient flow and improve training efficiency, especially in deep networks using SELU activations.                                       |
 | **When**                | During model initialization, particularly in deep networks or when using SELU activations to maintain self-normalization.                                  |
 | **Who**                 | Data scientists, ML engineers, researchers, and developers working on neural networks requiring stable initialization, especially with SELU activation.   |
-| **How**                 | By calculating the standard deviation as \( \sqrt{\frac{1}{n}} \), drawing from a normal distribution, and applying this during layer initialization.       |
+| **How**                 | By calculating the standard deviation as $ \sqrt{\frac{1}{n}} $, drawing from a normal distribution, and applying this during layer initialization.       |
 | **Pros**                | Optimized for SELU activation, reduces gradient issues, and supports faster convergence.                                                                   |
 | **Cons**                | Primarily useful for SELU activations and may require careful application.                                                                                 |
 | **Application Example** | Used in initializing weights for deep learning models with SELU activations, including self-normalizing neural networks.                                   |

@@ -48,7 +48,7 @@
                     </div>
                     <div class="card-content">
                         <p class="equation">
-                            \(\text{ReLU}(x) = \max(0, x)\)
+                            $\text{ReLU}(x) = \max(0, x)$
                         </p>
                     </div>
                 </a>
@@ -61,7 +61,7 @@
                     </div>
                     <div class="card-content">
                         <p class="equation">                            
-                            \(\sigma(x) = \frac{1}{1 + e^{-x}}\)
+                            $\sigma(x) = \frac{1}{1 + e^{-x}}$
                         </p>
                     </div>
                 </a>
@@ -75,7 +75,7 @@
                     </div>
                     <div class="card-content">
                         <p class="equation">                            
-                            \(\text{Softmax}(x_i) = \frac{e^{x_i}}{\sum_{j} e^{x_j}}\)
+                            $\text{Softmax}(x_i) = \frac{e^{x_i}}{\sum_{j} e^{x_j}}$
                         </p>
                     </div>
                 </a>
@@ -88,7 +88,7 @@
                     </div>
                     <div class="card-content">
                         <p class="equation">                            
-                            \(\text{Softplus}(x) = \ln(1 + e^x)\)
+                            $\text{Softplus}(x) = \ln(1 + e^x)$
                         </p>
                     </div>
                 </a>
@@ -101,7 +101,7 @@
                     </div>
                     <div class="card-content">
                         <p class="equation">                            
-                            \(\text{Softsign}(x) = \frac{x}{1 + |x|}\)
+                            $\text{Softsign}(x) = \frac{x}{1 + |x|}$
                         </p>
                     </div>
                 </a>
@@ -114,7 +114,7 @@
                     </div>
                     <div class="card-content">
                         <p class="equation">                            
-                            \(\text{Tanh}(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}\)
+                            $\text{Tanh}(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}$
                         </p>
                     </div>
                 </a>
@@ -127,10 +127,10 @@
                     </div>
                     <div class="card-content">
                         <p class="equation">                            
-                            \( \text{SELU}(x) = \lambda \begin{cases} 
+                            $ \text{SELU}(x) = \lambda \begin{cases} 
                             x & \text{if } x > 0 \\
   \alpha(e^x - 1) & \text{if } x \leq 0 
-  \end{cases}\)
+  \end{cases}$
                         </p>
                     </div>
                 </a>
@@ -143,10 +143,10 @@
                     </div>
                     <div class="card-content">
                         <p class="equation">                            
-                            \( \text{ELU}(x) = \begin{cases}
+                            $ \text{ELU}(x) = \begin{cases}
                             x & \text{if } x > 0 \\
                             \alpha (e^x - 1) & \text{if } x \leq 0
-                            \end{cases} \)
+                            \end{cases} $
                         </p>
                     </div>
                 </a>
@@ -159,7 +159,7 @@
                     </div>
                     <div class="card-content">
                         <p class="equation">                            
-                            \( f(x) = e^x \)
+                            $ f(x) = e^x $
                         </p>
                     </div>
                 </a>
@@ -173,10 +173,10 @@
                     </div>
                     <div class="card-content">
                         <p class="equation">                            
-                            \( \text{LeakyReLU}(x) = \begin{cases} 
+                            $ \text{LeakyReLU}(x) = \begin{cases} 
                             x & \text{if } x > 0 \\
                             \alpha x & \text{if } x \leq 0 
-                            \end{cases}  \)
+                            \end{cases}  $
                         </p>
                     </div>
                 </a>
@@ -190,7 +190,7 @@
                     </div>
                     <div class="card-content">
                         <p class="equation">                            
-                            \( \text{ReLU6}(x) = \min(\max(0, x), 6) \)
+                            $ \text{ReLU6}(x) = \min(\max(0, x), 6) $
                         </p>
                     </div>
                 </a>
@@ -204,9 +204,9 @@
                     </div>
                     <div class="card-content">
                         <p class="equation">                            
-                            \( \text{SiLU}(x) = x \cdot \sigma(x) \) 
-                            where \( sigma(x) \) is the sigmoid function:
-                            \( \sigma(x) = \frac{1}{1 + e^{-x}}\)
+                            $ \text{SiLU}(x) = x \cdot \sigma(x) $ 
+                            where $ sigma(x) $ is the sigmoid function:
+                            $ \sigma(x) = \frac{1}{1 + e^{-x}}$
                         </p>
                     </div>
                 </a>
@@ -219,9 +219,9 @@
                     </div>
                     <div class="card-content">
                         <p class="equation">                            
-                            \[ \text{Hard SiLU}(x) = x \cdot \frac{\text{ReLU6}(x + 3)}{6} \]
+                            $$ \text{Hard SiLU}(x) = x \cdot \frac{\text{ReLU6}(x + 3)}{6} $$
 
-where \(\text{ReLU6}(x)\) is the ReLU6 activation function. In other words, it applies a scaled and shifted ReLU6 function to approximate the SiLU.
+where $\text{ReLU6}(x)$ is the ReLU6 activation function. In other words, it applies a scaled and shifted ReLU6 function to approximate the SiLU.
                         </p>
                     </div>
                 </a>
@@ -234,11 +234,11 @@ where \(\text{ReLU6}(x)\) is the ReLU6 activation function. In other words, it a
                     </div>
                     <div class="card-content">
                         <p class="equation">                            
-                            \( \text{GELU}(x) = x \cdot \Phi(x) \)
+                            $ \text{GELU}(x) = x \cdot \Phi(x) $
                             where $\Phi(x)$ is the cumulative distribution function (CDF) of the standard normal distribution, given by:
-                            \( \Phi(x) = \frac{1}{2} \left[ 1 + \text{erf} \left( \frac{x}{\sqrt{2}} \right) \right] \)                  
+                            $ \Phi(x) = \frac{1}{2} \left[ 1 + \text{erf} \left( \frac{x}{\sqrt{2}} \right) \right] $                  
                             Here, $\text{erf}$ is the error function. In practice, the GELU function can be approximated as:
-                            \( \text{GELU}(x) \approx 0.5x \left[ 1 + \tanh \left( \sqrt{\frac{2}{\pi}} \left(x + 0.044715x^3 \right) \right) \right] \)   
+                            $ \text{GELU}(x) \approx 0.5x \left[ 1 + \tanh \left( \sqrt{\frac{2}{\pi}} \left(x + 0.044715x^3 \right) \right) \right] $   
                         </p>
                     </div>
                 </a>
@@ -299,7 +299,7 @@ where \(\text{ReLU6}(x)\) is the ReLU6 activation function. In other words, it a
                         <p class="equation">                            
                             $ \text{LogSoftmax}(x_i) = \ln\left(\frac{e^{x_i}}{\sum_{j} e^{x_j}}\right) = x_i - \ln\left(\sum_{j} e^{x_j}\right) $
 
-                            where $x_i$ represents the input for class \(i\), and the sum in the denominator is over all possible classes.  
+                            where $x_i$ represents the input for class $i$, and the sum in the denominator is over all possible classes.  
                         </p>
                     </div>
                 </a>
