@@ -40,3 +40,84 @@ Keras 3 -  Regularizer class
 what, where, why, when, who, 
 how, pros, cons, image - (graph or related to topic), table,
 example, proof , example code for proof, application , practical use, process flow, key, summary.
+
+Keras 3 -  Regularizer class - graph code
+
+
+Keras 3 -  L1 class
+
+what, where, why, when, who, 
+how, pros, cons, image - (graph or related to topic), table,
+example, proof , example code for proof, application , practical use, process flow, key, summary.
+
+Keras 3 -  L2 class
+
+what, where, why, when, who, 
+how, pros, cons, image - (graph or related to topic), table,
+example, proof , example code for proof, application , practical use, process flow, key, summary.
+
+
+Keras 3 -  L1L2 class
+
+what, where, why, when, who, 
+how, pros, cons, image - (graph or related to topic), table,
+example, proof , example code for proof, application , practical use, process flow, key, summary.
+
+Keras 3 -  OrthogonalRegularizer class
+
+what, where, why, when, who, 
+how, pros, cons, image - (graph or related to topic), table,
+example, proof , example code for proof, application , practical use, process flow, key, summary.
+
+
+Layer Weight Constraints
+
+1. Constraint class
+2. MaxNorm class
+3. MinMaxNorm class
+4. NonNeg class
+5. UnitNorm class
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow.
+
+
+Keras 3 -  Constraint Class
+
+what, where, why, when, who, 
+how, pros, cons, image - (graph or related to topic), table,
+example, proof , example code for proof, application , practical use, process flow, key, summary.
+
+
+Keras 3 -  MaxNorm class
+
+what, where, why, when, who, 
+how, pros, cons, image - (graph or related to topic), table,
+example, proof , example code for proof, application , practical use, process flow, key, summary.
+
+Keras 3 -  MinMaxNorm class
+
+what, where, why, when, who, 
+how, pros, cons, image - (graph or related to topic), table,
+example, proof , example code for proof, application , practical use, process flow, key, summary.
+
+
+Keras 3 -  NonNeg class
+
+what, where, why, when, who, 
+how, pros, cons, image - (graph or related to topic), table,
+example, proof , example code for proof, application , practical use, process flow, key, summary.
+
+
+Keras 3 -  UnitNorm class
+
+what, where, why, when, who, 
+how, pros, cons, image - (graph or related to topic), table,
+example, proof , example code for proof, application , practical use, process flow, key, summary.
+
+
+
+
+
+
+
+
