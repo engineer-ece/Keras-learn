@@ -32,4 +32,11 @@ L2 class
 L1L2 class
 OrthogonalRegularizer class
 
-Practical consideration in Table overview use cases, tips and tricks, example application in process flow.
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow.
+
+
+Keras 3 -  Regularizer class
+
+what, where, why, when, who, 
+how, pros, cons, image - (graph or related to topic), table,
+example, proof , example code for proof, application , practical use, process flow, key, summary.

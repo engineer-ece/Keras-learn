@@ -66,14 +66,14 @@ sns.kdeplot(weights_with_reg, bw_adjust=0.5, color='red', label='KDE of Weights 
 
 # Plot theoretical PDFs
 plt.plot(x_vals, pdf_no_reg, 'b--', label=r'Theoretical PDF without Reg: $\frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{x^2}{2\sigma^2}}$')
-plt.plot(x_vals, pdf_with_reg, 'r--', label=r'Theoretical PDF with Reg: Truncated Normal with $\sigma=0.05$')
+plt.plot(x_vals, pdf_with_reg, 'g*', label=r'Theoretical PDF with Reg: Truncated Normal with $\sigma=0.05$')
 
 # Add labels, title, and legend
 plt.title('Weight Distributions with and without Regularization')
 plt.xlabel('Weight Value')
 plt.ylabel('Density')
 plt.grid(True)
-plt.legend()
+plt.legend(loc='upper left')
 
 # Save the plot to a file in the current working directory
 plt.savefig('weight_distributions_with_regularization_theoretical.png')
