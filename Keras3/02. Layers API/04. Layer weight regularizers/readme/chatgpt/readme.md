@@ -1,11 +1,30 @@
 Here's a detailed table that covers practical considerations for different regularizer classes, including their use cases, formulas, explanations of formula parameters, tips and tricks, and example applications in a process flow:
 
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.2/katex.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.2/katex.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.2/contrib/auto-render.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    { left: "$$", right: "$$", display: true },
+                    { left: "$", right: "$", display: false }
+                ]
+            });
+        });
+    </script>   
+</body>
+
+
 ### Regularizer Classes Overview
 
 | **Regularizer Class**    | **Use Cases**                                    | **Formula**                                           | **Formula Parameter Explanation**                              | **Tips and Tricks**                              | **Example Application in Process Flow**                            |
 |--------------------------|--------------------------------------------------|------------------------------------------------------|---------------------------------------------------------------|--------------------------------------------------|--------------------------------------------------------------------|
 | **Regularizer**          | Base class for custom regularizers.              | N/A                                                  | N/A                                                           | Provides a framework for custom regularizers.    | Implement custom regularization by inheriting from this class.      |
-| **L1 Regularizer**       | Sparse models, feature selection.               | $ \lambda \sum \|w_i\| $                            | $\lambda$: Regularization strength; $|w_i|$: Absolute weight values | Promotes sparsity; be cautious with $\lambda$ to avoid underfitting. | Apply in models where feature sparsity is desired (e.g., Lasso regression). |
+| **L1 Regularizer**       | Sparse models, feature selection.               | $ \lambda \sum \|w_i\| $                            | $\lambda$: Regularization strength; $\|w_i\|$: Absolute weight values | Promotes sparsity; be cautious with $\lambda$ to avoid underfitting. | Apply in models where feature sparsity is desired (e.g., Lasso regression). |
 | **L2 Regularizer**       | Smooth models, weight decay.                    | $ \lambda \sum w_i^2 $                            | $\lambda$: Regularization strength; $w_i^2$: Squared weight values | Helps prevent overfitting by penalizing large weights; moderate $\lambda$ values are recommended. | Apply in models to control weight magnitude (e.g., Ridge regression). |
 | **L1L2 Regularizer**     | Combination of L1 and L2 penalties.              | $ \lambda_1 \sum \|w_i\| + \lambda_2 \sum w_i^2 $  | $\lambda_1$: L1 regularization strength; $\lambda_2$: L2 regularization strength | Balances sparsity and weight decay; tune both $\lambda_1$ and $\lambda_2$ for optimal results. | Use when a balance of sparsity and weight control is needed (e.g., Elastic Net). |
 | **OrthogonalRegularizer**| Ensures orthogonality of weight matrices.        | $ \lambda \text{Tr}((W^T W - I)^2) $              | $\lambda$: Regularization strength; $W$: Weight matrix; $I$: Identity matrix; $\text{Tr}$: Trace function | Useful for decorrelated features; can be computationally intensive. | Apply to ensure weights in neural networks are orthogonal.           |
