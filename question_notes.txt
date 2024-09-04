@@ -287,6 +287,27 @@ Practical consideration in Table overview use cases, formula, formula parameter 
 
 Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
 
+11. Normalization layers
+    1. BatchNormalization layer
+    2. LayerNormalization layer
+    3. UnitNormalization layer
+    4. GroupNormalization layer
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+
+12. Regularization layers
+    1. Dropout layer
+    2. SpatialDropout1D layer
+    3. SpatialDropout2D layer
+    4. SpatialDropout3D layer
+    5. GaussianDropout layer
+    6. AlphaDropout layer
+    7. ActivityRegularization layers
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+
 
 
 
