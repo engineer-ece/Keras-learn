@@ -377,3 +377,65 @@ for initializer in initializers:
 This table and code example provide a comprehensive guide to Keras weight initializers, helping you choose the right initializer for your specific application and visualize their distributions.
 
 ---
+
+
+# 4. Layer Weight Regularizers
+
+Here’s a detailed table overview of Keras layer weight regularizers, covering practical considerations, use cases, formulas, formula parameter explanations, tips and tricks, example applications, and code:
+
+| **Regularizer**               | **Description**                                                                                  | **Practical Considerations**                                                                                                     | **Use Cases**                                      | **Formula**                                                                                       | **Formula Parameters**                                | **Tips & Tricks**                                                                                                  | **Example Application & Code**                                                                                                                                              |
+|-------------------------------|--------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|---------------------------------------------------------------------------------------------------|------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Regularizer (Base Class)**  | Base class for creating custom regularizers.                                                     | This class is not used directly; instead, it’s extended to create custom regularizers.                                           | Custom regularization needs                       | Customizable based on subclass implementation                                                     | Varies based on the subclass                            | Extend this class to create your own regularizers. Use when standard regularizers don’t meet specific needs.         | ```python \nfrom tensorflow.keras.regularizers import Regularizer \n\nclass CustomRegularizer(Regularizer):\n    def __init__(self, ...): \n        ... \n\n    def __call__(self, x):\n        return ... \n``` \n                                                                                      |
+| **L1**                        | Adds L1 regularization, encouraging sparsity by adding the absolute value of weights to the loss. | L1 regularization leads to sparse weights, which can be useful in feature selection or when aiming for sparsity in models.       | Sparse models, feature selection, reducing overfitting | $\text{Loss} = \lambda \sum \|W\|$                                                             | $\lambda$: Regularization factor                    | Use when you want sparse models with fewer non-zero weights, beneficial in high-dimensional datasets.                | ```python \nfrom tensorflow.keras.regularizers import L1 \n\nlayer = Dense(..., kernel_regularizer=L1(0.01))``` \n                                                                                                                                      |
+| **L2**                        | Adds L2 regularization, which discourages large weights by adding the squared value of weights to the loss. | L2 regularization penalizes large weights, which helps prevent overfitting by encouraging smaller weight values.                 | General use, reducing overfitting, deep networks  | $\text{Loss} = \lambda \sum W^2$                                                              | $\lambda$: Regularization factor                    | Use for reducing overfitting in models with a lot of parameters. It's the most commonly used regularization technique. | ```python \nfrom tensorflow.keras.regularizers import L2 \n\nlayer = Dense(..., kernel_regularizer=L2(0.01))``` \n                                                                                                                                    |
+| **L1L2**                      | Combines L1 and L2 regularization, benefiting from both sparsity and discouraging large weights.  | L1L2 regularization provides a balanced approach, combining the benefits of both L1 and L2 regularization.                       | General use, reducing overfitting, sparse models  | $\text{Loss} = \lambda_1 \sum \|W\| + \lambda_2 \sum W^2$                                       | $\lambda_1, \lambda_2$: Regularization factors     | Use when you need both sparsity and control over large weights. Useful in complex models or when overfitting is a concern. | ```python \nfrom tensorflow.keras.regularizers import L1L2 \n\nlayer = Dense(..., kernel_regularizer=L1L2(l1=0.01, l2=0.01))``` \n                                                                                                           |
+| **OrthogonalRegularizer**     | Encourages orthogonality in weight matrices, which can stabilize training and reduce redundancy.  | Particularly useful in deep networks or architectures where preserving variance is crucial, like RNNs.                           | RNNs, deep networks, architectures needing orthogonality | $\text{Loss} = \lambda \sum \|W^T W - I\|^2$                                                  | $\lambda$: Regularization factor, $W$: Weight matrix | Use in RNNs or deep architectures to improve stability and reduce redundancy.                                    | ```python \nfrom tensorflow.keras.regularizers import OrthogonalRegularizer \n\nlayer = Dense(..., kernel_regularizer=OrthogonalRegularizer(0.01))``` \n                                                                                       |
+
+### Example Application: Regularization Effect on Model Performance
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.regularizers import L1, L2, L1L2
+from tensorflow.keras.optimizers import Adam
+
+# Sample data
+X = np.random.randn(100, 10)
+y = np.random.randint(0, 2, size=(100,))
+
+# Define models with different regularizations
+models = {
+    "L1": Sequential([Dense(64, input_dim=10, activation='relu', kernel_regularizer=L1(0.01)),
+                      Dense(1, activation='sigmoid')]),
+
+    "L2": Sequential([Dense(64, input_dim=10, activation='relu', kernel_regularizer=L2(0.01)),
+                      Dense(1, activation='sigmoid')]),
+
+    "L1L2": Sequential([Dense(64, input_dim=10, activation='relu', kernel_regularizer=L1L2(l1=0.01, l2=0.01)),
+                        Dense(1, activation='sigmoid')])
+}
+
+# Compile models
+for name, model in models.items():
+    model.compile(optimizer=Adam(), loss='binary_crossentropy')
+    model.fit(X, y, epochs=10, verbose=0)
+    print(f"{name} model weights sum:", np.sum([np.sum(layer.get_weights()[0]) for layer in model.layers]))
+
+# Compare performance by visualizing weights regularization effect
+for name, model in models.items():
+    weights = model.layers[0].get_weights()[0].flatten()
+    plt.hist(weights, bins=50, alpha=0.5, label=name)
+
+plt.legend()
+plt.title("Effect of Regularization on Weights Distribution")
+plt.xlabel("Weight Value")
+plt.ylabel("Frequency")
+plt.show()
+```
+
+This table and code example provide a comprehensive overview of Keras regularizers, illustrating their impact on model weights and performance.
+
+---
+

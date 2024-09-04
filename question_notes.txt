@@ -175,6 +175,16 @@ Practical consideration in Table overview use cases, formula, formula parameter 
 
 Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
 
+4. Layer weight regularizers
+    1. Regularizer class
+    2. L1 class
+    3. L2 class
+    4. L1L2 class
+    5. OrthogonalRegularizer class 
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+
 
 
 
