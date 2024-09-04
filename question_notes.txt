@@ -184,6 +184,15 @@ Practical consideration in Table overview use cases, formula, formula parameter 
 
 Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
 
+5. Layer weight constraints
+    1. Constraint class
+    2. MaxNorm class
+    3. MinMaxNorm class
+    4. NonNeg class
+    5. UnitNorm class
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+
 
 
 
