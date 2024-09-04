@@ -13,7 +13,7 @@
             });
         });
     </script>   
-</body
+</body>
 
 # Layers API overview
 
