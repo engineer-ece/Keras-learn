@@ -308,10 +308,61 @@ Practical consideration in Table overview use cases, formula, formula parameter 
 Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
 
 
+13. Attention layers
+    1. GroupQueryAttention
+    2. MultiHeadAttention layer
+    3. Attention layer
+    4. AdditiveAttention layer
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
 
 
 
+14. Reshaping layers
+    1. Reshape layer
+    2. Flatten layer
+    3. RepeatVector layer
+    4. Permute layer
+    5. Cropping1D layer
+    6. Cropping2D layer
+    7. Cropping3D layer
+    8. UpSampling1D layer
+    9. UpSampling2D layer
+    10. UpSampling3D layer
+    11. ZeroPadding1D layer
+    12. ZeroPadding2D layer
+    13. ZeroPadding3D layer
 
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+
+15. Merging layers
+    1. Concatenate layer
+    2. Average layer
+    3. Maximum layer
+    4. Minimum layer
+    5. Add layer
+    6. Subtract layer
+    7. Multiply layer
+    8. Dot layer
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+16. Activation layers
+    1. ReLU layer
+    2. Softmax layer
+    3. LeakyReLU layer
+    4. PReLU layer
+    5. ELU layer 
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+17. Backend-specific layers
+    1. TorchModuleWrapper layer
+    2. Tensorflow SavedModel layer
+    3. JaxLayer
+    4. FlaxLayer
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
 
 
 
