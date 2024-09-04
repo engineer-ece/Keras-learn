@@ -238,6 +238,57 @@ Practical consideration in Table overview use cases, formula, formula parameter 
 Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
 
 
+9. Recurrent layers
+    1. LSTM layer
+    2. LSTM cell layer
+    3. GRU layer
+    4. GRU Cell layer
+    5. SimpleRNN layer
+    6. TimeDistributed layer
+    7. Bidirectional layer
+    8. ConvLSTM1D layer
+    9. ConvLSTM2D layer
+    10. ConvLSTM3D layer
+    11. Base RNN layer
+    12. Simple RNN cell layer
+    13. Stacked RNN cell layer
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+10. Preprocessing layers
+    1. Text preprocessing
+        1. TextVectorization layer
+
+    2. Numerical features preprocessing layers
+        1. Normalization layer
+        2. Spectral Normalization layer
+        3. Discretization layer 
+
+    3. Categorical features preprocessing layers
+        1. CategoryEncoding layer
+        2. Hashing layer
+        3. HashedCrossing layer
+        4. StringLookup layer
+        5. IntegerLookup layer
+
+    4. Image preprocessing layers
+        1. Resizing layer
+        2. Rescaling layer
+        3. CenterCrop layer 
+
+    5. Image augmentation layers
+        1. RandomCrop layer
+        2. RandomFlip layer
+        3. RandomTranslation layer
+        4. RandomRotation layer
+        5. RandomZoom layer
+        6. RandomContrast layer
+        7. RandomBrightness layer
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+
+
 
 
 
