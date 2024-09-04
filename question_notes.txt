@@ -193,6 +193,22 @@ Practical consideration in Table overview use cases, formula, formula parameter 
 Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
 
 
+6. Core layers
+    1. Input object
+    2. InputSpec object
+    3. Dense layer
+    4. EinsumDense layer
+    5. Activation layer
+    6. Embedding layer
+    7. Masking layer
+    8. Lambda layer
+    9. Identity layer
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+
+
+
 
 
 
