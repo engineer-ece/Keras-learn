@@ -207,6 +207,40 @@ Practical consideration in Table overview use cases, formula, formula parameter 
 Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
 
 
+7. Convolution layers
+    1. Conv1D layer
+    2. Conv2D layer
+    3. Conv3D layer
+    4. SeparableConv1D layer
+    5. SeparableConv2D layer
+    6. DepthwiseConv1D layer
+    7. DepthwiseConv2D layer
+    8. Conv1DTranspose layer
+    9. Conv2DTranspose layer
+    10. Conv3DTranspose layer
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+8. Pooling layers
+    1. MaxPooling1D layer
+    2. MaxPooling2D layer
+    3. MaxPooling3D layer
+    4. AveragePooling1D layer
+    5. AveragePooling2D layer
+    6. AveragePooling3D layer
+    7. GlobalMaxPooling1D layer
+    8. GlobalMaxPooling2D layer
+    9. GlobalMaxPooling3D layer
+    10. GlobalAveragePooling1D layer
+    11. GlobalAveragePooling2D layer
+    12. GlobalAveragePooling3D layer
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+
+
+
+
 
 
 
