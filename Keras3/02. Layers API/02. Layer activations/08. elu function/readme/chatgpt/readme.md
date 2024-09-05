@@ -65,7 +65,7 @@ where:
 ### **6. How Does the ELU Function Work?**
 
 1. **Positive Inputs**: For inputs greater than zero, ELU behaves like a linear function.
-2. **Negative Inputs**: For inputs less than or equal to zero, ELU applies an exponential function scaled by \( \alpha \).
+2. **Negative Inputs**: For inputs less than or equal to zero, ELU applies an exponential function scaled by $ \alpha $.
 
 ### **7. Pros of the ELU Function**
 

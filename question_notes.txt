@@ -1,0 +1,379 @@
+Keras 3 -  Layer weight regularizers
+
+what, where, why, when, who, 
+how, pros, cons, image - (graph or related to topic), table,
+example, proof , example code for proof, application ,key, summary.
+
+
+
+The base layer class
+Layer activations
+Layer Weight initializers
+Layer Weight Regularizers
+Layer Weight Constraints
+Core layers
+Convolution layers
+Pooling layers
+Recurrent layers
+Preprocessing layers
+Normalization layers
+Regularization layers
+Attention layers
+Reshaping layers
+Merging layers
+Activation layers
+Backend-specific layers
+
+
+
+Regularizer class
+L1 class
+L2 class
+L1L2 class
+OrthogonalRegularizer class
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow.
+
+
+Keras 3 -  Regularizer class
+
+what, where, why, when, who, 
+how, pros, cons, image - (graph or related to topic), table,
+example, proof , example code for proof, application , practical use, process flow, key, summary.
+
+Keras 3 -  Regularizer class - graph code
+
+
+Keras 3 -  L1 class
+
+what, where, why, when, who, 
+how, pros, cons, image - (graph or related to topic), table,
+example, proof , example code for proof, application , practical use, process flow, key, summary.
+
+Keras 3 -  L2 class
+
+what, where, why, when, who, 
+how, pros, cons, image - (graph or related to topic), table,
+example, proof , example code for proof, application , practical use, process flow, key, summary.
+
+
+Keras 3 -  L1L2 class
+
+what, where, why, when, who, 
+how, pros, cons, image - (graph or related to topic), table,
+example, proof , example code for proof, application , practical use, process flow, key, summary.
+
+Keras 3 -  OrthogonalRegularizer class
+
+what, where, why, when, who, 
+how, pros, cons, image - (graph or related to topic), table,
+example, proof , example code for proof, application , practical use, process flow, key, summary.
+
+
+Layer Weight Constraints
+
+1. Constraint class
+2. MaxNorm class
+3. MinMaxNorm class
+4. NonNeg class
+5. UnitNorm class
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow.
+
+
+Keras 3 -  Constraint Class
+
+what, where, why, when, who, 
+how, pros, cons, image - (graph or related to topic), table,
+example, proof , example code for proof, application , practical use, process flow, key, summary.
+
+
+Keras 3 -  MaxNorm class
+
+what, where, why, when, who, 
+how, pros, cons, image - (graph or related to topic), table,
+example, proof , example code for proof, application , practical use, process flow, key, summary.
+
+Keras 3 -  MinMaxNorm class
+
+what, where, why, when, who, 
+how, pros, cons, image - (graph or related to topic), table,
+example, proof , example code for proof, application , practical use, process flow, key, summary.
+
+
+Keras 3 -  NonNeg class
+
+what, where, why, when, who, 
+how, pros, cons, image - (graph or related to topic), table,
+example, proof , example code for proof, application , practical use, process flow, key, summary.
+
+
+Keras 3 -  UnitNorm class
+
+what, where, why, when, who, 
+how, pros, cons, image - (graph or related to topic), table,
+example, proof , example code for proof, application , practical use, process flow, key, summary.
+
+----
+
+Date: 04-09-2024
+
+1. The base Layer class
+    1. Layer class
+    2. weights property
+    3. trainable_weights property
+    4. non_trainable_weights property
+    5. add_weight method
+    6. trainable property
+    7. get_weights method
+    8. set_weights method
+    9. get_config method
+    10. add_loss method
+    11. losses property
+
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+2. Layer activations
+    1. relu function
+    2. sigmoid function
+    3. softmax function
+    4. softplus function
+    5. softsign function
+    6. tanh function
+    7. selu function
+    8. elu function
+    9. exponential function
+    10. leaky_relu function
+    11. relu6 function
+    12. silu function 
+    13. hard_silu function
+    14. gelu function
+    15. hard_sigmoid function
+    16. linear function
+    17. mish function
+    18. log_softmax function
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+3. Layer weight initializers
+    1. RandomNormal class
+    2. RandomUniform class
+    3. TruncatedNormal class
+    4. Zeros class
+    5. Ones class
+    6. GlorotNormal class
+    7. GlorotUniform class
+    8. HeNormal class
+    9. HeUniform class
+    10. Orthogonal class
+    11. Constant class
+    12. VarianceScaling class
+    13. LecunNormal class
+    14. LecunUniform class
+    15. IdentityInitializer class 
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+4. Layer weight regularizers
+    1. Regularizer class
+    2. L1 class
+    3. L2 class
+    4. L1L2 class
+    5. OrthogonalRegularizer class 
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+5. Layer weight constraints
+    1. Constraint class
+    2. MaxNorm class
+    3. MinMaxNorm class
+    4. NonNeg class
+    5. UnitNorm class
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+
+6. Core layers
+    1. Input object
+    2. InputSpec object
+    3. Dense layer
+    4. EinsumDense layer
+    5. Activation layer
+    6. Embedding layer
+    7. Masking layer
+    8. Lambda layer
+    9. Identity layer
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+
+7. Convolution layers
+    1. Conv1D layer
+    2. Conv2D layer
+    3. Conv3D layer
+    4. SeparableConv1D layer
+    5. SeparableConv2D layer
+    6. DepthwiseConv1D layer
+    7. DepthwiseConv2D layer
+    8. Conv1DTranspose layer
+    9. Conv2DTranspose layer
+    10. Conv3DTranspose layer
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+8. Pooling layers
+    1. MaxPooling1D layer
+    2. MaxPooling2D layer
+    3. MaxPooling3D layer
+    4. AveragePooling1D layer
+    5. AveragePooling2D layer
+    6. AveragePooling3D layer
+    7. GlobalMaxPooling1D layer
+    8. GlobalMaxPooling2D layer
+    9. GlobalMaxPooling3D layer
+    10. GlobalAveragePooling1D layer
+    11. GlobalAveragePooling2D layer
+    12. GlobalAveragePooling3D layer
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+
+9. Recurrent layers
+    1. LSTM layer
+    2. LSTM cell layer
+    3. GRU layer
+    4. GRU Cell layer
+    5. SimpleRNN layer
+    6. TimeDistributed layer
+    7. Bidirectional layer
+    8. ConvLSTM1D layer
+    9. ConvLSTM2D layer
+    10. ConvLSTM3D layer
+    11. Base RNN layer
+    12. Simple RNN cell layer
+    13. Stacked RNN cell layer
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+10. Preprocessing layers
+    1. Text preprocessing
+        1. TextVectorization layer
+
+    2. Numerical features preprocessing layers
+        1. Normalization layer
+        2. Spectral Normalization layer
+        3. Discretization layer 
+
+    3. Categorical features preprocessing layers
+        1. CategoryEncoding layer
+        2. Hashing layer
+        3. HashedCrossing layer
+        4. StringLookup layer
+        5. IntegerLookup layer
+
+    4. Image preprocessing layers
+        1. Resizing layer
+        2. Rescaling layer
+        3. CenterCrop layer 
+
+    5. Image augmentation layers
+        1. RandomCrop layer
+        2. RandomFlip layer
+        3. RandomTranslation layer
+        4. RandomRotation layer
+        5. RandomZoom layer
+        6. RandomContrast layer
+        7. RandomBrightness layer
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+11. Normalization layers
+    1. BatchNormalization layer
+    2. LayerNormalization layer
+    3. UnitNormalization layer
+    4. GroupNormalization layer
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+
+12. Regularization layers
+    1. Dropout layer
+    2. SpatialDropout1D layer
+    3. SpatialDropout2D layer
+    4. SpatialDropout3D layer
+    5. GaussianDropout layer
+    6. AlphaDropout layer
+    7. ActivityRegularization layers
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+
+13. Attention layers
+    1. GroupQueryAttention
+    2. MultiHeadAttention layer
+    3. Attention layer
+    4. AdditiveAttention layer
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+
+
+14. Reshaping layers
+    1. Reshape layer
+    2. Flatten layer
+    3. RepeatVector layer
+    4. Permute layer
+    5. Cropping1D layer
+    6. Cropping2D layer
+    7. Cropping3D layer
+    8. UpSampling1D layer
+    9. UpSampling2D layer
+    10. UpSampling3D layer
+    11. ZeroPadding1D layer
+    12. ZeroPadding2D layer
+    13. ZeroPadding3D layer
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+
+15. Merging layers
+    1. Concatenate layer
+    2. Average layer
+    3. Maximum layer
+    4. Minimum layer
+    5. Add layer
+    6. Subtract layer
+    7. Multiply layer
+    8. Dot layer
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+16. Activation layers
+    1. ReLU layer
+    2. Softmax layer
+    3. LeakyReLU layer
+    4. PReLU layer
+    5. ELU layer 
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+17. Backend-specific layers
+    1. TorchModuleWrapper layer
+    2. Tensorflow SavedModel layer
+    3. JaxLayer
+    4. FlaxLayer
+
+Practical consideration in Table overview use cases, formula, formula parameter explanation, tips and tricks, example application in process flow, example code to use in application & generate graph.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

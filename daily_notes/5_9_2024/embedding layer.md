@@ -1,0 +1,1 @@
+[Embedding layer](https://www.youtube.com/watch?v=nam2zR7p7Os)

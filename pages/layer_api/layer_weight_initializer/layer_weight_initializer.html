@@ -68,11 +68,11 @@
                                     </ul>
                                     <p>The formula for the weights <code>W</code> initialized using <code>RandomNormal</code> is:</p>
                                     <div class="equation">
-                                        \[
+                                        $$
                                         W \sim \mathcal{N} (\text{mean}, \text{stddev}^2)
-                                        \]
+                                        $$
                                     </div>
-                                    <p>where \( \mathcal{N} \)  denotes a normal distribution with:</p>
+                                    <p>where $ \mathcal{N} $  denotes a normal distribution with:</p>
                                     <ul>
                                         <li><b>Mean (μ)</b>: The average value of the distribution.</li>
                                         <li><b>Variance (σ²)</b>: The square of the standard deviation, representing the spread of the distribution.</li>
@@ -139,9 +139,9 @@
                                     <h2>Formula</h2>
                                     <p>The <code>RandomUniform</code> initializer generates weights by drawing samples from a uniform distribution within a specified range. The formula for the weights <code>W</code> initialized using <code>RandomUniform</code> is:</p>
                                     <div class="equation">
-                                        \[
+                                        $$
                                         W \sim \text{Uniform}(\text{minval}, \text{maxval})
-                                        \]
+                                        $$
                                     </div>
                                     <p>where \text{Uniform} denotes a uniform distribution with:</p>
                                     <ul>
@@ -209,29 +209,29 @@
                                     <p>The <code>TruncatedNormal</code> initializer generates weights by drawing samples from a truncated normal distribution. The truncated normal distribution is a normal distribution that has been truncated to lie within a specified range. The formula for the weights <code>W</code> initialized using <code>TruncatedNormal</code> is:</p>
                                     <div class="equation">
                                         <h3>Probability Density Function (PDF)</h3>
-                                        \[
+                                        $$
                                         f(x) = \frac{\phi\left(\frac{x - \mu}{\sigma}\right)}{\Phi\left(\frac{b - \mu}{\sigma}\right) - \Phi\left(\frac{a - \mu}{\sigma}\right)}
-                                        \]
+                                        $$
                                         <h3>Cumulative Distribution Function (CDF)</h3>
-                                        \[
+                                        $$
                                         F(x) = \frac{\Phi\left(\frac{x - \mu}{\sigma}\right) - \Phi\left(\frac{a - \mu}{\sigma}\right)}{\Phi\left(\frac{b - \mu}{\sigma}\right) - \Phi\left(\frac{a - \mu}{\sigma}\right)}
-                                        \]
+                                        $$
                                     </div>
                                     <p>where:</p>
                                     <ul>
-                                        <li> \( \phi \) is the PDF of the standard normal distribution:
-                                            \[
+                                        <li> $ \phi $ is the PDF of the standard normal distribution:
+                                            $$
                                             \phi(z) = \frac{1}{\sqrt{2 \pi}} e^{-\frac{z^2}{2}}
-                                            \]
+                                            $$
                                         </li>
-                                        <li>\( \Phi \) is the CDF of the standard normal distribution:
-                                            \[
+                                        <li>$ \Phi $ is the CDF of the standard normal distribution:
+                                            $$
                                             \Phi(z) = \int_{-\infty}^z \phi(t) \, dt
-                                            \]
+                                            $$
                                         </li>
-                                        <li>\(  \mu\) is the mean of the original normal distribution.</li>
-                                        <li>\(   \sigma\) is the standard deviation of the original normal distribution.</li>
-                                        <li>\(  a \)and \( b\) are the lower and upper bounds for truncation.</li>
+                                        <li>$  \mu$ is the mean of the original normal distribution.</li>
+                                        <li>$   \sigma$ is the standard deviation of the original normal distribution.</li>
+                                        <li>$  a $and $ b$ are the lower and upper bounds for truncation.</li>
                                     </ul>
                                 </div>
                         
@@ -298,10 +298,10 @@
                                     <h2>Formula</h2>
                                     <p>The <code>Zeros</code> initializer sets all weights to zero. It does not use any distribution or randomness. This initializer is defined by the following formula:</p>
                                     <div class="equation">
-                                        \[
+                                        $$
                                         W = 0
-                                        \]
-                                        where \( W \) represents the initialized weight, and it is set to zero.
+                                        $$
+                                        where $ W $ represents the initialized weight, and it is set to zero.
                                     </div>
                                 </div>
                         
@@ -364,10 +364,10 @@
                                     <h2>Formula</h2>
                                     <p>The <code>Ones</code> initializer sets all weights to one. It does not use any distribution or randomness. This initializer is defined by the following formula:</p>
                                     <div class="equation">
-                                        \[
+                                        $$
                                         W = 1
-                                        \]
-                                        where \( W \) represents the initialized weight, and it is set to one.
+                                        $$
+                                        where $ W $ represents the initialized weight, and it is set to one.
                                     </div>
                                 </div>
                         
@@ -429,17 +429,17 @@
                                     <p>The <code>GlorotNormal</code> initializer, also known as Xavier Normal initializer, is designed to keep the variance of activations and gradients approximately the same across all layers. This helps in avoiding vanishing and exploding gradients problems. The weights are drawn from a normal distribution with a mean of 0 and a variance calculated based on the number of input and output units of the layer.</p>
                                     <div class="equation">
                                         The variance of the normal distribution is given by:
-                                        \[
+                                        $$
                                         \text{Var}(W) = \frac{2}{\text{input_units} + \text{output_units}}
-                                        \]
-                                        where \( W \) represents the weights initialized, and \( \text{input_units} \) and \( \text{output_units} \) are the number of input and output units for the layer, respectively.
+                                        $$
+                                        where $ W $ represents the weights initialized, and $ \text{input_units} $ and $ \text{output_units} $ are the number of input and output units for the layer, respectively.
                                     </div>
                                     <div class="equation">
                                         Thus, the weights are drawn from:
-                                        \[
+                                        $$
                                         W \sim \mathcal{N}(0, \text{Var}(W))
-                                        \]
-                                        where \( \mathcal{N} \) denotes a normal distribution with mean 0 and the calculated variance.
+                                        $$
+                                        where $ \mathcal{N} $ denotes a normal distribution with mean 0 and the calculated variance.
                                     </div>
                                 </div>
                         
@@ -456,7 +456,7 @@
                                         <li><b>Default Values</b>:
                                             <ul>
                                                 <li><b>Mean:</b> The weights are initialized with a mean of 0.</li>
-                                                <li><b>Variance:</b> Calculated as \( \frac{2}{\text{input_units} + \text{output_units}} \).</li>
+                                                <li><b>Variance:</b> Calculated as $ \frac{2}{\text{input_units} + \text{output_units}} $.</li>
                                             </ul>
                                         </li>
                                         <li><b>Choosing Parameters</b>:
@@ -502,10 +502,10 @@
                                     <p>The <code>GlorotUniform</code> initializer, also known as Xavier Uniform initializer, is designed to maintain the variance of activations across layers by drawing weights from a uniform distribution. This helps in avoiding issues such as vanishing or exploding gradients.</p>
                                     <div class="equation">
                                         The weights are drawn from a uniform distribution within the range:
-                                        \[
+                                        $$
                                         \text{Uniform} \left(- \sqrt{\frac{6}{\text{input_units} + \text{output_units}}}, \sqrt{\frac{6}{\text{input_units} + \text{output_units}}}\right)
-                                        \]
-                                        where \( \text{input_units} \) and \( \text{output_units} \) are the number of input and output units for the layer, respectively.
+                                        $$
+                                        where $ \text{input_units} $ and $ \text{output_units} $ are the number of input and output units for the layer, respectively.
                                     </div>
                                 </div>
                         
@@ -565,14 +565,14 @@
                                     <p>The <code>HeNormal</code> initializer, also known as He Initialization, is designed to address the issue of vanishing and exploding gradients in deep neural networks by initializing weights with values drawn from a normal distribution. It is particularly effective with ReLU activation functions.</p>
                                     <div class="equation">
                                         The weights are drawn from a normal distribution with:
-                                        \[
+                                        $$
                                         W \sim \mathcal{N}(0, \frac{2}{\text{input_units}})
-                                        \]
-                                        where \( \mathcal{N} \) denotes a normal distribution with:
-                                        - **Mean**: \( 0 \)
-                                        - **Variance**: \( \frac{2}{\text{input_units}} \)
+                                        $$
+                                        where $ \mathcal{N} $ denotes a normal distribution with:
+                                        - **Mean**: $ 0 $
+                                        - **Variance**: $ \frac{2}{\text{input_units}} $
                         
-                                        Here, \( \text{input_units} \) is the number of input units in the layer.
+                                        Here, $ \text{input_units} $ is the number of input units in the layer.
                                     </div>
                                 </div>
                         
@@ -589,7 +589,7 @@
                                         <li><b>Default Values</b>:
                                             <ul>
                                                 <li><b>Mean:</b> 0</li>
-                                                <li><b>Variance:</b> \( \frac{2}{\text{input_units}} \)</li>
+                                                <li><b>Variance:</b> $ \frac{2}{\text{input_units}} $</li>
                                             </ul>
                                         </li>
                                         <li><b>Choosing Parameters</b>:
@@ -634,14 +634,14 @@
                                     <p>The <code>HeUniform</code> initializer, also known as He Initialization with Uniform Distribution, is designed to address the issue of vanishing and exploding gradients in deep neural networks by initializing weights with values drawn from a uniform distribution. It is particularly effective with ReLU activation functions.</p>
                                     <div class="equation">
                                         The weights are drawn from a uniform distribution within the range:
-                                        \[
+                                        $$
                                         W \sim \text{Uniform}\left(-\sqrt{\frac{6}{\text{input_units}}}, \sqrt{\frac{6}{\text{input_units}}}\right)
-                                        \]
-                                        where \( \text{Uniform}(a, b) \) denotes a uniform distribution between \( a \) and \( b \), with:
-                                        - **Lower Bound (a)**: \(-\sqrt{\frac{6}{\text{input_units}}}\)
-                                        - **Upper Bound (b)**: \(\sqrt{\frac{6}{\text{input_units}}}\)
+                                        $$
+                                        where $ \text{Uniform}(a, b) $ denotes a uniform distribution between $ a $ and $ b $, with:
+                                        - **Lower Bound (a)**: $-\sqrt{\frac{6}{\text{input_units}}}$
+                                        - **Upper Bound (b)**: $\sqrt{\frac{6}{\text{input_units}}}$
                         
-                                        Here, \( \text{input_units} \) is the number of input units in the layer.
+                                        Here, $ \text{input_units} $ is the number of input units in the layer.
                                     </div>
                                 </div>
                         
@@ -657,8 +657,8 @@
                                         </li>
                                         <li><b>Default Values</b>:
                                             <ul>
-                                                <li><b>Lower Bound:</b> \(-\sqrt{\frac{6}{\text{input_units}}}\)</li>
-                                                <li><b>Upper Bound:</b> \(\sqrt{\frac{6}{\text{input_units}}}\)</li>
+                                                <li><b>Lower Bound:</b> $-\sqrt{\frac{6}{\text{input_units}}}$</li>
+                                                <li><b>Upper Bound:</b> $\sqrt{\frac{6}{\text{input_units}}}$</li>
                                             </ul>
                                         </li>
                                         <li><b>Choosing Parameters</b>:
@@ -698,12 +698,12 @@
                         
                                 <div class="section">
                                     <h2>Formula</h2>
-                                    <p>The <code>Orthogonal</code> initializer is designed to initialize weights such that the weight matrix is orthogonal. This means that the columns (or rows) of the weight matrix are orthogonal unit vectors. An orthogonal matrix \( W \) satisfies the property:</p>
+                                    <p>The <code>Orthogonal</code> initializer is designed to initialize weights such that the weight matrix is orthogonal. This means that the columns (or rows) of the weight matrix are orthogonal unit vectors. An orthogonal matrix $ W $ satisfies the property:</p>
                                     <div class="equation">
-                                        \[
+                                        $$
                                         W^T W = W W^T = I
-                                        \]
-                                        where \( W^T \) is the transpose of \( W \), and \( I \) is the identity matrix. This ensures that the weight matrix is orthogonal, which can help in preserving the norms of gradients throughout the training process.
+                                        $$
+                                        where $ W^T $ is the transpose of $ W $, and $ I $ is the identity matrix. This ensures that the weight matrix is orthogonal, which can help in preserving the norms of gradients throughout the training process.
                                     </div>
                                 </div>
                         
@@ -724,7 +724,7 @@
                                         </li>
                                         <li><b>Choosing Parameters</b>:
                                             <ul>
-                                                <li><b>Gain:</b> The gain parameter scales the orthogonal matrix. It can be adjusted based on the activation function used. For example, for ReLU activations, a gain of \(\sqrt{2}\) might be used.</li>
+                                                <li><b>Gain:</b> The gain parameter scales the orthogonal matrix. It can be adjusted based on the activation function used. For example, for ReLU activations, a gain of $\sqrt{2}$ might be used.</li>
                                             </ul>
                                         </li>
                                         <li><b>Examples of Use</b>:
@@ -761,12 +761,12 @@
                         
                                 <div class="section">
                                     <h2>Formula</h2>
-                                    <p>The <code>Constant</code> initializer sets all the weights in a layer to a constant value. The formula for the weights \( W \) initialized using <code>Constant</code> is:</p>
+                                    <p>The <code>Constant</code> initializer sets all the weights in a layer to a constant value. The formula for the weights $ W $ initialized using <code>Constant</code> is:</p>
                                     <div class="equation">
-                                        \[
+                                        $$
                                         W = c
-                                        \]
-                                        where \( c \) is the constant value specified during initialization.
+                                        $$
+                                        where $ c $ is the constant value specified during initialization.
                                     </div>
                                 </div>
                         
@@ -825,15 +825,15 @@
                         
                                 <div class="section">
                                     <h2>Formula</h2>
-                                    <p>The <code>VarianceScaling</code> initializer scales the variance of the weights according to the number of input units in the layer. The formula for the weights \( W \) initialized using <code>VarianceScaling</code> is:</p>
+                                    <p>The <code>VarianceScaling</code> initializer scales the variance of the weights according to the number of input units in the layer. The formula for the weights $ W $ initialized using <code>VarianceScaling</code> is:</p>
                                     <div class="equation">
-                                        \[
+                                        $$
                                         W \sim \text{Uniform} \left(-\sqrt{\frac{3}{\text{scale}}}, \sqrt{\frac{3}{\text{scale}}}\right)
-                                        \]
+                                        $$
                                         or
-                                        \[
+                                        $$
                                         W \sim \text{Normal} \left(0, \frac{\text{scale}}{\text{fan_in}}\right)
-                                        \]
+                                        $$
                                         where:
                                         <ul>
                                             <li><b>scale:</b> A scaling factor, typically 1.0, 2.0, or 3.0 depending on the mode.</li>
@@ -900,14 +900,14 @@
                         
                                 <div class="section">
                                     <h2>Formula</h2>
-                                    <p>The <code>LeCunNormal</code> initializer scales weights according to the number of input units using a normal distribution. The formula for the weights \( W \) initialized using <code>LeCunNormal</code> is:</p>
+                                    <p>The <code>LeCunNormal</code> initializer scales weights according to the number of input units using a normal distribution. The formula for the weights $ W $ initialized using <code>LeCunNormal</code> is:</p>
                                     <div class="equation">
-                                        \[
+                                        $$
                                         W \sim \mathcal{N}\left(0, \frac{1}{\text{fan_in}}\right)
-                                        \]
+                                        $$
                                         where:
                                         <ul>
-                                            <li><b>\(\mathcal{N}\)</b> denotes a normal distribution.</li>
+                                            <li><b>$\mathcal{N}$</b> denotes a normal distribution.</li>
                                             <li><b>fan_in</b> is the number of input units in the weight tensor.</li>
                                         </ul>
                                     </div>
@@ -926,7 +926,7 @@
                                         <li><b>Default Values</b>:
                                             <ul>
                                                 <li><b>Mean:</b> Default is 0.0.</li>
-                                                <li><b>Standard Deviation:</b> Scaled as \( \frac{1}{\sqrt{\text{fan_in}}} \), where fan_in is the number of input units.</li>
+                                                <li><b>Standard Deviation:</b> Scaled as $ \frac{1}{\sqrt{\text{fan_in}}} $, where fan_in is the number of input units.</li>
                                             </ul>
                                         </li>
                                         <li><b>Choosing Parameters</b>:
@@ -970,14 +970,14 @@
                         
                                 <div class="section">
                                     <h2>Formula</h2>
-                                    <p>The <code>LeCunUniform</code> initializer generates weights according to a uniform distribution scaled by the number of input units. The formula for the weights \( W \) initialized using <code>LeCunUniform</code> is:</p>
+                                    <p>The <code>LeCunUniform</code> initializer generates weights according to a uniform distribution scaled by the number of input units. The formula for the weights $ W $ initialized using <code>LeCunUniform</code> is:</p>
                                     <div class="equation">
-                                        \[
+                                        $$
                                         W \sim \text{Uniform}\left(-\sqrt{\frac{3}{\text{fan_in}}}, \sqrt{\frac{3}{\text{fan_in}}}\right)
-                                        \]
+                                        $$
                                         where:
                                         <ul>
-                                            <li><b>\(\text{Uniform}\)</b> denotes a uniform distribution.</li>
+                                            <li><b>$\text{Uniform}$</b> denotes a uniform distribution.</li>
                                             <li><b>fan_in</b> is the number of input units in the weight tensor.</li>
                                         </ul>
                                     </div>
@@ -995,8 +995,8 @@
                                         </li>
                                         <li><b>Default Values</b>:
                                             <ul>
-                                                <li><b>Lower Bound:</b> \(-\sqrt{\frac{3}{\text{fan_in}}}\)</li>
-                                                <li><b>Upper Bound:</b> \(\sqrt{\frac{3}{\text{fan_in}}}\)</li>
+                                                <li><b>Lower Bound:</b> $-\sqrt{\frac{3}{\text{fan_in}}}$</li>
+                                                <li><b>Upper Bound:</b> $\sqrt{\frac{3}{\text{fan_in}}}$</li>
                                             </ul>
                                         </li>
                                         <li><b>Choosing Parameters</b>:
@@ -1038,18 +1038,18 @@
                             
                                 <div class="section">
                                     <h2>Formula</h2>
-                                    <p>The <code>Identity</code> initializer generates weights according to the identity matrix. The formula for the weights \( W \) initialized using <code>Identity</code> is:</p>
+                                    <p>The <code>Identity</code> initializer generates weights according to the identity matrix. The formula for the weights $ W $ initialized using <code>Identity</code> is:</p>
                                     <div class="equation">
-                                        <p>For a weight matrix \( W \) of size \( n \times n \):</p>
-                                        \[
+                                        <p>For a weight matrix $ W $ of size $ n \times n $:</p>
+                                        $$
                             W_{ij} = \begin{cases}
                             1 & \text{if } i = j \\
                             0 & \text{if } i \ne j
                             \end{cases}
-                                        \]
+                                        $$
                                         <ul>
-                                            <li><b>\(W_{ij}\)</b> represents the element at the \(i\)-th row and \(j\)-th column of the weight matrix.</li>
-                                            <li><b>\(n \times n\)</b> denotes a square matrix where the number of rows and columns is equal.</li>
+                                            <li><b>$W_{ij}$</b> represents the element at the $i$-th row and $j$-th column of the weight matrix.</li>
+                                            <li><b>$n \times n$</b> denotes a square matrix where the number of rows and columns is equal.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1113,105 +1113,105 @@
                         <tbody>
                             <tr>
                                 <td>RandomNormal</td>
-                                <td>\( W \sim \mathcal{N}(\text{mean}, \text{stddev}^2) \)</td>
-                                <td>Mean \(\pm\) 3 × stddev</td>
+                                <td>$ W \sim \mathcal{N}(\text{mean}, \text{stddev}^2) $</td>
+                                <td>Mean $\pm$ 3 × stddev</td>
                                 <td>General-purpose initialization. Suitable for most layers.</td>
                                 <td class="tips">Ensure mean and standard deviation are set appropriately to avoid issues with gradient scale.</td>
                             </tr>
                             <tr>
                                 <td>RandomUniform</td>
-                                <td>\( W \sim \text{Uniform}(a, b) \)</td>
-                                <td>Between \(a\) and \(b\)</td>
-                                <td>General-purpose initialization. Works well when the range \([a, b]\) is appropriate.</td>
+                                <td>$ W \sim \text{Uniform}(a, b) $</td>
+                                <td>Between $a$ and $b$</td>
+                                <td>General-purpose initialization. Works well when the range $[a, b]$ is appropriate.</td>
                                 <td class="tips">Adjust the range based on layer size and activation function.</td>
                             </tr>
                             <tr>
                                 <td>TruncatedNormal</td>
-                                <td>\( W \sim \text{TruncatedNormal}(\text{mean}, \text{stddev}) \)</td>
-                                <td>Limited to \(\text{mean} \pm 2 \times \text{stddev}\)</td>
+                                <td>$ W \sim \text{TruncatedNormal}(\text{mean}, \text{stddev}) $</td>
+                                <td>Limited to $\text{mean} \pm 2 \times \text{stddev}$</td>
                                 <td>Useful when normal initialization might lead to extreme values.</td>
                                 <td class="tips">Helps stabilize training by truncating extreme values.</td>
                             </tr>
                             <tr>
                                 <td>Zeros</td>
-                                <td>\( W = 0 \)</td>
+                                <td>$ W = 0 $</td>
                                 <td>Zero</td>
                                 <td>Typically used for biases. Avoid for weights as it can lead to symmetry issues.</td>
                                 <td class="tips">Useful for biases in some layers; avoid for weights.</td>
                             </tr>
                             <tr>
                                 <td>Ones</td>
-                                <td>\( W = 1 \)</td>
+                                <td>$ W = 1 $</td>
                                 <td>One</td>
                                 <td>Similar to zeros, generally avoided for weights.</td>
                                 <td class="tips">Useful for biases; avoid for weights due to symmetry issues.</td>
                             </tr>
                             <tr>
                                 <td>GlorotNormal</td>
-                                <td>\( W \sim \mathcal{N}(0, \sqrt{\frac{2}{\text{fan_in} + \text{fan_out}}}) \)</td>
-                                <td>Normal distribution scaled by \( \sqrt{\frac{2}{\text{fan_in} + \text{fan_out}}} \)</td>
+                                <td>$ W \sim \mathcal{N}(0, \sqrt{\frac{2}{\text{fan_in} + \text{fan_out}}}) $</td>
+                                <td>Normal distribution scaled by $ \sqrt{\frac{2}{\text{fan_in} + \text{fan_out}}} $</td>
                                 <td>Suitable for layers with tanh or sigmoid activations.</td>
                                 <td class="tips">Helps maintain stable gradients and activations.</td>
                             </tr>
                             <tr>
                                 <td>GlorotUniform</td>
-                                <td>\( W \sim \text{Uniform}\left(-\sqrt{\frac{6}{\text{fan_in} + \text{fan_out}}}, \sqrt{\frac{6}{\text{fan_in} + \text{fan_out}}}\right) \)</td>
-                                <td>Uniform distribution scaled by \( \sqrt{\frac{6}{\text{fan_in} + \text{fan_out}}} \)</td>
+                                <td>$ W \sim \text{Uniform}\left(-\sqrt{\frac{6}{\text{fan_in} + \text{fan_out}}}, \sqrt{\frac{6}{\text{fan_in} + \text{fan_out}}}\right) $</td>
+                                <td>Uniform distribution scaled by $ \sqrt{\frac{6}{\text{fan_in} + \text{fan_out}}} $</td>
                                 <td>Works well with tanh or sigmoid activation functions.</td>
                                 <td class="tips">Ensures proper scaling of weights for deep networks.</td>
                             </tr>
                             <tr>
                                 <td>HeNormal</td>
-                                <td>\( W \sim \mathcal{N}(0, \sqrt{\frac{2}{\text{fan_in}}}) \)</td>
-                                <td>Normal distribution scaled by \( \sqrt{\frac{2}{\text{fan_in}}} \)</td>
+                                <td>$ W \sim \mathcal{N}(0, \sqrt{\frac{2}{\text{fan_in}}}) $</td>
+                                <td>Normal distribution scaled by $ \sqrt{\frac{2}{\text{fan_in}}} $</td>
                                 <td>Ideal for ReLU and its variants.</td>
                                 <td class="tips">Prevents vanishing gradients and helps in maintaining activation stability.</td>
                             </tr>
                             <tr>
                                 <td>HeUniform</td>
-                                <td>\( W \sim \text{Uniform}\left(-\sqrt{\frac{6}{\text{fan_in}}}, \sqrt{\frac{6}{\text{fan_in}}}\right) \)</td>
-                                <td>Uniform distribution scaled by \( \sqrt{\frac{6}{\text{fan_in}}} \)</td>
+                                <td>$ W \sim \text{Uniform}\left(-\sqrt{\frac{6}{\text{fan_in}}}, \sqrt{\frac{6}{\text{fan_in}}}\right) $</td>
+                                <td>Uniform distribution scaled by $ \sqrt{\frac{6}{\text{fan_in}}} $</td>
                                 <td>Similar to HeNormal but uses uniform distribution.</td>
                                 <td class="tips">Effective for ReLU activations; adjust range based on network architecture.</td>
                             </tr>
                             <tr>
                                 <td>Orthogonal</td>
-                                <td>\( W \) is an orthogonal matrix where \( W^T W = I \)</td>
+                                <td>$ W $ is an orthogonal matrix where $ W^T W = I $</td>
                                 <td>Orthogonal matrix with unit norm</td>
                                 <td>Useful in RNNs and deep networks to maintain orthogonality and stabilize training.</td>
                                 <td class="tips">Helps in maintaining stability in deep networks and RNNs.</td>
                             </tr>
                             <tr>
                                 <td>Constant</td>
-                                <td>\( W = c \)</td>
-                                <td>Constant value \(c\)</td>
+                                <td>$ W = c $</td>
+                                <td>Constant value $c$</td>
                                 <td>Typically used for biases rather than weights.</td>
                                 <td class="tips">Useful for biases where a specific constant initialization is needed.</td>
                             </tr>
                             <tr>
                                 <td>VarianceScaling</td>
-                                <td>\( W \sim \text{Uniform}\left(-\sqrt{\frac{6}{\text{scale}}}, \sqrt{\frac{6}{\text{scale}}}\right) \)</td>
+                                <td>$ W \sim \text{Uniform}\left(-\sqrt{\frac{6}{\text{scale}}}, \sqrt{\frac{6}{\text{scale}}}\right) $</td>
                                 <td>Distribution scaled by a given factor</td>
                                 <td>Flexible initializer for different layers and activation functions.</td>
                                 <td class="tips">Adjust the scale parameter based on the network architecture and layer requirements.</td>
                             </tr>
                             <tr>
                                 <td>LeCunNormal</td>
-                                <td>\( W \sim \mathcal{N}(0, \sqrt{\frac{1}{\text{fan_in}}}) \)</td>
-                                <td>Normal distribution scaled by \( \sqrt{\frac{1}{\text{fan_in}}} \)</td>
+                                <td>$ W \sim \mathcal{N}(0, \sqrt{\frac{1}{\text{fan_in}}}) $</td>
+                                <td>Normal distribution scaled by $ \sqrt{\frac{1}{\text{fan_in}}} $</td>
                                 <td>Effective for Leaky ReLU and SELU activations.</td>
                                 <td class="tips">Helps maintain proper gradient scaling and stability in deep networks.</td>
                             </tr>
                             <tr>
                                 <td>LeCunUniform</td>
-                                <td>\( W \sim \text{Uniform}\left(-\sqrt{\frac{3}{\text{fan_in}}}, \sqrt{\frac{3}{\text{fan_in}}}\right) \)</td>
-                                <td>Uniform distribution scaled by \( \sqrt{\frac{3}{\text{fan_in}}} \)</td>
+                                <td>$ W \sim \text{Uniform}\left(-\sqrt{\frac{3}{\text{fan_in}}}, \sqrt{\frac{3}{\text{fan_in}}}\right) $</td>
+                                <td>Uniform distribution scaled by $ \sqrt{\frac{3}{\text{fan_in}}} $</td>
                                 <td>Suitable for Leaky ReLU and SELU activations.</td>
                                 <td class="tips">Ensures weights are initialized within a suitable range for stable training.</td>
                             </tr>
                             <tr>
                                 <td>Identity</td>
-                                <td>\( W \) is an identity matrix where \( W_{ij} = 1 \text{ if } i = j, 0 \text{ otherwise} \)</td>
+                                <td>$ W $ is an identity matrix where $ W_{ij} = 1 \text{ if } i = j, 0 \text{ otherwise} $</td>
                                 <td>Identity matrix</td>
                                 <td>Used for square matrices, often in residual networks.</td>
                                 <td class="tips">Only applicable to square weight matrices; maintains identity mapping in specific architectures.</td>

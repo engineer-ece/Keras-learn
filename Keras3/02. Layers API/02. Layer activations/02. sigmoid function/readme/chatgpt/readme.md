@@ -60,7 +60,7 @@ $$
 
 ### **6. How Does the Sigmoid Function Work?**
 
-1. **Input Transformation**: Takes a real-valued input \( x \) and applies the sigmoid formula.
+1. **Input Transformation**: Takes a real-valued input $ x \) and applies the sigmoid formula.
 2. **Output Range**: Maps the input to a value between 0 and 1, which can be interpreted as a probability.
 
 ### **7. Pros of the Sigmoid Function**
