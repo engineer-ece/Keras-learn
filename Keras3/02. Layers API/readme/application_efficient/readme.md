@@ -69,3 +69,55 @@ Here is a detailed table overview of various convolutional layers, their primary
 - **Conv3DTranspose**: Used for upsampling 3D volumes.
 
 Each layer type is designed to handle specific types of data and computational requirements, providing flexibility and efficiency across various machine learning and computer vision tasks.
+
+
+------
+
+Here’s an overview of core and convolutional layers in Keras, along with a description of their functions and how they are typically used.
+
+### Core Layers
+
+| Layer Type        | Description                                                                                             | Example Use Case                                      |
+|-------------------|---------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
+| **Input**         | Defines the input shape for the model.                                                                  | Initial layer to specify input dimensions.            |
+| **InputSpec**     | Used internally to specify the shape of inputs that a layer expects.                                     | Validate input shapes in custom layers.               |
+| **Dense**         | Fully connected layer where each unit is connected to every unit in the previous layer.                 | Feedforward neural networks, classification tasks.    |
+| **Einsum**        | Computes tensor contractions using Einstein summation notation.                                        | Flexible tensor operations, mathematical computations. |
+| **Embedding**     | Maps integer indices to dense vectors of fixed size.                                                     | Natural Language Processing (NLP), text embeddings.   |
+| **Activation**    | Applies an activation function to the input.                                                             | Introduces non-linearity (e.g., ReLU, sigmoid).       |
+| **Masking**       | Masks certain timesteps in sequences to ignore them in training.                                         | Handling variable-length sequences in NLP.            |
+| **Lambda**        | Applies a custom function to the inputs.                                                                  | Custom operations not directly supported by Keras.    |
+| **Identity**      | Returns the input as-is, useful for implementing certain architectures.                                   | Placeholder or debugging.                            |
+
+### Convolutional Layers
+
+| Layer Type              | Description                                                                                           | Example Use Case                                |
+|-------------------------|-------------------------------------------------------------------------------------------------------|-------------------------------------------------|
+| **Conv1D**              | Applies a 1D convolution operation over sequences.                                                   | Text processing, 1D signal processing.         |
+| **Conv2D**              | Applies a 2D convolution operation over 2D spatial data (images).                                      | Image classification, object detection.        |
+| **Conv3D**              | Applies a 3D convolution operation over 3D spatial data (videos or volumetric data).                   | Video processing, 3D medical imaging.          |
+| **SeparableConv1D**     | Applies depthwise separable 1D convolution, separating spatial and channel convolutions.                | Lightweight text or sequence processing.       |
+| **SeparableConv2D**     | Applies depthwise separable 2D convolution, separating spatial and channel convolutions.                | Efficient image processing, mobile networks.   |
+| **DepthwiseConv1D**     | Applies depthwise convolution over 1D sequences, where each input channel is convolved separately.      | Efficient sequence processing, lightweight models. |
+| **DepthwiseConv2D**     | Applies depthwise convolution over 2D spatial data, where each input channel is convolved separately.    | Efficient image processing, especially in mobile settings. |
+| **Conv1DTranspose**     | Applies a 1D transposed convolution (also known as deconvolution), used for upsampling.                  | Sequence upsampling, generating sequences.     |
+| **Conv2DTranspose**     | Applies a 2D transposed convolution for upsampling 2D spatial data.                                     | Image upsampling, generative models.           |
+| **Conv3DTranspose**     | Applies a 3D transposed convolution for upsampling 3D spatial data.                                     | Video upsampling, 3D data reconstruction.      |
+
+### Examples of Usage
+
+- **Core Layers**:
+  - **Dense Layer**: Used in feedforward networks. For example, in a fully connected layer of a neural network.
+  - **Embedding Layer**: Converts words into dense vectors for NLP tasks.
+  - **Activation Layer**: Applies activation functions like ReLU to introduce non-linearity.
+
+- **Convolutional Layers**:
+  - **Conv2D**: Used in image classification networks such as CNNs.
+  - **Conv3D**: Used in video classification tasks where temporal and spatial information is important.
+  - **SeparableConv2D**: Used in models like MobileNet for efficient image processing.
+  - **Conv2DTranspose**: Used in autoencoders and GANs for upsampling images.
+
+This table provides a concise overview of each layer type and their typical applications in neural network architectures.
+
+----------
+
