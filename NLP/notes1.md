@@ -157,7 +157,268 @@ lemmatizer.lemmatize("going", pos=wordnet.VERB)
 Why does the part-of-speech tag matter?
 
 'Donald Trump has a devoted following"
-'The
+
+
+Vector Similarity
+````````````````
+
+Application : Article Spinning - auto generate content
+
+Euclidean Distance  - normal distance formula
+
+Angle Between 2 Vector - angle two vector
+
+Cosine Similarity -  2 vector == 180 = -1 = least similar 
+
+cosine distance =  1 - cosine similarity
+(it not true distance)
+
+dist = 1 - sim = 1 - 1 = 0
+
+dist = 1 - sim = 1 - (-1) = 2
+
+Which one should we use?
+When are cosine distance and Euclidean distance equivalent?
+
+ TF-IDF (Theory) 
+ ```````````````
+
+ What's wrong with the Count Vectorizer?
+
+ - why don't we want to keep stopwords?
+ - unlikely - nlp tasks
+ - every document contains these words
+
+ stopwords
+
+ auto identity good or bad
+
+ convert -> text into vectors by counting
+
+ scale down word count
+
+ TF - IDF ~~  Term Frequency/Document Frequency
+
+ tfidf(t,d) = tf(t,d) x idf(t)
+
+ tf(t, d) = # of times t appears in d
+    
+t = term
+d = document
+
+idf(t) = log (N/N(t))
+
+tfidf(t,d) = tf(t,d) * idf(t)
+
+why take the log?
+  N/N(t) 
+
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+tfidf = TfidfVectorizer()
+
+Xtrain = tfidf.fit_transform(train_texts)
+Xtest = tfidf.transform(test_texts)
+
+# note : arguments exist for stopwords, tokenizer, strip accents, etc.
+
+Recap  - TF-IDF works and what problems it solves
+`````
+
+= Term Frequency Variations
+
+tf(t,d ) = count(t,d)/ sum(count(t',d))
+
+tf(t,d) = log(1+count(t,d))
+
+Inverse Document Frequency
+
+- Smooth IDF -  idf(t) = log(N/N(t)+1) + 1
+- idf max - idf(t) = log (max N(t)/n(T))
+
+
+
+
+Why do we need it?
+
+Text -> Vect
+
+document-term matrix
+
+row = document
+column = term (size = #document x #terms)
+
+Warning : Coding Skills Required
+
+
+simple example
+`````````````````
+
+doc 1 = I like cats
+doc 2 = i love cats
+doc 3 = i love dogs
+
+words in column
+
+How can we do this programmatically?
+
+current_idx = 0
+word2idx = {}
+
+for doc in documents:
+  tokens = word_tokenize(doc)
+  for token in tokens:
+    if token not in word2idx:
+        word2idx[token] = current_idx
+        current_idx += 1
+
+
+
+Dependencies
+````````````
+
+Word-to-index mapping ----> Count Vectorizer ----> TF-IDF
+
+Train vs. Test
+``````````````
+
+* What to do with words in the test set but not train set?
+* Method 1 : Ignore those words
+* Why? Your ML model will be trained on the train set
+* It wouldn't know what to do with other words
+* method 2 : createa a special token/rare word
+* Assign any rare word
+
+
+Reverse Mapping (index-to-word)
+
+==
+
+-Neural Word Embeddings
+
+Documents vs Words
+
+- softmax, RNN
+
+Sequences of Vectors - we have purpose-built models for sequences
+
+Word2Vec (google)
+Glove (stanford)
+
+Word2Vec - embedding
+
+The quick brown fox jumps over the lazy dog
+
+Glove - Doesn't use neural network, but invented in the era of 'Deep NLP'
+
+"Jumps" is 1 word away from 'fox' : score = 1/1
+"Jumps" is 2 words away from 'brown' : score = 1/2
+
+i.e. our "rating" are based on distance between words
+. If you want to learn more about
+
+1. What can we do with word vectors?
+
+can convert a document into a vector(but not sparse like counting/TFIDF)
+
+Embeddings are dense and low-dimensional (20, 50, 100, 300, ... << V)
+
+Doc ---> "I", "like", "cats", "and", "dogs" ---> vec(i),vec(like), vec(cats) ---> average()
+
+
+Word Analogies
+``````````````
+
+- We can do arithmetic on vectors (+ and -)
+- king: Man :: ??? : woman
+- Answer : Queen
+- In math : King - Man ~ Queen - Woman
+- In code : x = king - man + Woman
+            Find the closest word vector to x
+            The result will be Queen
+
+- Neural Word Embeddings Demo
+
+---------------------------
+
+
+
+Vector models & Text preprocessing summary
+``````````````````````````````````````````
+- text -> vector
+- preprocessing
+  - tokenization
+  - bag of words
+  - stopwords
+  - stemming and lemmatization
+
+- counting
+- tf-idf
+- vector similarity / recommender system
+- tf-idf from scratch
+- word - to - index mapping
+- neural word embeddings (word2vec, GloVe)
+- word analogies
+- words really represent concepts in multipe dimensions
+- if concepts are numbers, then are thinking and reasoning simply mathematical operation on numbers?
+
+Text Summarization Preview
+``````````````````````````
+
+Steps of a typical NLP analysis
+
+- Get the text (strings)
+- tokenize the text
+- stopwords, stemming/lemmatization
+- map tokens to integers
+  - tabular ML works with numbers
+  - a table of the format (documents x tokens)
+  - need to know which column goes with which token!
+- Convert text into count vectors / TF-idf
+- do ml task (recommend, detect spam, summarize, topic model, ...)
+
+
+Many Tools are english-centric
+
+ - Japanese tokenizer 1.6
+
+
+ Why should you learn the language?
+
+ Eg - suppose text = "this movie is good", but target = "negative"
+
+ - suppose model predicts "positive" (incorrect)
+ - you can only diagnose the issue if you know the language.
+
+ - Learning a language is a matter of taking a language course, not an NLP course!
+
+The Key Points
+``````````````
+2 solutions : (1) build one yourself, (2) find one
+
+Word Embeddings
+```````````````
+
+- How to find word vectors for neural networks?
+- It really comes down to the same strategy we've discussed
+- simply do a search to see if anyone has uploaded them publicly
+- Not much i can do to help - I would just be doing the same search!
+- What if no embeddings exits? same strategy applies!
+- tokenize the text
+- Multilingual models
+  - active area of research
+  - idea : embeddings consistent across languages
+  - gpt3
+
+--------------------------------------------------------------
+
+Suggestion box
+
+
+
+
+
+
 
 
  
