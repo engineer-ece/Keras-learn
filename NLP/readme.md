@@ -56,7 +56,7 @@ $$
 
 ## Properties of conditional probability
 
-### Property 1 :  $ P(S|F) = P(F|F) = 1 $
+### Property 1 :  $P(S|F) = P(F|F) = 1$
 
 Let E and F be events of a sample space S of an experiment
 
@@ -96,20 +96,18 @@ $$
   &= \frac{ P(A \cap F)}{P(F)} + \frac{ P(B \cap F)}{P(F)} - \frac{ P[(A \cap B)|  F]}{P(F)} \\
   &= P(A | F ) + P(B | F) - P((A \cap B) | F)
       
-\end{aligned}
+\end{aligned} $$
 
-$$
+When A and B are disjoint events, then $P((A \cap B) | F) = 0$
 
-When A and B are disjoint events, then $ P((A \cap B) | F) = 0 $
-
-$ = P((A \cup B) | F) = P(A|F) + P(B|F) $
+$= P((A \cup B) | F) = P(A|F) + P(B|F)$
 
 
-### Property 3 $ P(E' | F) = 1 - P(E|F) $
+### Property 3 : $P(E' | F) = 1 - P(E|F)$
 
-From Property 1 , we know that  $ P(S | F) = 1 $
+From Property 1 , we know that  $P(S | F) = 1$
 
-= $P( E \cup E'|F ) = 1 $ since $ S = E \cup E' $
+= $P( E \cup E'|F ) = 1$ since $S = E \cup E'$
 
 = $P(E|F) + P(E'|F) = 1 $ since E and E' are disjoint events
 
