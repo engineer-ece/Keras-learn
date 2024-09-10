@@ -61,24 +61,21 @@ $$
 in particular, if A and B are disjoint events, 
 
 $$
-
 \begin{align*}
-  
   P((AUB)|F) &= \frac{P[(A \cup B) \cap F]}{P(F)} \\ 
              &= \frac{P[(A \cap F) \cup (B \cap F)]}{P(F)}
 \end{align*}
-
 $$
 
 - by distributive law of union of sets over intersection
 
 $$
-\begin{aligned}
+\begin{align*}
   P((AUB)|F) &= \frac{ P(A \cap F) + P(B\cap F) - P(A \cap B \cap F) }{P(F)} \\  
   &= \frac{ P(A \cap F)}{P(F)} + \frac{ P(B \cap F)}{P(F)} - \frac{ P[(A \cap B)|  F]}{P(F)} \\
   &= P(A | F ) + P(B | F) - P((A \cap B) | F)
-      
-\end{aligned} $$
+\end{align*}
+$$
 
 When A and B are disjoint events, then $P((A \cap B)|F) = 0$
 
