@@ -88,7 +88,7 @@ From Property 1 , we know that  $P(S|F) = 1$
 
 = $P( E \cup E'|F ) = 1$ since $S = E \cup E'$
 
-= $P(E|F) + P(E'|F) = 1 $ since E and E' are disjoint events
+= $P(E|F) + P(E'|F) = 1$ since E and E' are disjoint events
 
 Thus, $P(E'|F) = 1 - P(E|F)$
 
@@ -101,7 +101,7 @@ if $\displaystyle P(A) =  \frac{7}{13}$, $\displaystyle P(B) =  \frac{9}{13}$ an
 ### Solution :
 
 $$
- \begin{align*}
+\begin{align*}
  P(A|B)  &= \frac{P(A \cap B)}{P(B)} \\
               \\
          &= \Large  {\frac{\frac{4}{13}}{\frac{9}{13}}} \\ \\
@@ -133,13 +133,11 @@ Now $E \cap F = \{ (b,b) \}$
 Thus $P(F) = \Large \frac{3}{4}$, $P(E \cap F) = \Large\frac{1}{4}$
 
 Therefore 
-$$
-\begin{align*}
+$$\begin{align*}
 P(E|F) &= \frac{P(E \cap F)}{ P(F)} \\ \\
        &= \displaystyle \Large{\frac{\frac{1}{4}}{\frac{3}{4}}} \\ \\
        &= \frac{1}{3}
-\end{align*}
-$$
+\end{align*}$$
 
 ### Example 3 :
 
@@ -157,12 +155,11 @@ Then $A = \{ 2, 4, 6, 8, 10 \}$, $B = \{ 4, 5, 6, 7, 8, 9, 10\}$ and $A \cap B =
 $P(A) = \frac{5}{10}, P(B) = \frac{7}{10}$ and  $P(A \cap B)= \frac{4}{10}$
 
 $$
- \begin{align*}
+\begin{align*}
   P(A|B) &= \frac{P(A \cap B)}{P(B)} \\
          &= \Large \frac{\frac{4}{10}}{\frac{7}{10}} \\
          &= \frac{4}{7}
-
- \end{align*}
+\end{align*}
 $$
 
 ### Example 4 :
