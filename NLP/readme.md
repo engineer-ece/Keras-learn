@@ -1,21 +1,3 @@
-
-<body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.2/katex.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.2/katex.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.2/contrib/auto-render.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            renderMathInElement(document.body, {
-                delimiters: [
-                    { left: "$$", right: "$$", display: true },
-                    { left: "$", right: "$", display: false }
-                ]
-            });
-        });
-    </script>   
-</body>
-
 bayes theorem
 multiplication rule of probability
 independence of events
@@ -147,7 +129,7 @@ $E : \text{both the children are boys}$
 
 $F : \text{at least one of the child is a boy }$
 
-Then $E = \{ (b,b) \}$and $F = \{ (b,b), (g,b), (b,g) \}$
+Then $E = \{ (b,b) \}$ and $F = \{ (b,b), (g,b), (b,g) \}$
 
 Now $E \cap F = \{ (b,b) \}$
 
