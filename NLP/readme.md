@@ -130,6 +130,7 @@ Now $E \cap F = \{ (b,b) \}$
 Thus $P(F) = \Large \frac{3}{4}$, $P(E \cap F) = \Large\frac{1}{4}$
 
 Therefore 
+
 $$
 \begin{align*}
 P(E|F) &= \frac{P(E \cap F)}{P(F)} \\
