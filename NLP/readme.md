@@ -98,26 +98,26 @@ $$
       
 \end{aligned} $$
 
-When A and B are disjoint events, then $P((A \cap B) | F) = 0$
+When A and B are disjoint events, then $P((A \cap B)|F) = 0$
 
-$= P((A \cup B) | F) = P(A|F) + P(B|F)$
+$= P((A \cup B)|F) = P(A|F) + P(B|F)$
 
 
 ### Property 3 : $P(E' | F) = 1 - P(E|F)$
 
-From Property 1 , we know that  $P(S | F) = 1$
+From Property 1 , we know that  $P(S|F) = 1$
 
 = $P( E \cup E'|F ) = 1$ since $S = E \cup E'$
 
 = $P(E|F) + P(E'|F) = 1 $ since E and E' are disjoint events
 
-Thus, $P(E'|F) = 1 - P(E|F)$ 
+Thus, $P(E'|F) = 1 - P(E|F)$
 
 ------
 
 ### Example 1 : 
 
-if $ \displaystyle P(A) =  \frac{7}{13} $, $ \displaystyle P(B) =  \frac{9}{13} $ and $ \displaystyle P(A \cap B) =  \frac{4}{13} $, evaluate $ P(A|B) $
+if $\displaystyle P(A) =  \frac{7}{13}$, $\displaystyle P(B) =  \frac{9}{13}$ and $\displaystyle P(A \cap B) =  \frac{4}{13}$, evaluate $P(A|B)$
 
 ### Solution :
 
@@ -139,22 +139,22 @@ A family has two children. What is the probability that both the children are bo
 Let b stand for boy and g for girl. 
 The sample space of the experiment is 
 
-$ S = \{ (b,b), (g,b), (b,g), (g,g) \} $
+$S = \{ (b,b), (g,b), (b,g), (g,g) \}$
 
 Let E and F denote the following events : 
 
-$ E : \text{both the children are boys} $
+$E : \text{both the children are boys}$
 
-$ F : \text{at least one of the child is a boy } $
+$F : \text{at least one of the child is a boy }$
 
-Then $ E = \{ (b,b) \}$ and $ F = \{ (b,b), (g,b), (b,g) \}$
+Then $E = \{ (b,b) \}$and $F = \{ (b,b), (g,b), (b,g) \}$
 
-Now $ E \cap F = \{ (b,b) \}$
+Now $E \cap F = \{ (b,b) \}$
 
-Thus $ P(F) = \Large \frac{3}{4}$ , $ P(E \cap F) = \Large\frac{1}{4}  $
+Thus $P(F) = \Large \frac{3}{4}$, $P(E \cap F) = \Large\frac{1}{4}$
 
 Therefore 
-$$ 
+$$
 \begin{align*}
 P(E|F) &= \frac{P(E \cap F)}{ P(F)} \\ \\
        &= \displaystyle \Large{\frac{\frac{1}{4}}{\frac{3}{4}}} \\ \\
@@ -171,13 +171,13 @@ Ten cards numbered 1 to 10 are placed in a box, mixed up thorougly and then one 
 Let A be the event ' the number on the card drawn is even ' and B  be the event the number on the card drawn is greater than 3. 
 We find P(A|B).
 
-Now, the sample space of the experiment is $ S = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\} $
+Now, the sample space of the experiment is $S = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\}$
 
-Then $ A = \{ 2, 4, 6, 8, 10 \}$ , $ B = \{ 4, 5, 6, 7, 8, 9, 10\}$ and $ A \cap B = {4, 6, 8, 10}$
+Then $A = \{ 2, 4, 6, 8, 10 \}$, $B = \{ 4, 5, 6, 7, 8, 9, 10\}$ and $A \cap B = {4, 6, 8, 10}$
 
-$ P(A) = \frac{5}{10}, P(B) = \frac{7}{10} $  and  $ P(A \cap B)= \frac{4}{10} $
+$P(A) = \frac{5}{10}, P(B) = \frac{7}{10}$ and  $P(A \cap B)= \frac{4}{10}$
 
-$$ 
+$$
  \begin{align*}
   P(A|B) &= \frac{P(A \cap B)}{P(B)} \\
          &= \Large \frac{\frac{4}{10}}{\frac{7}{10}} \\
