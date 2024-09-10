@@ -18,10 +18,7 @@ $$
 \displaystyle P(E|F) = 
 \frac{n(E\cap F)}{n(F)}
 = \frac{\frac{n(E\cap F)}{n(S)}}{\frac{n(F)}{n(S)}}
-
 = \frac{P(E\cap F)}{P(F)}
-
-
 $$
 
 $$
@@ -133,11 +130,13 @@ Now $E \cap F = \{ (b,b) \}$
 Thus $P(F) = \Large \frac{3}{4}$, $P(E \cap F) = \Large\frac{1}{4}$
 
 Therefore 
-$$\begin{align*}
-P(E|F) &= \frac{P(E \cap F)}{ P(F)} \\ \\
-       &= \displaystyle \Large{\frac{\frac{1}{4}}{\frac{3}{4}}} \\ \\
+$$
+\begin{align*}
+P(E|F) &= \frac{P(E \cap F)}{P(F)} \\
+       &= \displaystyle \Large\frac{\frac{1}{4}}{\frac{3}{4}} \\
        &= \frac{1}{3}
-\end{align*}$$
+\end{align*}
+$$
 
 ### Example 3 :
 
