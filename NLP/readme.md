@@ -166,3 +166,21 @@ $$
 
 In a school, there are 1000 students, out of which 430 are girls. It is known that out of 430, 10% of the girls study in class XII.
 What is the probability that a student chosen randomly studies in Class XII given that the choosen student is a girl?
+
+### Solution : 
+
+Let E denote the event that a student chosen randomly studies in Class XII and F be the event that the randomly chosen student is a girl. We have to find $P(E|F)$
+
+Now 
+
+$P(F)=\frac{430}{1000}=0.43$ and $P(E \cap F )=\frac{43}{1000}=0.043$ 10% 
+
+Then
+
+$$
+\begin{align*}
+P(E|F) &= \frac{P(E \cap F)}{P(F)} \\
+       &= \frac{0.043}{0.43} \\
+       &= 0.1
+\end{align*}
+$$
