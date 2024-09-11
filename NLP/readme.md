@@ -184,3 +184,135 @@ P(E|F) &= \frac{P(E \cap F)}{P(F)} \\
        &= 0.1
 \end{align*}
 $$
+
+### Example 5 : 
+
+A die is thrown three times. Events A and B are defined as below
+
+A :  4 on the third throw
+
+B : 6 on the first and 5 on the second throw
+
+Find the probability of A given that B has already occurred.
+
+
+### Solution:
+
+The sample space has 216 outcome - for thrown 3 times
+
+$P(S)=216$
+
+$A = \{(1, 1, 4),
+(1, 2, 4),
+(1, 3, 4),
+(1, 4, 4),
+(1, 5, 4),
+(1, 6, 4),
+(2, 1, 4),
+(2, 2, 4),
+(2, 3, 4),
+(2, 4, 4),
+(2, 5, 4),
+(2, 6, 4),
+(3, 1, 4),
+(3, 2, 4),
+(3, 3, 4),
+(3, 4, 4),
+(3, 5, 4),
+(3, 6, 4),
+(4, 1, 4),
+(4, 2, 4),
+(4, 3, 4),
+(4, 4, 4),
+(4, 5, 4),
+(4, 6, 4),
+(5, 1, 4),
+(5, 2, 4),
+(5, 3, 4),
+(5, 4, 4),
+(5, 5, 4),
+(5, 6, 4),
+(6, 1, 4),
+(6, 2, 4),
+(6, 3, 4),
+(6, 4, 4),
+(6, 5, 4),
+(6, 6, 4),\}$
+
+$B=\{(6,5,1),(6,5,2),(6,5,3,),(6,5,4,),(6,5,5,),(6,5,6,)\}$ and
+$(A \cap B)=\{(6,5,4)\}$
+
+
+$P(B)=\Large\frac{6}{216}$ and $P(A \cap B)=\Large\frac{1}{216}$ 
+
+Then 
+
+$$
+\begin{align*}
+P(A|B)&=\frac{P(A \cap B)}{P(B)}\\
+      &=\Large\frac{\frac{1}{216}}{\frac{6}{216}}\\
+      &=\frac{1}{6}
+\end{align*}
+$$
+
+### Example 6 : 
+
+A die is thrown twice and the sum of the numbers appearing is observed to be 6. What is the conditional probability that the number 4 has appeared at least once?
+
+### Solution:
+
+Let E be the event that 'number 4 appears at least once',
+    F be the event that 'the sume of the numbers appearing is 6'
+
+
+The, 
+
+$P(E)=\{(4,1),(4,2),(4,3),(4,4),(4,5),(4,6),(1,4),(2,4),(3,4),(5,4),(6,4)\}$
+
+and $F=\{(1,5),(2,4),(3,3),(4,2),(5,1),\}$
+
+We have 
+
+$P(E)=\Large\frac{11}{36}$ and $P(F)=\Large\frac{5}{36}$
+
+Also $E \cap F  = \{(2,4), (4,2) \}$
+
+Therefore $P(E \cap F) = \Large\frac{2}{36}$
+
+Hence, the required probability
+
+$$
+\begin{align*}
+P(E|F)&=\frac{P(E \cap F)}{P(F)}\\
+      &=\Large\frac{\frac{2}{36}}{\frac{5}{36}}\\
+      &=\frac{2}{5}
+\end{align*}
+$$
+
+### Example 7 :
+
+Consider the experiment of tossing a coin. If the coin shows head, toss it again but if it shows tail, then throw a die.
+Find the conditional probability of the event that `the die shows a number greater than 4' given that 'there is at least one tail'
+
+# Solution : 
+
+E = The die shows a number greater than 4
+
+F = There is at least one tail
+
+The outcomes of the experiment can be represented in following diagrammatic manner called the 'tree diagram'
+
+The sample space of the experiment may be described as 
+
+$S=\{(H,H),(H,T),(T,1),(T,2),(T,3),(T,4),(T,5),(T,6),\}$
+
+Where (H,H) denotes that both the tosses result into head and
+(T,i) denote the first toss result into a tail and the number i appeared on the die for 'i = 1,2,3,4,5,6'
+
+Thus, the probabilities assigned to the 8 elementary events
+
+F = {(H, T), (T, 1), (T, 2), (T, 3), (T, 4), (T, 5), (T, 6)}
+
+E = {(T,5), (T,6)}
+
+$E \cap F = \{ (T, 5), (T, 6)\}$
