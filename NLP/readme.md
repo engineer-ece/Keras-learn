@@ -316,3 +316,13 @@ F = {(H, T), (T, 1), (T, 2), (T, 3), (T, 4), (T, 5), (T, 6)}
 E = {(T,5), (T,6)}
 
 $E \cap F = \{ (T, 5), (T, 6)\}$
+
+$\Large P(F) = \frac{1}{4} + \frac{1}{12} + \frac{1}{12} + \frac{1}{12} + \frac{1}{12} + \frac{1}{12} + \frac{1}{12} = \frac{3}{4} $
+
+$\Large P( E \cap F) = \{ (T, 5), (T, 6)\} = \frac{1}{6}$
+
+Hence 
+
+$\large P(E|F) = \frac{P(E \cap F)}{P(F)} = \huge\frac{\frac{1}{6}}{\frac{3}{4}}\large=\frac{2}{9}$
+
+
